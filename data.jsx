@@ -11,19 +11,19 @@ const MOODS = [
 
 const BOOKS = [
   // Stoic Mornings
-  { id: 'aurelius',   title: 'Meditations',              author: 'Marcus Aurelius',      year: 180,  mood: 'Stoic Mornings', passages: 184, minutes: 16, continue: 0.42, colorA: '#C5B39A', colorB: '#8F7554' },
+  { id: 'aurelius',   title: 'Meditations',              author: 'Marcus Aurelius',      year: 180,  mood: 'Stoic Mornings', passages: 184, minutes: 16, continue: null, colorA: '#C5B39A', colorB: '#8F7554' },
   { id: 'epictetus',  title: 'The Enchiridion',          author: 'Epictetus',            year: 125,  mood: 'Stoic Mornings', passages:  53, minutes: 12, continue: null, colorA: '#D6C4A8', colorB: '#9A7F5A' },
   { id: 'seneca',     title: 'Letters from a Stoic',     author: 'Seneca',               year:   65, mood: 'Stoic Mornings', passages: 124, minutes: 22, continue: null, colorA: '#B7A485', colorB: '#6E5A3A' },
   { id: 'emerson',    title: 'Self-Reliance',            author: 'Ralph Waldo Emerson',  year: 1841, mood: 'Stoic Mornings', passages:  42, minutes: 18, continue: null, colorA: '#C9B89A', colorB: '#7E6845' },
 
   // Slow Sundays
-  { id: 'walden',     title: 'Walden',                   author: 'Henry David Thoreau',  year: 1854, mood: 'Slow Sundays',   passages: 211, minutes: 20, continue: 0.18, colorA: '#B9C1A5', colorB: '#5E6B4A' },
+  { id: 'walden',     title: 'Walden',                   author: 'Henry David Thoreau',  year: 1854, mood: 'Slow Sundays',   passages: 211, minutes: 20, continue: null, colorA: '#B9C1A5', colorB: '#5E6B4A' },
   { id: 'grass',      title: 'Leaves of Grass',          author: 'Walt Whitman',         year: 1855, mood: 'Slow Sundays',   passages: 168, minutes: 15, continue: null, colorA: '#C8CBB0', colorB: '#6F7653' },
   { id: 'pastoral',   title: 'A Pastoral Diary',         author: 'Dorothy Wordsworth',   year: 1803, mood: 'Slow Sundays',   passages:  94, minutes: 12, continue: null, colorA: '#D4CFB6', colorB: '#807A5C' },
   { id: 'montaigne',  title: 'Essays',                   author: 'Michel de Montaigne',  year: 1580, mood: 'Slow Sundays',   passages: 276, minutes: 22, continue: null, colorA: '#BBB19A', colorB: '#6B5F47' },
 
   // Mystical
-  { id: 'rumi',       title: 'The Masnavi',              author: 'Rumi',                 year: 1273, mood: 'Mystical',       passages: 102, minutes: 14, continue: 0.67, colorA: '#C8A886', colorB: '#7A4E2C' },
+  { id: 'rumi',       title: 'The Masnavi',              author: 'Rumi',                 year: 1273, mood: 'Mystical',       passages: 102, minutes: 14, continue: null, colorA: '#C8A886', colorB: '#7A4E2C' },
   { id: 'tao',        title: 'Tao Te Ching',             author: 'Laozi',                year: -400, mood: 'Mystical',       passages:  81, minutes: 10, continue: null, colorA: '#B5A89A', colorB: '#5F554A' },
   { id: 'blake',      title: 'Songs of Innocence',       author: 'William Blake',        year: 1789, mood: 'Mystical',       passages:  46, minutes:  9, continue: null, colorA: '#C4A58F', colorB: '#6F4A32' },
   { id: 'hafiz',      title: 'The Divan',                author: 'Hafiz',                year: 1389, mood: 'Mystical',       passages: 119, minutes: 11, continue: null, colorA: '#CEB08B', colorB: '#80562E' },
@@ -35,7 +35,7 @@ const BOOKS = [
   { id: 'secret',     title: 'The Secret Garden',        author: 'Frances H. Burnett',   year: 1911, mood: 'Wonder',         passages: 162, minutes: 16, continue: null, colorA: '#BFC2A2', colorB: '#606C46' },
 
   // Melancholy
-  { id: 'rilke',      title: 'Letters to a Young Poet',  author: 'Rainer Maria Rilke',   year: 1929, mood: 'Melancholy',     passages:  32, minutes: 14, continue: 0.09, colorA: '#AAA398', colorB: '#4E473C' },
+  { id: 'rilke',      title: 'Letters to a Young Poet',  author: 'Rainer Maria Rilke',   year: 1929, mood: 'Melancholy',     passages:  32, minutes: 14, continue: null, colorA: '#AAA398', colorB: '#4E473C' },
   { id: 'pessoa',     title: 'The Book of Disquiet',     author: 'Fernando Pessoa',      year: 1935, mood: 'Melancholy',     passages: 248, minutes: 19, continue: null, colorA: '#A29887', colorB: '#4B4334' },
   { id: 'dickinson',  title: 'Selected Poems',           author: 'Emily Dickinson',      year: 1890, mood: 'Melancholy',     passages:  74, minutes:  9, continue: null, colorA: '#B4A692', colorB: '#5C4E3A' },
   { id: 'kierkegaard',title: 'Either/Or',                author: 'S\u00f8ren Kierkegaard',year: 1843, mood: 'Melancholy',     passages: 192, minutes: 22, continue: null, colorA: '#9E9789', colorB: '#464034' },
