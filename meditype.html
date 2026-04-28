@@ -99,6 +99,7 @@
 <body>
   <div id="app"></div>
 
+  <script type="text/babel" src="storage.jsx"></script>
   <script type="text/babel" src="data.jsx"></script>
   <script type="text/babel" src="passages.jsx"></script>
   <script type="text/babel" src="components/primitives.jsx"></script>
@@ -117,17 +118,18 @@
     }/*EDITMODE-END*/;
 
     function App() {
-      // Hydrate from localStorage
-      const saved = (() => {
-        try { return JSON.parse(localStorage.getItem('meditype') || '{}'); }
-        catch (e) { return {}; }
-      })();
+      // Session-only state: every visit boots to the library on the default book.
+      const [screen, setScreen] = React.useState(TWEAK_DEFAULTS.screen);
+      const [book, setBook] = React.useState(BOOKS.find(b => b.id === 'aurelius') || BOOKS[0]);
+      const [settings, setSettings] = React.useState(null);
 
-      const [screen, setScreen] = React.useState(saved.screen || TWEAK_DEFAULTS.screen);
-      const [book, setBook] = React.useState(saved.book ? BOOKS.find(b => b.id === saved.book) || BOOKS[0] : BOOKS.find(b => b.id === 'aurelius'));
-      const [settings, setSettings] = React.useState(saved.settings || null);
-      const [readingVariant, setReadingVariant] = React.useState(saved.readingVariant || TWEAK_DEFAULTS.readingVariant);
-      const [libraryTone, setLibraryTone] = React.useState(saved.libraryTone || TWEAK_DEFAULTS.libraryTone);
+      // Preferences: read once from the versioned store, write on change below.
+      const [readingVariant, setReadingVariant] = React.useState(
+        () => MTStorage.prefs.getField('readingVariant', TWEAK_DEFAULTS.readingVariant)
+      );
+      const [libraryTone, setLibraryTone] = React.useState(
+        () => MTStorage.prefs.getField('libraryTone', TWEAK_DEFAULTS.libraryTone)
+      );
 
       // Closing-the-book transition: when set, we render the previous screen on top
       // while the new screen fades in beneath. Cleared automatically.
@@ -167,12 +169,9 @@
         return () => window.removeEventListener('message', onMsg);
       }, []);
 
-      // Persist
-      React.useEffect(() => {
-        localStorage.setItem('meditype', JSON.stringify({
-          screen, book: book.id, settings, readingVariant, libraryTone,
-        }));
-      }, [screen, book, settings, readingVariant, libraryTone]);
+      // Persist preferences only — session state (screen, book, settings) is intentionally not stored.
+      React.useEffect(() => { MTStorage.prefs.setField('readingVariant', readingVariant); }, [readingVariant]);
+      React.useEffect(() => { MTStorage.prefs.setField('libraryTone', libraryTone); }, [libraryTone]);
 
       const saveTweak = (edits) => {
         window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');

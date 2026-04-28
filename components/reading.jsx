@@ -34,28 +34,39 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
 
   // Live session state
   const [ambientId, setAmbientId] = React.useState(initialSettings?.ambient || 'rain');
-  const [volume, setVolume] = React.useState(0.45);
+  const [volume, setVolume] = React.useState(() => MTStorage.prefs.getField('ambientVolume', 0.45));
   const [backgroundId, setBackgroundId] = React.useState(initialSettings?.background || 'paper');
-  const [sessionSettings, setSessionSettings] = React.useState({
-    typeSize: 'M', strict: false, showTimer: true, margins: 50,
-  });
+  const [sessionSettings, setSessionSettings] = React.useState(() => ({
+    typeSize: MTStorage.prefs.getField('typeSize', 'M'),
+    strict: MTStorage.prefs.getField('strict', false),
+    showTimer: MTStorage.prefs.getField('showTimer', true),
+    margins: MTStorage.prefs.getField('margins', 50),
+  }));
   const [openPopover, setOpenPopover] = React.useState(null);
 
-  // Typing sound — persists globally (not per-book)
-  const savedTS = (() => { try { return JSON.parse(localStorage.getItem('meditype.typingSound') || '{}'); } catch { return {}; } })();
-  const [tsPreset, setTsPreset] = React.useState(savedTS.preset || 'softkeys');
-  const [tsVolume, setTsVolume] = React.useState(savedTS.volume ?? 0.4);
-  const [tsMistake, setTsMistake] = React.useState(savedTS.mistake !== false);
-  const [rainHintDismissed, setRainHintDismissed] = React.useState(savedTS.rainHintDismissed || false);
+  // Typing sound — persists globally via the versioned prefs blob.
+  const [tsPreset, setTsPreset] = React.useState(() => MTStorage.prefs.getField('typingPreset', 'softkeys'));
+  const [tsVolume, setTsVolume] = React.useState(() => MTStorage.prefs.getField('typingVolume', 0.4));
+  const [tsMistake, setTsMistake] = React.useState(() => MTStorage.prefs.getField('typingMistake', true));
+  const [rainHintDismissed, setRainHintDismissed] = React.useState(() => MTStorage.prefs.getField('rainHintDismissed', false));
 
   React.useEffect(() => {
-    localStorage.setItem('meditype.typingSound', JSON.stringify({
-      preset: tsPreset, volume: tsVolume, mistake: tsMistake, rainHintDismissed,
-    }));
+    MTStorage.prefs.setField('typingPreset', tsPreset);
+    MTStorage.prefs.setField('typingVolume', tsVolume);
+    MTStorage.prefs.setField('typingMistake', tsMistake);
+    MTStorage.prefs.setField('rainHintDismissed', rainHintDismissed);
     window.typingSound.setPreset(tsPreset);
     window.typingSound.setVolume(tsVolume);
     window.typingSound.setMistake(tsMistake);
   }, [tsPreset, tsVolume, tsMistake, rainHintDismissed]);
+
+  React.useEffect(() => { MTStorage.prefs.setField('ambientVolume', volume); }, [volume]);
+  React.useEffect(() => {
+    MTStorage.prefs.setField('typeSize', sessionSettings.typeSize);
+    MTStorage.prefs.setField('strict', sessionSettings.strict);
+    MTStorage.prefs.setField('showTimer', sessionSettings.showTimer);
+    MTStorage.prefs.setField('margins', sessionSettings.margins);
+  }, [sessionSettings]);
 
   const current = passages[passageIdx] || '';
   const isLast = passageIdx >= passages.length - 1;

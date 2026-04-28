@@ -3,10 +3,14 @@
 // three selectors (ambient sound, background, length), one "Begin" button.
 
 function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
-  const [ambient, setAmbient] = React.useState('rain');
-  const [background, setBackground] = React.useState('paper');
-  const [length, setLength] = React.useState('15');
+  const [ambient, setAmbient] = React.useState(() => MTStorage.prefs.getField('ambient', 'rain'));
+  const [background, setBackground] = React.useState(() => MTStorage.prefs.getField('background', 'paper'));
+  const [length, setLength] = React.useState(() => MTStorage.prefs.getField('length', '15'));
   const [drift, setDrift] = React.useState(false);
+
+  React.useEffect(() => { MTStorage.prefs.setField('ambient', ambient); }, [ambient]);
+  React.useEffect(() => { MTStorage.prefs.setField('background', background); }, [background]);
+  React.useEffect(() => { MTStorage.prefs.setField('length', length); }, [length]);
 
   const isDark = tone !== 'ink';
   const bg = isDark ? 'var(--walnut)' : 'var(--paper)';
