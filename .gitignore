@@ -1,0 +1,6 @@
+screenshots/
+uploads/
+.DS_Store
+*.log
+node_modules/
+.vercel

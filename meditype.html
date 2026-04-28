@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>meditype — a quiet reading practice</title>
+  <link rel="stylesheet" href="tokens.css" />
+  <style>
+    html, body, #app { height: 100%; }
+    body { overflow-x: hidden; }
+
+    /* Tweaks panel */
+    .tweaks {
+      position: fixed; right: 22px; bottom: 22px; z-index: 50;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      padding: 20px 22px 18px;
+      width: 288px;
+      font-family: var(--serif);
+      color: var(--ink);
+      font-size: 13px;
+    }
+    .tweaks.dark {
+      background: var(--walnut); color: var(--paper-warm);
+      border-color: var(--hairline-d);
+    }
+    .tweaks h4 {
+      margin: 0 0 14px; font-family: var(--mono); font-size: 10px;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      font-weight: 500; opacity: 0.7;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .tweaks .row { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+    .tweaks button.chip {
+      padding: 7px 11px; font-size: 12px; font-family: var(--serif);
+      color: inherit; background: transparent;
+      border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+      border-left: 0; border-right: 0;
+      letter-spacing: -0.005em; cursor: pointer;
+      font-style: italic;
+    }
+    .tweaks.dark button.chip { border-top-color: var(--hairline-d); border-bottom-color: var(--hairline-d); }
+    .tweaks button.chip.active {
+      border-top-color: var(--accent); border-bottom-color: var(--accent); font-weight: 500;
+    }
+    .tweaks.dark button.chip.active { border-top-color: var(--ember); border-bottom-color: var(--ember); }
+    .tweaks .label {
+      font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.22em;
+      text-transform: uppercase; opacity: 0.55; margin-bottom: 8px;
+    }
+    .tweaks .close {
+      font-family: var(--serif); font-style: italic; font-size: 11px; opacity: 0.5;
+    }
+
+    /* ---- screen transitions: closing the book ---- */
+    .scene { position: relative; min-height: 100%; }
+    .scene-layer {
+      position: absolute; inset: 0; min-height: 100%;
+      will-change: transform, opacity, filter;
+    }
+    /* Outgoing: settle, lift, soften, fade */
+    @keyframes book-close {
+      0%   { opacity: 1; transform: translateY(0)    scale(1);     filter: blur(0);    }
+      35%  { opacity: 1; transform: translateY(-2px) scale(0.998); filter: blur(0);    }
+      100% { opacity: 0; transform: translateY(-12px) scale(0.985); filter: blur(2px); }
+    }
+    /* Incoming: gently rise + warm in */
+    @keyframes book-open {
+      0%   { opacity: 0; transform: translateY(8px)  scale(1.005); }
+      40%  { opacity: 0.65; }
+      100% { opacity: 1; transform: translateY(0)    scale(1);     }
+    }
+    /* A subtle warm wash that crosses the whole frame during the transition */
+    @keyframes book-wash {
+      0%   { opacity: 0; }
+      30%  { opacity: 0.55; }
+      100% { opacity: 0; }
+    }
+    .scene-out { animation: book-close 620ms cubic-bezier(.22,.61,.32,1) forwards; pointer-events: none; }
+    .scene-in  { animation: book-open  720ms cubic-bezier(.22,.61,.32,1) both; }
+    .scene-wash {
+      position: fixed; inset: 0; z-index: 25; pointer-events: none;
+      background: radial-gradient(60% 50% at 50% 45%, rgba(0,0,0,0.18), rgba(0,0,0,0.04) 60%, transparent 80%);
+      animation: book-wash 620ms cubic-bezier(.4,0,.4,1) forwards;
+    }
+    .scene-wash.light {
+      background: radial-gradient(60% 50% at 50% 45%, rgba(60,40,20,0.10), rgba(60,40,20,0.03) 60%, transparent 80%);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scene-out, .scene-in, .scene-wash { animation: none; }
+      .scene-out { display: none; }
+    }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" src="data.jsx"></script>
+  <script type="text/babel" src="passages.jsx"></script>
+  <script type="text/babel" src="components/primitives.jsx"></script>
+  <script type="text/babel" src="components/popovers.jsx"></script>
+  <script type="text/babel" src="components/typing-sound.jsx"></script>
+  <script type="text/babel" src="components/library.jsx"></script>
+  <script type="text/babel" src="components/prepare.jsx"></script>
+  <script type="text/babel" src="components/reading.jsx"></script>
+  <script type="text/babel" src="components/complete.jsx"></script>
+
+  <script type="text/babel">
+    const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+      "screen": "prepare",
+      "readingVariant": "A",
+      "libraryTone": "ink"
+    }/*EDITMODE-END*/;
+
+    function App() {
+      // Hydrate from localStorage
+      const saved = (() => {
+        try { return JSON.parse(localStorage.getItem('meditype') || '{}'); }
+        catch (e) { return {}; }
+      })();
+
+      const [screen, setScreen] = React.useState(saved.screen || TWEAK_DEFAULTS.screen);
+      const [book, setBook] = React.useState(saved.book ? BOOKS.find(b => b.id === saved.book) || BOOKS[0] : BOOKS.find(b => b.id === 'aurelius'));
+      const [settings, setSettings] = React.useState(saved.settings || null);
+      const [readingVariant, setReadingVariant] = React.useState(saved.readingVariant || TWEAK_DEFAULTS.readingVariant);
+      const [libraryTone, setLibraryTone] = React.useState(saved.libraryTone || TWEAK_DEFAULTS.libraryTone);
+
+      // Closing-the-book transition: when set, we render the previous screen on top
+      // while the new screen fades in beneath. Cleared automatically.
+      const [closing, setClosing] = React.useState(null);
+      // closing = { fromScreen, fromBook, fromTone } | null
+
+      const closeTo = React.useCallback((nextScreen, opts = {}) => {
+        // Snapshot what's leaving so it keeps rendering during the fade-out.
+        setClosing({
+          fromScreen: screen,
+          fromBook: book,
+          fromTone: opts.fromTone,
+        });
+        // Apply screen change next tick so React commits the snapshot first.
+        setScreen(nextScreen);
+        if (opts.onAfter) opts.onAfter();
+        window.setTimeout(() => setClosing(null), 720);
+      }, [screen, book]);
+
+      // Tweaks
+      const [tweaksOpen, setTweaksOpen] = React.useState(false);
+      React.useEffect(() => {
+        const onMsg = (e) => {
+          if (e.data?.type === '__activate_edit_mode') setTweaksOpen(true);
+          if (e.data?.type === '__deactivate_edit_mode') setTweaksOpen(false);
+        };
+        window.addEventListener('message', onMsg);
+        window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+        return () => window.removeEventListener('message', onMsg);
+      }, []);
+
+      // Persist
+      React.useEffect(() => {
+        localStorage.setItem('meditype', JSON.stringify({
+          screen, book: book.id, settings, readingVariant, libraryTone,
+        }));
+      }, [screen, book, settings, readingVariant, libraryTone]);
+
+      const saveTweak = (edits) => {
+        window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
+      };
+
+      const darkForReadingC = readingVariant === 'C';
+      const nonReadingTone = libraryTone;
+
+      // Render a screen by name. Used for both current and outgoing.
+      const renderScreen = (which, asOutgoing = false) => {
+        if (which === 'library') {
+          return <LibraryScreen
+            tone={nonReadingTone}
+            onOpenBook={(b) => { setBook(b); setScreen('prepare'); }}
+          />;
+        }
+        if (which === 'prepare') {
+          return <PrepareScreen
+            book={asOutgoing && closing ? closing.fromBook : book}
+            tone={nonReadingTone}
+            onBack={() => closeTo('library', { fromTone: nonReadingTone })}
+            onBegin={(s) => { setSettings(s); setScreen('reading'); }}
+          />;
+        }
+        if (which === 'reading') {
+          return <ReadingScreen
+            book={asOutgoing && closing ? closing.fromBook : book}
+            variant={readingVariant}
+            settings={settings}
+            onVariantChange={(v) => { setReadingVariant(v); saveTweak({ readingVariant: v }); }}
+            onExit={() => closeTo('prepare', { fromTone: darkForReadingC ? 'ember' : 'ink' })}
+            onComplete={() => setScreen('complete')}
+          />;
+        }
+        if (which === 'complete') {
+          const b = asOutgoing && closing ? closing.fromBook : book;
+          return <CompleteScreen
+            book={b}
+            tone={darkForReadingC ? 'dark' : nonReadingTone}
+            stats={{
+              words: 1427,
+              time: '28 min',
+              passages: 4,
+              bookPosition: b.continue ? `${Math.round(b.continue * 100)}%` : '2%',
+            }}
+            onContinue={() => setScreen('prepare')}
+            onClose={() => closeTo('library', { fromTone: darkForReadingC ? 'ember' : 'ink' })}
+          />;
+        }
+      };
+
+      const isClosing = !!closing;
+
+      return (
+        <React.Fragment>
+          {isClosing ? (
+            <div className="scene">
+              <div className="scene-layer scene-in" key={`in-${screen}`}>
+                {renderScreen(screen, false)}
+              </div>
+              <div className="scene-layer scene-out" key={`out-${closing.fromScreen}`}>
+                {renderScreen(closing.fromScreen, true)}
+              </div>
+              <div className={`scene-wash ${closing.fromTone === 'ink' ? 'light' : ''}`} />
+            </div>
+          ) : (
+            renderScreen(screen, false)
+          )}
+          {tweaksOpen && (
+            <div className={`tweaks ${darkForReadingC && screen === 'reading' ? 'dark' : (nonReadingTone !== 'ink' ? 'dark' : '')}`}>
+              <h4>
+                <span>Tweaks</span>
+                <button className="close" onClick={() => setTweaksOpen(false)}>hide</button>
+              </h4>
+
+              <div className="label">Screen</div>
+              <div className="row">
+                {['library','prepare','reading','complete'].map(s => (
+                  <button key={s} className={`chip ${screen === s ? 'active' : ''}`}
+                    onClick={() => { setScreen(s); saveTweak({ screen: s }); }}>
+                    {s}
+                  </button>
+                ))}
+              </div>
+
+              <div className="label">Reading variant</div>
+              <div className="row">
+                {[
+                  { id: 'A', label: 'A · split' },
+                  { id: 'B', label: 'B · unified' },
+                  { id: 'C', label: 'C · candlelit' },
+                ].map(v => (
+                  <button key={v.id} className={`chip ${readingVariant === v.id ? 'active' : ''}`}
+                    onClick={() => { setReadingVariant(v.id); saveTweak({ readingVariant: v.id }); }}>
+                    {v.label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="label">Library · prepare · complete tone</div>
+              <div className="row">
+                {[
+                  { id: 'ink', label: 'paper' },
+                  { id: 'ember', label: 'candlelit' },
+                ].map(t => (
+                  <button key={t.id} className={`chip ${libraryTone === t.id ? 'active' : ''}`}
+                    onClick={() => { setLibraryTone(t.id); saveTweak({ libraryTone: t.id }); }}>
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="label">Book</div>
+              <div className="row">
+                {['aurelius','walden','rumi','rilke'].map(id => {
+                  const b = BOOKS.find(x => x.id === id);
+                  return (
+                    <button key={id} className={`chip ${book.id === id ? 'active' : ''}`}
+                      onClick={() => setBook(b)}>
+                      {b.title.split(' ')[0].toLowerCase()}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div style={{
+                marginTop: 14, paddingTop: 12, borderTop: '1px solid currentColor',
+                borderTopColor: 'inherit', opacity: 0.6,
+                fontSize: 11, fontStyle: 'italic', lineHeight: 1.5,
+              }}>
+                On the Reading screen, type to see the surface behave.
+                Space or Enter turns the page.
+              </div>
+            </div>
+          )}
+        </React.Fragment>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+  </script>
+</body>
+</html>

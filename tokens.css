@@ -1,0 +1,73 @@
+/* meditype — shared tokens */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+  /* Paper (light) */
+  --paper:        #F2ECE0;
+  --paper-deep:   #ECE4D4;
+  --paper-edge:   #E3DBCB;
+  --hairline:     #C9BFAB;
+  --ink:          #22201C;
+  --ink-soft:     #5A5348;
+  --ink-faint:    #8A8172;
+  --accent:       #B5705A;          /* dusty terracotta */
+  --accent-soft:  #D2A494;
+  --error:        #A85B50;          /* soft faded red */
+
+  /* Candlelit (dark) */
+  --walnut:       #1C140E;
+  --walnut-deep:  #140D08;
+  --walnut-edge:  #2A1F16;
+  --hairline-d:   #4A3A2A;
+  --paper-warm:   #E8DCC4;
+  --paper-dim:    #B9A585;
+  --paper-faint:  #7C6A50;
+  --ember:        #D9AE76;          /* candleglow */
+  --ember-soft:   #A37A4E;
+  --error-d:      #C87A6A;
+
+  --serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+  --mono:  'JetBrains Mono', ui-monospace, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--serif);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss01', 'ss02', 'liga', 'kern';
+  text-rendering: optimizeLegibility;
+}
+
+button { font-family: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+input, textarea { font-family: inherit; color: inherit; }
+
+/* Paper grain — very subtle */
+.paper-grain {
+  position: relative;
+}
+.paper-grain::before {
+  content: '';
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(110, 90, 60, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(110, 90, 60, 0.025) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+}
+
+.hairline { height: 1px; background: var(--hairline); opacity: 0.5; }
+.hairline-d { height: 1px; background: var(--hairline-d); opacity: 0.6; }
+
+/* Utility */
+.tracked { letter-spacing: 0.22em; text-transform: uppercase; }
+.tracked-tight { letter-spacing: 0.12em; text-transform: uppercase; }
