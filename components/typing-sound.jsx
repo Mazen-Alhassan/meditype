@@ -88,17 +88,13 @@ class TypingSound {
     if (idx === this._lastThockyIdx) idx = (idx + 1) % THOCKY_BANK.length;
     this._lastThockyIdx = idx;
     const id = `thocky-${idx}`;
+    // No pitch jitter — rate stays at 1.0 so every sample sounds as recorded.
+    // Only tiny gain variation (±8%) keeps consecutive keys from being robotically identical.
+    const opts = { rate: 1.0, gain: 0.92 + Math.random() * 0.16 };
     if (this.buffers[id]) {
-      // pitch jitter ±4%, gain jitter ±15%
-      const rate = 0.96 + Math.random() * 0.08;
-      const gain = 0.85 + Math.random() * 0.30;
-      this._playSample(id, { rate, gain });
+      this._playSample(id, opts);
     } else {
-      this._load(id, THOCKY_BANK[idx]).then(() => {
-        const rate = 0.96 + Math.random() * 0.08;
-        const gain = 0.85 + Math.random() * 0.30;
-        this._playSample(id, { rate, gain });
-      });
+      this._load(id, THOCKY_BANK[idx]).then(() => this._playSample(id, opts));
     }
   }
 
@@ -192,20 +188,22 @@ const TYPING_PRESETS = [
 
 // ------------------------------------------------------------
 // TYPING SOUND POPOVER
-function TypingSoundPopover({ preset, volume, onMistake, showRainHint, onPreset, onVolume, onMistakeToggle, onDismissHint, tone }) {
-  const isDark = tone !== 'ink';
-  const ink = isDark ? 'var(--paper-warm)' : 'var(--ink)';
-  const soft = isDark ? 'var(--paper-dim)' : 'var(--ink-soft)';
-  const faint = isDark ? 'var(--paper-faint)' : 'var(--ink-faint)';
-  const rule = isDark ? 'var(--hairline-d)' : 'var(--hairline)';
+function TypingSoundPopover({ preset, volume, onMistake, showRainHint, onPreset, onVolume, onMistakeToggle, onDismissHint, tone, bgId }) {
+  const isDark = ['wood','sky','ink'].includes(bgId) || tone !== 'ink';
+  const COLORS = { paper:{bg:'#EAE2D0',border:'#D5CBB8',text:'var(--ink)',soft:'var(--ink-soft)',rule:'var(--hairline)'}, linen:{bg:'#E2DAC7',border:'#CBBFA8',text:'var(--ink)',soft:'var(--ink-soft)',rule:'var(--hairline)'}, mist:{bg:'#D8D9D1',border:'#C2C4BA',text:'var(--ink)',soft:'var(--ink-soft)',rule:'#B5B9AF'}, wood:{bg:'#38291A',border:'#513C24',text:'var(--paper-warm)',soft:'var(--paper-dim)',rule:'var(--hairline-d)'}, sky:{bg:'#30354A',border:'#3E4560',text:'#DDE0EC',soft:'#9AA0BC',rule:'#44506A'}, ink:{bg:'#221810',border:'#362515',text:'var(--paper-warm)',soft:'var(--paper-dim)',rule:'var(--hairline-d)'} };
+  const c = COLORS[bgId] || (isDark ? COLORS.wood : COLORS.paper);
+  const ink   = c.text;
+  const soft  = c.soft;
+  const faint = c.soft;
+  const rule  = c.rule;
   const accent = isDark ? 'var(--ember)' : 'var(--accent)';
 
   const isSilent = preset === 'silent';
   const dimStyle = isSilent ? { opacity: 0.5, pointerEvents: 'none' } : {};
 
   return (
-    <Popover tone={tone}>
-      <PopoverHeader title="Typing Sound" hint={TYPING_PRESETS.find(p => p.id === preset)?.name.toLowerCase()} tone={tone} />
+    <Popover tone={tone} bgId={bgId}>
+      <PopoverHeader title="Typing Sound" hint={TYPING_PRESETS.find(p => p.id === preset)?.name.toLowerCase()} tone={tone} bgId={bgId} />
 
       <div style={{ display: 'grid', gap: 2 }}>
         {TYPING_PRESETS.map(p => {

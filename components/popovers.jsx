@@ -206,29 +206,38 @@ window.ambience = window.ambience || new Ambience();
 
 // ------------------------------------------------------------
 // Popover shell
-function Popover({ children, anchor = 'right', top = 76, right = 88, tone }) {
-  const isDark = tone !== 'ink';
+// Derive popover surface color from the current background selection so it
+// always feels like a panel lifted from the same surface the user is sitting on.
+const POPOVER_COLORS = {
+  paper: { bg: '#EAE2D0', border: '#D5CBB8', text: 'var(--ink)',       textSoft: 'var(--ink-soft)',  rule: 'var(--hairline)',   shadow: '0 2px 20px rgba(54,40,20,0.10)' },
+  linen: { bg: '#E2DAC7', border: '#CBBFA8', text: 'var(--ink)',       textSoft: 'var(--ink-soft)',  rule: 'var(--hairline)',   shadow: '0 2px 20px rgba(54,40,20,0.10)' },
+  mist:  { bg: '#D8D9D1', border: '#C2C4BA', text: 'var(--ink)',       textSoft: 'var(--ink-soft)',  rule: '#B5B9AF',          shadow: '0 2px 20px rgba(40,44,38,0.10)'  },
+  wood:  { bg: '#38291A', border: '#513C24', text: 'var(--paper-warm)','textSoft':'var(--paper-dim)', rule: 'var(--hairline-d)', shadow: '0 2px 20px rgba(0,0,0,0.45)'   },
+  sky:   { bg: '#30354A', border: '#3E4560', text: '#DDE0EC',          textSoft: '#9AA0BC',          rule: '#44506A',          shadow: '0 2px 20px rgba(0,0,0,0.40)'    },
+  ink:   { bg: '#221810', border: '#362515', text: 'var(--paper-warm)','textSoft':'var(--paper-dim)', rule: 'var(--hairline-d)', shadow: '0 2px 20px rgba(0,0,0,0.50)'   },
+};
+
+function Popover({ children, anchor = 'right', top = 76, right = 88, tone, bgId }) {
+  const c = POPOVER_COLORS[bgId] || (tone !== 'ink' ? POPOVER_COLORS.wood : POPOVER_COLORS.paper);
   return (
     <div style={{
       position: 'fixed', top, right,
       width: 340,
-      background: isDark ? 'var(--walnut-edge)' : 'var(--paper-deep)',
-      border: `1px solid ${isDark ? 'var(--hairline-d)' : 'var(--hairline)'}`,
+      background: c.bg,
+      border: `1px solid ${c.border}`,
       padding: '22px 24px 20px',
       fontFamily: 'var(--serif)',
-      color: isDark ? 'var(--paper-warm)' : 'var(--ink)',
+      color: c.text,
       zIndex: 40,
-      boxShadow: isDark
-        ? '0 2px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(217,174,118,0.04) inset'
-        : '0 2px 20px rgba(54,40,20,0.08)',
+      boxShadow: c.shadow,
     }}>
       {/* hairline tick pointing up to the anchor */}
       <div style={{
         position: 'absolute', top: -6, right: anchor === 'right' ? 40 : 'auto', left: anchor === 'left' ? 40 : 'auto',
         width: 10, height: 10,
-        background: isDark ? 'var(--walnut-edge)' : 'var(--paper-deep)',
-        borderTop: `1px solid ${isDark ? 'var(--hairline-d)' : 'var(--hairline)'}`,
-        borderLeft: `1px solid ${isDark ? 'var(--hairline-d)' : 'var(--hairline)'}`,
+        background: c.bg,
+        borderTop: `1px solid ${c.border}`,
+        borderLeft: `1px solid ${c.border}`,
         transform: 'rotate(45deg)',
       }} />
       {children}
@@ -236,13 +245,13 @@ function Popover({ children, anchor = 'right', top = 76, right = 88, tone }) {
   );
 }
 
-function PopoverHeader({ title, hint, tone }) {
-  const isDark = tone !== 'ink';
+function PopoverHeader({ title, hint, tone, bgId }) {
+  const c = POPOVER_COLORS[bgId] || (tone !== 'ink' ? POPOVER_COLORS.wood : POPOVER_COLORS.paper);
   return (
     <div style={{
       display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
       marginBottom: 18, paddingBottom: 14,
-      borderBottom: `1px solid ${isDark ? 'var(--hairline-d)' : 'var(--hairline)'}`,
+      borderBottom: `1px solid ${c.border}`,
     }}>
       <div style={{
         fontFamily: 'var(--mono)', fontSize: 10.5, letterSpacing: '0.3em',
@@ -258,16 +267,17 @@ function PopoverHeader({ title, hint, tone }) {
 
 // ------------------------------------------------------------
 // SOUND POPOVER
-function SoundPopover({ currentId, volume, onSelect, onVolume, tone }) {
-  const isDark = tone !== 'ink';
-  const faint = isDark ? 'var(--paper-faint)' : 'var(--ink-faint)';
-  const soft = isDark ? 'var(--paper-dim)' : 'var(--ink-soft)';
-  const rule = isDark ? 'var(--hairline-d)' : 'var(--hairline)';
+function SoundPopover({ currentId, volume, onSelect, onVolume, tone, bgId }) {
+  const c = POPOVER_COLORS[bgId] || (tone !== 'ink' ? POPOVER_COLORS.wood : POPOVER_COLORS.paper);
+  const isDark = ['wood','sky','ink'].includes(bgId) || tone !== 'ink';
+  const faint = c.textSoft || (isDark ? 'var(--paper-faint)' : 'var(--ink-faint)');
+  const soft  = c.textSoft || (isDark ? 'var(--paper-dim)'   : 'var(--ink-soft)');
+  const rule  = c.rule;
   const accent = isDark ? 'var(--ember)' : 'var(--accent)';
 
   return (
-    <Popover tone={tone}>
-      <PopoverHeader title="Sound" hint={currentId === 'off' ? 'off' : 'playing'} tone={tone} />
+    <Popover tone={tone} bgId={bgId}>
+      <PopoverHeader title="Sound" hint={currentId === 'off' ? 'off' : 'playing'} tone={tone} bgId={bgId} />
       <div style={{ display: 'grid', gap: 2 }}>
         {[{ id: 'off', name: 'Off', hint: 'no sound' }, ...AMBIENTS].map(a => {
           const active = currentId === a.id;
@@ -318,14 +328,15 @@ function SoundPopover({ currentId, volume, onSelect, onVolume, tone }) {
 
 // ------------------------------------------------------------
 // BACKGROUND POPOVER
-function BackgroundPopover({ currentId, onSelect, tone }) {
-  const isDark = tone !== 'ink';
-  const soft = isDark ? 'var(--paper-dim)' : 'var(--ink-soft)';
-  const faint = isDark ? 'var(--paper-faint)' : 'var(--ink-faint)';
+function BackgroundPopover({ currentId, onSelect, tone, bgId }) {
+  const c = POPOVER_COLORS[bgId] || (tone !== 'ink' ? POPOVER_COLORS.wood : POPOVER_COLORS.paper);
+  const isDark = ['wood','sky','ink'].includes(bgId) || tone !== 'ink';
+  const soft  = c.textSoft || (isDark ? 'var(--paper-dim)'   : 'var(--ink-soft)');
+  const faint = c.textSoft || (isDark ? 'var(--paper-faint)' : 'var(--ink-faint)');
 
   return (
-    <Popover tone={tone}>
-      <PopoverHeader title="Background" hint="where the page sits" tone={tone} />
+    <Popover tone={tone} bgId={bgId}>
+      <PopoverHeader title="Background" hint="where the page sits" tone={tone} bgId={bgId} />
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
         {BACKGROUNDS.map(b => {
           const active = currentId === b.id;
@@ -354,13 +365,14 @@ function BackgroundPopover({ currentId, onSelect, tone }) {
 
 // ------------------------------------------------------------
 // SETTINGS POPOVER
-function SettingsPopover({ settings, onChange, tone, onToggleTone }) {
-  const isDark = tone !== 'ink';
-  const soft = isDark ? 'var(--paper-dim)' : 'var(--ink-soft)';
-  const faint = isDark ? 'var(--paper-faint)' : 'var(--ink-faint)';
-  const rule = isDark ? 'var(--hairline-d)' : 'var(--hairline)';
+function SettingsPopover({ settings, onChange, tone, onToggleTone, bgId }) {
+  const c = POPOVER_COLORS[bgId] || (tone !== 'ink' ? POPOVER_COLORS.wood : POPOVER_COLORS.paper);
+  const isDark = ['wood','sky','ink'].includes(bgId) || tone !== 'ink';
+  const soft  = c.textSoft || (isDark ? 'var(--paper-dim)'   : 'var(--ink-soft)');
+  const faint = c.textSoft || (isDark ? 'var(--paper-faint)' : 'var(--ink-faint)');
+  const rule  = c.rule;
   const accent = isDark ? 'var(--ember)' : 'var(--accent)';
-  const ink = isDark ? 'var(--paper-warm)' : 'var(--ink)';
+  const ink   = c.text || (isDark ? 'var(--paper-warm)' : 'var(--ink)');
 
   const Row = ({ label, children }) => (
     <div style={{
@@ -387,8 +399,8 @@ function SettingsPopover({ settings, onChange, tone, onToggleTone }) {
   );
 
   return (
-    <Popover tone={tone}>
-      <PopoverHeader title="Settings" hint="the room" tone={tone} />
+    <Popover tone={tone} bgId={bgId}>
+      <PopoverHeader title="Settings" hint="the room" tone={tone} bgId={bgId} />
 
       <Row label="Theme">
         <Chip active={!isDark} onClick={() => onToggleTone('ink')}>Paper</Chip>
