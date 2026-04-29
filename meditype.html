@@ -53,9 +53,9 @@
     }
 
     /* ---- screen transitions: closing the book ---- */
-    .scene { position: relative; min-height: 100%; }
+    .scene { position: relative; min-height: 100vh; overflow: hidden; }
     .scene-layer {
-      position: absolute; inset: 0; min-height: 100%;
+      position: absolute; inset: 0; min-height: 100vh;
       will-change: transform, opacity, filter;
     }
     /* Outgoing: settle, lift, soften, fade */
@@ -111,6 +111,7 @@
   <script type="text/babel" src="components/library.jsx"></script>
   <script type="text/babel" src="components/prepare.jsx"></script>
   <script type="text/babel" src="components/reading.jsx"></script>
+  <script type="text/babel" src="components/hint.jsx"></script>
   <script type="text/babel" src="components/complete.jsx"></script>
 
   <script type="text/babel">

@@ -178,6 +178,12 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
       if (e.key === 'Escape') { fadeAndDo(onExit); return; }
       if (e.metaKey || e.ctrlKey || e.altKey) return;
 
+      if (e.key === 'Tab') {
+        // Tab resets the current passage — like monkeytype.
+        e.preventDefault();
+        setTyped('');
+        return;
+      }
       if (e.key === 'Backspace') {
         e.preventDefault();
         setTyped(t => t.slice(0, -1));
@@ -246,7 +252,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
           <SoundPopover
             currentId={ambientId} volume={volume}
             onSelect={setAmbientId} onVolume={setVolume}
-            tone={isDark ? 'ember' : 'ink'} />
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId} />
         </div>
       )}
       {openPopover === 'background' && (
@@ -256,7 +262,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
             onSelect={(id) => {
               setBackgroundId(id);
             }}
-            tone={isDark ? 'ember' : 'ink'} />
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId} />
         </div>
       )}
       {openPopover === 'typing' && (
@@ -268,7 +274,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
             onVolume={setTsVolume}
             onMistakeToggle={setTsMistake}
             onDismissHint={() => setRainHintDismissed(true)}
-            tone={isDark ? 'ember' : 'ink'} />
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId} />
         </div>
       )}
       {openPopover === 'settings' && (
