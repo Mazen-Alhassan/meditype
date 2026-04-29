@@ -247,6 +247,7 @@ function Popover({ children, anchor = 'right', top = 76, right = 88, tone, bgId 
 
 function PopoverHeader({ title, hint, tone, bgId }) {
   const c = POPOVER_COLORS[bgId] || (tone !== 'ink' ? POPOVER_COLORS.wood : POPOVER_COLORS.paper);
+  const isDark = ['wood','sky','ink'].includes(bgId) || tone !== 'ink';
   return (
     <div style={{
       display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
