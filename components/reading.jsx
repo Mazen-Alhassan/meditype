@@ -34,39 +34,28 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
 
   // Live session state
   const [ambientId, setAmbientId] = React.useState(initialSettings?.ambient || 'rain');
-  const [volume, setVolume] = React.useState(() => MTStorage.prefs.getField('ambientVolume', 0.45));
+  const [volume, setVolume] = React.useState(0.45);
   const [backgroundId, setBackgroundId] = React.useState(initialSettings?.background || 'paper');
-  const [sessionSettings, setSessionSettings] = React.useState(() => ({
-    typeSize: MTStorage.prefs.getField('typeSize', 'M'),
-    strict: MTStorage.prefs.getField('strict', false),
-    showTimer: MTStorage.prefs.getField('showTimer', true),
-    margins: MTStorage.prefs.getField('margins', 50),
-  }));
+  const [sessionSettings, setSessionSettings] = React.useState({
+    typeSize: 'M', strict: false, showTimer: true, margins: 50,
+  });
   const [openPopover, setOpenPopover] = React.useState(null);
 
-  // Typing sound — persists globally via the versioned prefs blob.
-  const [tsPreset, setTsPreset] = React.useState(() => MTStorage.prefs.getField('typingPreset', 'softkeys'));
-  const [tsVolume, setTsVolume] = React.useState(() => MTStorage.prefs.getField('typingVolume', 0.4));
-  const [tsMistake, setTsMistake] = React.useState(() => MTStorage.prefs.getField('typingMistake', true));
-  const [rainHintDismissed, setRainHintDismissed] = React.useState(() => MTStorage.prefs.getField('rainHintDismissed', false));
+  // Typing sound — persists globally (not per-book)
+  const savedTS = (() => { try { return JSON.parse(localStorage.getItem('meditype.typingSound') || '{}'); } catch { return {}; } })();
+  const [tsPreset, setTsPreset] = React.useState(savedTS.preset || 'softkeys');
+  const [tsVolume, setTsVolume] = React.useState(savedTS.volume ?? 0.4);
+  const [tsMistake, setTsMistake] = React.useState(savedTS.mistake !== false);
+  const [rainHintDismissed, setRainHintDismissed] = React.useState(savedTS.rainHintDismissed || false);
 
   React.useEffect(() => {
-    MTStorage.prefs.setField('typingPreset', tsPreset);
-    MTStorage.prefs.setField('typingVolume', tsVolume);
-    MTStorage.prefs.setField('typingMistake', tsMistake);
-    MTStorage.prefs.setField('rainHintDismissed', rainHintDismissed);
+    localStorage.setItem('meditype.typingSound', JSON.stringify({
+      preset: tsPreset, volume: tsVolume, mistake: tsMistake, rainHintDismissed,
+    }));
     window.typingSound.setPreset(tsPreset);
     window.typingSound.setVolume(tsVolume);
     window.typingSound.setMistake(tsMistake);
   }, [tsPreset, tsVolume, tsMistake, rainHintDismissed]);
-
-  React.useEffect(() => { MTStorage.prefs.setField('ambientVolume', volume); }, [volume]);
-  React.useEffect(() => {
-    MTStorage.prefs.setField('typeSize', sessionSettings.typeSize);
-    MTStorage.prefs.setField('strict', sessionSettings.strict);
-    MTStorage.prefs.setField('showTimer', sessionSettings.showTimer);
-    MTStorage.prefs.setField('margins', sessionSettings.margins);
-  }, [sessionSettings]);
 
   const current = passages[passageIdx] || '';
   const isLast = passageIdx >= passages.length - 1;
@@ -246,7 +235,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
           <SoundPopover
             currentId={ambientId} volume={volume}
             onSelect={setAmbientId} onVolume={setVolume}
-            tone={isDark ? 'ember' : 'ink'} />
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId} />
         </div>
       )}
       {openPopover === 'background' && (
@@ -256,7 +245,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
             onSelect={(id) => {
               setBackgroundId(id);
             }}
-            tone={isDark ? 'ember' : 'ink'} />
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId} />
         </div>
       )}
       {openPopover === 'typing' && (
@@ -268,7 +257,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
             onVolume={setTsVolume}
             onMistakeToggle={setTsMistake}
             onDismissHint={() => setRainHintDismissed(true)}
-            tone={isDark ? 'ember' : 'ink'} />
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId} />
         </div>
       )}
       {openPopover === 'settings' && (
@@ -276,7 +265,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
           <SettingsPopover
             settings={sessionSettings}
             onChange={(patch) => setSessionSettings(s => ({ ...s, ...patch }))}
-            tone={isDark ? 'ember' : 'ink'}
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId}
             onToggleTone={(t) => onVariantChange?.(t === 'ember' ? 'C' : 'A')}
           />
         </div>
