@@ -98,13 +98,20 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
     return () => clearInterval(t);
   }, []);
 
-  // Ambient audio — start on first user interaction (browser policy)
+  // Ambient audio — arm immediately on mount (the "Begin" click counts as a user
+  // gesture, so AudioContext can start without waiting for another keypress).
   const audioArmedRef = React.useRef(false);
   React.useEffect(() => {
+    if (audioArmedRef.current) return;
+    audioArmedRef.current = true;
+    if (ambientId && ambientId !== 'off') {
+      window.ambience.setVolume(volume);
+      window.ambience.play(ambientId);
+    }
+    // Fallback: also arm on first keydown/mousedown in case mount fires before ctx resumes
     const arm = () => {
-      if (audioArmedRef.current) return;
-      audioArmedRef.current = true;
-      if (ambientId && ambientId !== 'off') {
+      if (audioArmedRef.current && !window.ambience.ctx) return;
+      if (ambientId && ambientId !== 'off' && !window.ambience.current) {
         window.ambience.setVolume(volume);
         window.ambience.play(ambientId);
       }
@@ -179,7 +186,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
       if (e.metaKey || e.ctrlKey || e.altKey) return;
 
       if (e.key === 'Tab') {
-        // Tab resets the current passage — like monkeytype.
+        // Tab (or Tab+Enter on Mac) resets the current passage — like monkeytype
         e.preventDefault();
         setTyped('');
         return;
@@ -227,11 +234,16 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
   const prev = passages[passageIdx - 1];
   const next = passages[passageIdx + 1];
 
+  // Fade-in on mount — smooth transition from Begin → reading
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => { requestAnimationFrame(() => setMounted(true)); }, []);
+
   return (
     <div className="paper-grain" style={{
       minHeight: '100%', background: bg, color: textInk,
       fontFamily: 'var(--serif)', position: 'relative',
-      transition: 'background 800ms ease, color 800ms ease',
+      transition: 'background 800ms ease, color 800ms ease, opacity 600ms ease',
+      opacity: mounted ? 1 : 0,
     }}>
       {/* ambient vignette in dark mode */}
       {isDark && <div style={{
@@ -280,9 +292,15 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
       {openPopover === 'settings' && (
         <div data-popover>
           <SettingsPopover
-            settings={sessionSettings}
-            onChange={(patch) => setSessionSettings(s => ({ ...s, ...patch }))}
-            tone={isDark ? 'ember' : 'ink'}
+            settings={{ ...sessionSettings, variant }}
+            onChange={(patch) => {
+              if (patch.variant && patch.variant !== variant) {
+                onVariantChange?.(patch.variant);
+              }
+              const { variant: _v, ...rest } = patch;
+              if (Object.keys(rest).length) setSessionSettings(s => ({ ...s, ...rest }));
+            }}
+            tone={isDark ? 'ember' : 'ink'} bgId={backgroundId}
             onToggleTone={(t) => onVariantChange?.(t === 'ember' ? 'C' : 'A')}
           />
         </div>
@@ -291,7 +309,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
       {/* Body */}
       <main ref={containerRef} style={{
         minHeight: 'calc(100vh - 128px)',
-        padding: variant === 'B' ? '80px 0 120px' : '72px 88px 120px',
+        padding: variant === 'B' ? '104px 0 132px' : '72px 88px 120px',
       }}>
         {variant === 'A' && (
           <SplitLayout
@@ -328,6 +346,11 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
         typed={typed} current={current} isComplete={isComplete} isLast={isLast}
         textInk={textInk} textSoft={textSoft} textFaint={textFaint} rule={rule}
         accent={accent} />
+
+      {/* Onboarding hint card */}
+      <ReadingHint
+        isDark={isDark} accent={accent} rule={rule} bgId={backgroundId}
+        textInk={textInk} textSoft={textSoft} textFaint={textFaint} />
     </div>
   );
 }
@@ -530,7 +553,7 @@ function SplitLayout({ book, passageIdx, total, prev, current, next, typed, show
         </div>
 
         {prev && (
-          <div style={{ opacity: 0.22, marginBottom: 28 }}>
+          <div style={{ opacity: 0.45, marginBottom: 28 }}>
             <TypedPassage text={prev} typed={prev} size={17}
               textInk={textFaint} textFaint={textFaint} errorClr={errorClr} accent={accent}
               mode="book" />
@@ -549,7 +572,7 @@ function SplitLayout({ book, passageIdx, total, prev, current, next, typed, show
         </div>
 
         {next && (
-          <div style={{ opacity: 0.22, marginTop: 32 }}>
+          <div style={{ opacity: 0.45, marginTop: 32 }}>
             <TypedPassage text={next} typed="" size={17}
               textInk={textFaint} textFaint={textFaint} errorClr={errorClr} accent={accent}
               mode="book" emphasisCurrentWord={false} />
@@ -597,25 +620,26 @@ function SplitLayout({ book, passageIdx, total, prev, current, next, typed, show
 function UnifiedLayout({ book, passageIdx, total, prev, current, next, typed, showTurn,
                         strict = false, typeSize = 'M',
                         textInk, textSoft, textFaint, rule, accent, errorClr, dim }) {
-  const sizePx = typeSize === 'S' ? 19 : typeSize === 'L' ? 30 : 24;
+  const sizePx = typeSize === 'S' ? 21 : typeSize === 'L' ? 32 : 26;
   return (
     <div style={{
-      maxWidth: 760, margin: '0 auto', padding: '0 40px',
+      maxWidth: 880, margin: '0 auto', padding: '0 56px',
       opacity: showTurn ? 0 : 1, transition: 'opacity 500ms ease',
     }}>
-      {/* Title marginalia */}
+      {/* Header rule — book title ─── passage NN */}
       <div style={{
-        display: 'grid', gridTemplateColumns: '1fr 1fr', marginBottom: 72,
         fontFamily: 'var(--mono)', fontSize: 10.5, letterSpacing: '0.3em',
-        textTransform: 'uppercase', color: textFaint,
+        textTransform: 'uppercase', color: textFaint, marginBottom: 72,
+        display: 'flex', alignItems: 'center', gap: 14,
       }}>
-        <div style={{ fontStyle: 'normal' }}>{book.title}</div>
-        <div style={{ textAlign: 'right' }}>passage {String(passageIdx+1).padStart(2,'0')}</div>
+        <span>{book.title}</span>
+        <span style={{ flex: 1, height: 1, background: rule }} />
+        <span>passage {String(passageIdx+1).padStart(2,'0')}</span>
       </div>
 
-      {/* Previous — very faded, above */}
+      {/* Previous — softly visible, above */}
       {prev && (
-        <div style={{ opacity: 0.18, marginBottom: 48 }}>
+        <div style={{ opacity: 0.45, marginBottom: 40 }}>
           <TypedPassage text={prev} typed={prev} size={17}
             textInk={textFaint} textFaint={textFaint} errorClr={errorClr} accent={accent}
             mode="book" emphasisCurrentWord={false} />
@@ -624,9 +648,9 @@ function UnifiedLayout({ book, passageIdx, total, prev, current, next, typed, sh
 
       {/* Current — the ONE surface. Book and typing are the same thing. */}
       <div style={{ position: 'relative' }}>
-        {/* drop cap */}
+        {/* drop cap — sits well to the left of the text body */}
         <div style={{
-          position: 'absolute', left: -70, top: -8,
+          position: 'absolute', left: -130, top: -8,
           fontSize: 84, lineHeight: 1, fontWeight: 400, color: accent,
           fontStyle: 'italic', opacity: 0.6,
           fontVariationSettings: "'opsz' 144",
@@ -636,9 +660,9 @@ function UnifiedLayout({ book, passageIdx, total, prev, current, next, typed, sh
           textInk={textInk} textFaint={dim} errorClr={errorClr} accent={accent} />
       </div>
 
-      {/* Next — very faded, below */}
+      {/* Next — softly visible, below */}
       {next && (
-        <div style={{ opacity: 0.12, marginTop: 48 }}>
+        <div style={{ opacity: 0.45, marginTop: 40 }}>
           <TypedPassage text={next} typed="" size={17}
             textInk={textFaint} textFaint={textFaint} errorClr={errorClr} accent={accent}
             mode="book" emphasisCurrentWord={false} />
@@ -646,7 +670,7 @@ function UnifiedLayout({ book, passageIdx, total, prev, current, next, typed, sh
       )}
 
       <div style={{
-        marginTop: 72, paddingTop: 22, borderTop: `1px solid ${rule}`,
+        marginTop: 88, paddingTop: 28, borderTop: `1px solid ${rule}`,
         display: 'flex', justifyContent: 'space-between',
         fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.22em',
         textTransform: 'uppercase', color: textFaint,

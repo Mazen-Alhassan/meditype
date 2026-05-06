@@ -1,6 +1,7 @@
 // meditype — onboarding hint card (bottom-right of reading screen)
 // 3 pages, subtle slide/fade between them, dismisses with a quiet fade.
-// Shown once per browser session (localStorage flag: meditype.hintSeen).
+// Shown once per device (localStorage flag: meditype.hintSeen.v2).
+// v2 so old dismissed state from prior sessions doesn't suppress the card.
 // Derives surface colors from the active background (bgId) via the same
 // palette map as the popovers — so it always looks like it belongs.
 
@@ -14,7 +15,7 @@ const HINT_COLORS = {
 };
 
 function ReadingHint({ isDark, bgId, accent: accentProp, rule, textInk: textInkProp, textSoft: textSoftProp, textFaint: textFaintProp }) {
-  const seen = (() => { try { return !!localStorage.getItem('meditype.hintSeen'); } catch { return false; } })();
+  const seen = (() => { try { return !!localStorage.getItem('meditype.hintSeen.v2'); } catch { return false; } })();
   const [visible, setVisible] = React.useState(!seen);
   const [page, setPage] = React.useState(0);
   const [exiting, setExiting] = React.useState(false);
@@ -31,7 +32,7 @@ function ReadingHint({ isDark, bgId, accent: accentProp, rule, textInk: textInkP
     setExiting(true);
     setTimeout(() => {
       setVisible(false);
-      try { localStorage.setItem('meditype.hintSeen', '1'); } catch {}
+      try { localStorage.setItem('meditype.hintSeen.v2', '1'); } catch {}
     }, 380);
   };
 
@@ -127,6 +128,7 @@ function Page1({ textInk, textSoft, textFaint, accent }) {
     { Icon: IconSound,      label: 'Sound',      note: 'ambient for the room' },
     { Icon: ITyping,        label: 'Typing',     note: 'per-keystroke sound'  },
     { Icon: IconBackground, label: 'Background', note: 'surface & palette'    },
+    { Icon: IconLayout,     label: 'Layout',     note: 'split or unified view' },
     { Icon: IconSettings,   label: 'Settings',   note: 'size, mistakes'       },
   ];
   return (

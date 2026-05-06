@@ -20,6 +20,12 @@ class Ambience {
     this.master.connect(this.ctx.destination);
   }
   _stopAll() {
+    // Belt-and-suspenders: pause every cached HTMLAudio element directly,
+    // in case its wrapper got dropped from this.nodes for any reason.
+    ['_rainEl','_fireEl','_jazzEl','_whitenoiseEl'].forEach(k => {
+      const el = this[k];
+      if (el) { try { el.pause(); el.currentTime = 0; } catch {} this[k] = null; }
+    });
     this.nodes.forEach(n => { try { n.stop && n.stop(); n.disconnect && n.disconnect(); } catch(e){} });
     this.nodes = [];
   }
@@ -60,6 +66,8 @@ class Ambience {
   play(preset) {
     this._ensure();
     if (this.ctx.state === 'suspended') this.ctx.resume();
+    // Cancel any pending deferred _stopAll from a previous fade
+    if (this._stopTimer) { clearTimeout(this._stopTimer); this._stopTimer = null; }
     this._stopAll();
     this.current = preset;
 
@@ -197,7 +205,8 @@ class Ambience {
     // route through the master \u2014 the master gain DOES affect them, but we
     // also pause the elements after the fade so they don't keep streaming.
     const stopAtMs = fade * 1000 + 60;
-    setTimeout(() => this._stopAll(), stopAtMs);
+    if (this._stopTimer) clearTimeout(this._stopTimer);
+    this._stopTimer = setTimeout(() => { this._stopAll(); this._stopTimer = null; }, stopAtMs);
     this.current = null;
   }
 }
@@ -416,24 +425,14 @@ function SettingsPopover({ settings, onChange, tone, onToggleTone, bgId }) {
         <Chip active={settings.strict === false} onClick={() => onChange({ strict: false })}>Soft</Chip>
         <Chip active={settings.strict === true}  onClick={() => onChange({ strict: true })}>Strict</Chip>
       </Row>
+      <Row label="Layout">
+        <Chip active={settings.variant !== 'A'} onClick={() => onChange({ variant: 'B' })}>Single</Chip>
+        <Chip active={settings.variant === 'A'} onClick={() => onChange({ variant: 'A' })}>Split</Chip>
+      </Row>
       <Row label="Show timer">
         <Chip active={settings.showTimer !== false} onClick={() => onChange({ showTimer: true })}>On</Chip>
         <Chip active={settings.showTimer === false} onClick={() => onChange({ showTimer: false })}>Off</Chip>
       </Row>
-      <div style={{ padding: '12px 0 0' }}>
-        <div style={{ fontSize: 13, color: soft, fontStyle: 'italic', marginBottom: 10 }}>Margins</div>
-        <input type="range" min="0" max="100" value={settings.margins ?? 50}
-          onChange={(e) => onChange({ margins: parseInt(e.target.value, 10) })}
-          style={{ width: '100%', accentColor: isDark ? '#D9AE76' : '#B5705A' }}
-        />
-        <div style={{
-          display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--mono)',
-          fontSize: 9.5, letterSpacing: '0.22em', textTransform: 'uppercase', color: faint,
-          marginTop: 6,
-        }}>
-          <span>narrow</span><span>wide</span>
-        </div>
-      </div>
 
       <div style={{
         marginTop: 16, paddingTop: 14, borderTop: `1px solid ${rule}`,

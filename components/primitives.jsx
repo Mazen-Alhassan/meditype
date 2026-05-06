@@ -80,6 +80,10 @@ const IconSettings = (p) => <Icon sw={1} {...p} d={<>
   <circle cx="12" cy="12" r="2" />
   <path d="M12 4v3M12 17v3M4 12h3M17 12h3M6.3 6.3l2.1 2.1M15.6 15.6l2.1 2.1M6.3 17.7l2.1-2.1M15.6 8.4l2.1-2.1" opacity="0.7" />
 </>} />;
+const IconLayout = (p) => <Icon sw={1} {...p} d={<>
+  <rect x="4" y="5" width="16" height="14" rx="0" />
+  <path d="M12 5v14" />
+</>} />;
 const IconBack = (p) => <Icon sw={1} {...p} d={<path d="M14 5l-7 7 7 7" />} />;
 const IconSearch = (p) => <Icon sw={1} {...p} d={<>
   <circle cx="11" cy="11" r="5" />
@@ -137,6 +141,6 @@ function BackgroundSwatch({ bg, active, tone = 'ink' }) {
 
 Object.assign(window, {
   BookCover, ProgressLine, Icon, Waveform, BackgroundSwatch,
-  IconSound, IconBackground, IconSettings, IconBack, IconSearch,
+  IconSound, IconBackground, IconSettings, IconLayout, IconBack, IconSearch,
   IconPlay, IconMoon, IconSun, IconCheck,
 });
