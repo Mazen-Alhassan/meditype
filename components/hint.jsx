@@ -50,7 +50,7 @@ function ReadingHint({ isDark, bgId, accent: accentProp, rule, textInk: textInkP
 
   return (
     <div style={{
-      position: 'fixed', bottom: 28, right: 28,
+      position: 'fixed', bottom: 72, right: 28,
       width: 264, zIndex: 35,
       opacity: exiting ? 0 : 1,
       transform: exiting ? 'translateY(10px) scale(0.96)' : 'translateY(0) scale(1)',
@@ -148,7 +148,7 @@ function Page1({ textInk, textSoft, textFaint, accent }) {
       </div>
       <div style={{
         marginTop: 12, fontSize: 10.5, fontStyle: 'italic', color: textFaint, lineHeight: 1.5,
-      }}>All four buttons live in the top-right corner.</div>
+      }}>All five buttons live in the top-right corner. Defaults: <span style={{ fontStyle: 'normal', color: accent }}>Single</span> layout, <span style={{ fontStyle: 'normal', color: accent }}>Strict</span> mistakes — change anytime in Settings.</div>
     </div>
   );
 }

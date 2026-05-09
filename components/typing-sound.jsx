@@ -5,8 +5,7 @@
 const THOCKY_BANK = [
   'assets/thocky-01.wav', 'assets/thocky-02.wav', 'assets/thocky-03.wav',
   'assets/thocky-04.wav', 'assets/thocky-05.wav', 'assets/thocky-06.wav',
-  'assets/thocky-07.wav', 'assets/thocky-08.wav', 'assets/thocky-09.wav',
-  'assets/thocky-10.wav',
+  'assets/thocky-07.wav', 'assets/thocky-08.wav',
 ];
 
 class TypingSound {

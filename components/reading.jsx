@@ -38,7 +38,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
   const [backgroundId, setBackgroundId] = React.useState(initialSettings?.background || 'paper');
   const [sessionSettings, setSessionSettings] = React.useState(() => ({
     typeSize: MTStorage.prefs.getField('typeSize', 'M'),
-    strict: MTStorage.prefs.getField('strict', false),
+    strict: MTStorage.prefs.getField('strict', true),
     showTimer: MTStorage.prefs.getField('showTimer', true),
     margins: MTStorage.prefs.getField('margins', 50),
   }));
@@ -623,7 +623,7 @@ function UnifiedLayout({ book, passageIdx, total, prev, current, next, typed, sh
   const sizePx = typeSize === 'S' ? 21 : typeSize === 'L' ? 32 : 26;
   return (
     <div style={{
-      maxWidth: 880, margin: '0 auto', padding: '0 56px',
+      maxWidth: 880, margin: '0 auto', padding: '0 56px 0 186px',
       opacity: showTurn ? 0 : 1, transition: 'opacity 500ms ease',
     }}>
       {/* Header rule — book title ─── passage NN */}
