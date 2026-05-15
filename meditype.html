@@ -219,7 +219,7 @@
             settings={settings}
             onVariantChange={(v) => { setReadingVariant(v); saveTweak({ readingVariant: v }); }}
             onExit={() => closeTo('prepare', { fromTone: darkForReadingC ? 'ember' : 'ink' })}
-            onComplete={() => setScreen('complete')}
+            onComplete={() => closeTo('complete', { fromTone: darkForReadingC ? 'ember' : 'ink' })}
           />;
         }
         if (which === 'complete') {

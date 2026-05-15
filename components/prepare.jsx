@@ -3,17 +3,29 @@
 // three selectors (ambient sound, background, length), one "Begin" button.
 
 function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
-  const [ambient, setAmbient] = React.useState(() => MTStorage.prefs.getField('ambient', 'rain'));
-  const [background, setBackground] = React.useState(() => MTStorage.prefs.getField('background', 'paper'));
-  const [length, setLength] = React.useState(() => MTStorage.prefs.getField('length', '15'));
+  const [ambient, setAmbient] = React.useState('rain');
+  const [background, setBackground] = React.useState('paper');
+  const [length, setLength] = React.useState('15');
   const [drift, setDrift] = React.useState(false);
 
-  React.useEffect(() => { MTStorage.prefs.setField('ambient', ambient); }, [ambient]);
-  React.useEffect(() => { MTStorage.prefs.setField('background', background); }, [background]);
-  React.useEffect(() => { MTStorage.prefs.setField('length', length); }, [length]);
+  // Preview ambient when changed (4s window: ~0.5s in, ~3s hold, ~0.5s out)
+  React.useEffect(() => {
+    if (!ambient) return;
+    window.ambience?.preview?.(ambient, 3000);
+  }, [ambient]);
+  // Stop preview when leaving Prepare
+  React.useEffect(() => () => { window.ambience?.stop?.(600); }, []);
 
-  const isDark = tone !== 'ink';
-  const bg = isDark ? 'var(--walnut)' : 'var(--paper)';
+  // Background palette for the prepare-screen preview (mirrors the Reading bg map)
+  const PREP_BG = {
+    paper: 'var(--paper)', linen: '#ECE5D2', mist: '#E6E4DB',
+    wood:  '#2A1F16', sky: '#3A3D4A', ink: 'var(--walnut)',
+  };
+  const darkBackgrounds = ['wood','sky','ink'];
+  const effectiveBgId = drift ? null : background;
+  const previewIsDark = effectiveBgId ? darkBackgrounds.includes(effectiveBgId) : (tone !== 'ink');
+  const isDark = previewIsDark;
+  const bg = effectiveBgId ? PREP_BG[effectiveBgId] : (isDark ? 'var(--walnut)' : 'var(--paper)');
   const textInk = isDark ? 'var(--paper-warm)' : 'var(--ink)';
   const textSoft = isDark ? 'var(--paper-dim)' : 'var(--ink-soft)';
   const textFaint = isDark ? 'var(--paper-faint)' : 'var(--ink-faint)';
@@ -34,6 +46,7 @@ function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
     <div className="paper-grain" style={{
       minHeight: '100%', background: bg, color: textInk,
       fontFamily: 'var(--serif)',
+      transition: 'background 700ms cubic-bezier(.4,.2,.2,1), color 700ms ease',
     }}>
       {/* Top bar */}
       <header style={{

@@ -191,6 +191,30 @@ class Ambience {
     this.master.gain.cancelScheduledValues(this.ctx.currentTime);
     this.master.gain.linearRampToValueAtTime(this.volume, this.ctx.currentTime + 0.3);
   }
+  // Preview a preset: play it with a soft fade-in, hold for ~3s, then fade out.
+  // Used in the Prepare screen so users can audition a sound before begin.
+  preview(preset, holdMs = 3000) {
+    if (!preset || preset === 'off') {
+      this.stop(600);
+      return;
+    }
+    // If a preview is already playing the SAME preset, just refresh the hold timer
+    if (this._previewActive && this.current === preset) {
+      if (this._previewFadeTimer) clearTimeout(this._previewFadeTimer);
+      this._previewFadeTimer = setTimeout(() => {
+        this.stop(800);
+        this._previewActive = false;
+      }, holdMs);
+      return;
+    }
+    if (this._previewFadeTimer) clearTimeout(this._previewFadeTimer);
+    this._previewActive = true;
+    this.play(preset);
+    this._previewFadeTimer = setTimeout(() => {
+      this.stop(800);
+      this._previewActive = false;
+    }, holdMs);
+  }
   stop(fadeMs = 800) {
     clearTimeout(this._crackleTimer);
     clearTimeout(this._birdTimer);
