@@ -1,4 +1,4 @@
-// meditype — Library screen
+// meditype - Library screen
 // A curated shelf organized by mood. Cream paper, generous air, no ratings.
 
 function LibraryScreen({ onOpenBook, tone = 'ink' }) {

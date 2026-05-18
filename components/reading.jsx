@@ -98,6 +98,12 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
     return () => clearInterval(t);
   }, []);
 
+  // Metrics: start a session on mount, end on unmount (finalizes WPM/accuracy stats).
+  React.useEffect(() => {
+    window.metrics?.startSession?.(book.id);
+    return () => { window.metrics?.endSession?.(); };
+  }, [book.id]);
+
   // Ambient audio — arm immediately on mount (the "Begin" click counts as a user
   // gesture, so AudioContext can start without waiting for another keypress).
   const audioArmedRef = React.useRef(false);
@@ -215,6 +221,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
           // treat space as a character during typing
           const wrong = isMistake({ expected: current[typed.length], typedCh: ' ', strict: sessionSettings.strict });
           window.typingSound?.click(wrong);
+          window.metrics?.recordKey({ expected: current[typed.length], typed: ' ' });
           setTyped(t => t + ' ');
         }
         return;
@@ -223,6 +230,7 @@ function ReadingScreen({ book, variant = 'A', settings: initialSettings, onExit,
         e.preventDefault();
         const wrong = isMistake({ expected: current[typed.length], typedCh: e.key, strict: sessionSettings.strict });
         window.typingSound?.click(wrong);
+        window.metrics?.recordKey({ expected: current[typed.length], typed: e.key });
         setTyped(t => t + e.key);
       }
     };
@@ -431,26 +439,14 @@ function IconButton({ icon, label, textFaint, textInk, onClick, active, id }) {
 
 // Determines whether a typed char counts as a "mistake" for coloring/sound.
 // - strict=true  : any difference counts (case, punctuation, everything).
-// - strict=false : forgive case differences on letters; forgive punctuation
-//                  the user omits or substitutes — but a missing SPACE where one
-//                  is expected is always a mistake (typing the next word's first
-//                  letter where a space belongs reads as a wrong character).
-const PUNCT = /[.,;:!?"'()—–\-\[\]…]/;
+// - strict=false : forgive ONLY case differences on letters; everything else
+//                  (wrong letter, wrong punctuation, missing space) still shows
+//                  red so the user always knows when they slipped.
 function isMistake({ expected, typedCh, strict }) {
   if (typedCh === expected) return false;
   if (strict) return true;
-  // Soft mode forgiveness:
-  // 1. Case-insensitive letter match → not a mistake
+  // Soft mode: case-insensitive letter match is the only forgiveness.
   if (expected && typedCh && expected.toLowerCase() === typedCh.toLowerCase()) return false;
-  // 2. If the expected char is punctuation, the user can skip or substitute it freely.
-  //    We can't know mid-keystroke that they skipped it (that would require lookahead
-  //    logic in the reducer); here we only judge per-position. So: if they typed a
-  //    punctuation where a different punctuation was expected — fine.
-  if (PUNCT.test(expected) && (PUNCT.test(typedCh) || typedCh === ' ')) return false;
-  // 3. Typing a letter/number where a punctuation was expected — also fine in soft.
-  if (PUNCT.test(expected)) return false;
-  // 4. Missing-space rule: expected is a space, typed is not → this IS a mistake.
-  //    (Running words together is the one thing soft mode still catches.)
   return true;
 }
 
@@ -607,7 +603,7 @@ function SplitLayout({ book, passageIdx, total, prev, current, next, typed, show
           <span>
             {typed.length === 0 ? 'begin when you are ready' :
              typed.length < current.length ? 'no hurry · backspace to correct' :
-             'press space to turn the page'}
+             'press space to turn the page · backspace to revise'}
           </span>
         </div>
       </div>

@@ -1,4 +1,4 @@
-// meditype — seed data (public domain books, passages, ambient options)
+// meditype - seed data (public domain books, passages, ambient options)
 
 const MOODS = [
   'Slow Sundays',
@@ -47,7 +47,7 @@ const BOOKS = [
   { id: 'kim',        title: 'Kim',                      author: 'Rudyard Kipling',      year: 1901, mood: 'Adventure',      passages: 195, minutes: 19, continue: null, colorA: '#BFA682', colorB: '#7A5B33' },
 ];
 
-// A handful of representative passages — the "current" book for the reading screens
+// A handful of representative passages - the "current" book for the reading screens
 const PASSAGES = {
   aurelius: [
     "Begin the morning by saying to thyself, I shall meet with the busy-body, the ungrateful, arrogant, deceitful, envious, unsocial. All these things happen to them by reason of their ignorance of what is good and evil. But I who have seen the nature of the good, that it is beautiful, and of the bad, that it is ugly, and the nature of him who does wrong, that it is akin to me, not only of the same blood or seed, but that it participates in the same intelligence and the same portion of the divinity, I can neither be injured by any of them, for no one can fix on me what is ugly, nor can I be angry with my kinsman, nor hate him.",

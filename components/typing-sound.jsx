@@ -1,4 +1,4 @@
-// meditype — typing sound engine (sample-based playback)
+// meditype - typing sound engine (sample-based playback)
 // softkeys, thocky (sample-bank, 10 keystrokes from a real mech kbd), pen +
 // synthesized wood block + silent.
 
@@ -87,7 +87,7 @@ class TypingSound {
     if (idx === this._lastThockyIdx) idx = (idx + 1) % THOCKY_BANK.length;
     this._lastThockyIdx = idx;
     const id = `thocky-${idx}`;
-    // No pitch jitter — rate stays at 1.0 so every sample sounds as recorded.
+    // No pitch jitter - rate stays at 1.0 so every sample sounds as recorded.
     // Only tiny gain variation (±8%) keeps consecutive keys from being robotically identical.
     const opts = { rate: 1.0, gain: 0.92 + Math.random() * 0.16 };
     if (this.buffers[id]) {
@@ -121,7 +121,7 @@ class TypingSound {
       return;
     }
 
-    // woodblock — synthesized (no sample provided)
+    // woodblock - synthesized (no sample provided)
     if (this.preset === 'woodblock') {
       const ctx = this.ctx;
       const t = ctx.currentTime;
@@ -154,7 +154,7 @@ const IKey = (p) => <Icon sw={1} {...p} d={<>
   <rect x="5" y="6" width="14" height="12" rx="1.5" />
   <path d="M8.5 10h.01M12 10h.01M15.5 10h.01M8 14h8" />
 </>} />;
-// Thocky switch — a square keycap viewed from a slight angle, with the cross-stem visible.
+// Thocky switch - a square keycap viewed from a slight angle, with the cross-stem visible.
 const IThocky = (p) => <Icon sw={1} {...p} d={<>
   <rect x="5" y="6" width="14" height="12" rx="1.4" />
   <path d="M7.5 8.5h9v7h-9z" opacity="0.55" />
@@ -260,7 +260,7 @@ function TypingSoundPopover({ preset, volume, onMistake, showRainHint, onPreset,
               marginTop: 12, display: 'flex', gap: 8, alignItems: 'flex-start',
               fontSize: 11, color: faint, fontStyle: 'italic', lineHeight: 1.5,
             }}>
-              <span>Tip — with rain playing, you may prefer Silent.</span>
+              <span>Tip - with rain playing, you may prefer Silent.</span>
               <button onClick={onDismissHint} style={{
                 color: faint, fontFamily: 'var(--mono)', fontSize: 9,
                 letterSpacing: '0.22em', textTransform: 'uppercase',

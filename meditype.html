@@ -119,6 +119,8 @@
   <script type="text/babel" src="passages.jsx"></script>
   <script type="text/babel" src="components/primitives.jsx"></script>
   <script type="text/babel" src="components/popovers.jsx"></script>
+  <script type="text/babel" src="components/metrics-store.jsx"></script>
+  <script type="text/babel" src="components/dashboard.jsx"></script>
   <script type="text/babel" src="components/typing-sound.jsx"></script>
   <script type="text/babel" src="components/library.jsx"></script>
   <script type="text/babel" src="components/prepare.jsx"></script>
@@ -129,8 +131,7 @@
   <script type="text/babel">
     const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
       "screen": "library",
-      "readingVariant": "B",
-      "libraryTone": "ink"
+      "readingVariant": "B"
     }/*EDITMODE-END*/;
 
     function App() {
@@ -143,9 +144,8 @@
       const [readingVariant, setReadingVariant] = React.useState(
         () => MTStorage.prefs.getField('readingVariant', TWEAK_DEFAULTS.readingVariant)
       );
-      const [libraryTone, setLibraryTone] = React.useState(
-        () => MTStorage.prefs.getField('libraryTone', TWEAK_DEFAULTS.libraryTone)
-      );
+      // libraryTone removed: Library/Prepare/Complete always render paper. Only
+      // the Reading screen can go dark, via its background swatch.
 
       // Closing-the-book transition: when set, we render the previous screen on top
       // while the new screen fades in beneath. Cleared automatically.
@@ -187,14 +187,15 @@
 
       // Persist preferences only — session state (screen, book, settings) is intentionally not stored.
       React.useEffect(() => { MTStorage.prefs.setField('readingVariant', readingVariant); }, [readingVariant]);
-      React.useEffect(() => { MTStorage.prefs.setField('libraryTone', libraryTone); }, [libraryTone]);
+      // Clean up stale libraryTone from older v1 prefs (one-time, idempotent).
+      React.useEffect(() => { try { MTStorage.prefs.setField('libraryTone', undefined); } catch (e) {} }, []);
 
       const saveTweak = (edits) => {
         window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
       };
 
       const darkForReadingC = readingVariant === 'C';
-      const nonReadingTone = libraryTone;
+      const nonReadingTone = 'ink'; // hardcoded paper for Library/Prepare/Complete
 
       // Render a screen by name. Used for both current and outgoing.
       const renderScreen = (which, asOutgoing = false) => {
@@ -256,8 +257,12 @@
           ) : (
             renderScreen(screen, false)
           )}
+
+          {/* Typing dashboard: bottom-left, expands to a centered portrait card */}
+          <Dashboard tone={nonReadingTone} screen={screen} book={book} />
+
           {tweaksOpen && (
-            <div className={`tweaks ${darkForReadingC && screen === 'reading' ? 'dark' : (nonReadingTone !== 'ink' ? 'dark' : '')}`}>
+            <div className={`tweaks ${darkForReadingC && screen === 'reading' ? 'dark' : ''}`}>
               <h4>
                 <span>Tweaks</span>
                 <button className="close" onClick={() => setTweaksOpen(false)}>hide</button>
@@ -283,19 +288,6 @@
                   <button key={v.id} className={`chip ${readingVariant === v.id ? 'active' : ''}`}
                     onClick={() => { setReadingVariant(v.id); saveTweak({ readingVariant: v.id }); }}>
                     {v.label}
-                  </button>
-                ))}
-              </div>
-
-              <div className="label">Library · prepare · complete tone</div>
-              <div className="row">
-                {[
-                  { id: 'ink', label: 'paper' },
-                  { id: 'ember', label: 'candlelit' },
-                ].map(t => (
-                  <button key={t.id} className={`chip ${libraryTone === t.id ? 'active' : ''}`}
-                    onClick={() => { setLibraryTone(t.id); saveTweak({ libraryTone: t.id }); }}>
-                    {t.label}
                   </button>
                 ))}
               </div>

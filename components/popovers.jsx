@@ -1,4 +1,4 @@
-// meditype — ambient audio engine (WebAudio, no external assets)
+// meditype - ambient audio engine (WebAudio, no external assets)
 // + top-bar popovers (Sound / Background / Settings)
 
 // ------------------------------------------------------------
@@ -108,7 +108,7 @@ class Ambience {
       const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1800;
       const g = ctx.createGain(); g.gain.value = 0.35;
       n.connect(lp); lp.connect(g); g.connect(out); n.start();
-      // distant "bird" — soft sine blips
+      // distant "bird" - soft sine blips
       const birdTick = () => {
         if (this.current !== 'forest') return;
         const osc = ctx.createOscillator();
@@ -392,7 +392,7 @@ function BackgroundPopover({ currentId, onSelect, tone, bgId }) {
       </div>
       <div style={{
         marginTop: 18, fontSize: 11, fontStyle: 'italic', color: faint, lineHeight: 1.5,
-      }}>Changes apply quietly — the page will shift once.</div>
+      }}>Changes apply quietly - the page will shift once.</div>
     </Popover>
   );
 }
@@ -450,8 +450,8 @@ function SettingsPopover({ settings, onChange, tone, onToggleTone, bgId }) {
         <Chip active={settings.strict === true}  onClick={() => onChange({ strict: true })}>Strict</Chip>
       </Row>
       <Row label="Layout">
-        <Chip active={settings.variant !== 'A'} onClick={() => onChange({ variant: 'B' })}>Single</Chip>
-        <Chip active={settings.variant === 'A'} onClick={() => onChange({ variant: 'A' })}>Split</Chip>
+        <Chip active={settings.variant === 'B'} onClick={() => onChange({ variant: 'B' })}>Single</Chip>
+        <Chip active={settings.variant !== 'B'} onClick={() => onChange({ variant: 'A' })}>Split</Chip>
       </Row>
       <Row label="Show timer">
         <Chip active={settings.showTimer !== false} onClick={() => onChange({ showTimer: true })}>On</Chip>

@@ -1,9 +1,9 @@
-// meditype — onboarding hint card (bottom-right of reading screen)
+// meditype - onboarding hint card (bottom-right of reading screen)
 // 3 pages, subtle slide/fade between them, dismisses with a quiet fade.
 // Shown once per device (localStorage flag: meditype.hintSeen.v2).
 // v2 so old dismissed state from prior sessions doesn't suppress the card.
 // Derives surface colors from the active background (bgId) via the same
-// palette map as the popovers — so it always looks like it belongs.
+// palette map as the popovers - so it always looks like it belongs.
 
 const HINT_COLORS = {
   paper: { bg: 'rgba(236,228,212,0.97)', border: '#D5CBB8', text: '#22201C', soft: '#5A5348', faint: '#8A8172', accent: '#B5705A' },
@@ -148,7 +148,7 @@ function Page1({ textInk, textSoft, textFaint, accent }) {
       </div>
       <div style={{
         marginTop: 12, fontSize: 10.5, fontStyle: 'italic', color: textFaint, lineHeight: 1.5,
-      }}>All five buttons live in the top-right corner. Defaults: <span style={{ fontStyle: 'normal', color: accent }}>Single</span> layout, <span style={{ fontStyle: 'normal', color: accent }}>Strict</span> mistakes — change anytime in Settings.</div>
+      }}>All five buttons live in the top-right corner. Defaults: <span style={{ fontStyle: 'normal', color: accent }}>Single</span> layout, <span style={{ fontStyle: 'normal', color: accent }}>Strict</span> mistakes - change anytime in Settings.</div>
     </div>
   );
 }
@@ -191,7 +191,7 @@ function Rec({ icon, label, note, textInk, textSoft, accent, border }) {
 // ── page 3: keyboard shortcuts ───────────────────────────────────────────────
 function Page3({ textInk, textSoft, textFaint, accent, border, isDark, bgId }) {
   const keys = [
-    { k: 'Tab',     desc: 'Reset this passage — start from the top.' },
+    { k: 'Tab',     desc: 'Reset this passage - start from the top.' },
     { k: 'Esc',     desc: 'Close the book, return to Prepare.' },
     { k: 'Space ↵', desc: 'At passage end, turn to the next page.' },
   ];

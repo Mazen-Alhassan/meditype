@@ -1,4 +1,4 @@
-// meditype — Session Complete screen
+// meditype - Session Complete screen
 // Dignified, quiet. "You read X words of [book] tonight."
 // One line of rotating reflection. Two buttons: Continue / Close the book.
 

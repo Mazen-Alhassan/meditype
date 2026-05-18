@@ -1,6 +1,6 @@
-// meditype — shared primitives
+// meditype - shared primitives
 
-// Soft book cover placeholder — no cover art competing; two muted tones + stamped title
+// Soft book cover placeholder - no cover art competing; two muted tones + stamped title
 function BookCover({ book, width = 120, height = 170, small }) {
   const ratio = height / 170;
   const titleSize = small ? 11 : 13;
@@ -45,7 +45,7 @@ function BookCover({ book, width = 120, height = 170, small }) {
   );
 }
 
-// Thin progress line — never a percentage
+// Thin progress line - never a percentage
 function ProgressLine({ value, tone = 'ink', width = '100%', height = 1 }) {
   const bg = tone === 'ink' ? 'var(--hairline)' : 'var(--hairline-d)';
   const fg = tone === 'ink' ? 'var(--ink-soft)' : 'var(--ember)';
@@ -60,7 +60,7 @@ function ProgressLine({ value, tone = 'ink', width = '100%', height = 1 }) {
   );
 }
 
-// Tiny icons — hairline only
+// Tiny icons - hairline only
 const Icon = ({ d, size = 14, stroke = 'currentColor', sw = 1 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={stroke} strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
     {d}

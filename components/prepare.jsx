@@ -1,4 +1,4 @@
-// meditype — Prepare screen
+// meditype - Prepare screen
 // After a book is chosen. Settling-in moment: cover, description,
 // three selectors (ambient sound, background, length), one "Begin" button.
 
@@ -72,7 +72,7 @@ function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
 
       <div style={{ padding: '80px 88px 64px', display: 'grid', gridTemplateColumns: '420px 1fr', gap: 96 }}>
 
-        {/* Left — the book itself */}
+        {/* Left - the book itself */}
         <div>
           <div style={{ position: 'relative', width: 300 }}>
             <BookCover book={book} width={300} height={426} />
@@ -95,7 +95,7 @@ function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
           }}>{book.author}</div>
         </div>
 
-        {/* Right — settling in */}
+        {/* Right - settling in */}
         <div style={{ maxWidth: 560 }}>
           <div style={{
             fontFamily: 'var(--mono)', fontSize: 10.5, letterSpacing: '0.3em',
@@ -157,7 +157,7 @@ function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
               </div>
             </Selector>
 
-            <Selector title="Session length" hint="no pressure — you can stop earlier" textInk={textInk} textFaint={textFaint}>
+            <Selector title="Session length" hint="no pressure - you can stop earlier" textInk={textInk} textFaint={textFaint}>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {LENGTHS.map(l => {
                   const active = length === l.id;
@@ -217,7 +217,7 @@ function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
 const BOOK_DESCRIPTIONS = {
   aurelius: "Private notes from an emperor to himself, written at night on the edge of empire. Read in the morning, a sentence at a time, they are less like philosophy and more like a practice.",
   walden: "A man builds a small cabin on a pond and spends a year paying close attention. The weather, the light, his own mind. You are invited to do the same.",
-  rumi: "Thirteenth-century verse that behaves like water — gentle on the surface and going somewhere deep. Slow down enough and it will carry you.",
+  rumi: "Thirteenth-century verse that behaves like water - gentle on the surface and going somewhere deep. Slow down enough and it will carry you.",
   rilke: "Ten letters to a young poet who had asked how to live. Rilke answers, carefully, without ever giving instructions. Solitude and patience figure heavily.",
 };
 const DEFAULT_DESC = "A quiet book to sit with. Each passage is short; the pace is yours.";
