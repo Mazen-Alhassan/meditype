@@ -2,7 +2,7 @@
 // Dignified, quiet. "You read X words of [book] tonight."
 // One line of rotating reflection. Two buttons: Continue / Close the book.
 
-function CompleteScreen({ book, stats, onContinue, onClose, tone = 'ink' }) {
+function CompleteScreen({ book, stats, onContinue, onClose, tone = 'ink', darkMode, onToggleDarkMode }) {
   const isDark = tone !== 'ink';
   const bg = isDark ? 'var(--walnut)' : 'var(--paper)';
   const textInk = isDark ? 'var(--paper-warm)' : 'var(--ink)';
@@ -19,6 +19,7 @@ function CompleteScreen({ book, stats, onContinue, onClose, tone = 'ink' }) {
       minHeight: '100vh', background: bg, color: textInk,
       fontFamily: 'var(--serif)',
       display: 'flex', flexDirection: 'column',
+      transition: 'background 700ms cubic-bezier(.4,.2,.2,1), color 700ms ease',
     }}>
       {isDark && <div style={{
         position: 'fixed', inset: 0, pointerEvents: 'none',
@@ -36,6 +37,9 @@ function CompleteScreen({ book, stats, onContinue, onClose, tone = 'ink' }) {
           fontFamily: 'var(--mono)', fontSize: 10.5, letterSpacing: '0.3em',
           textTransform: 'uppercase', color: textFaint,
         }}>Session · complete</div>
+        <span style={{ display: 'inline-flex', marginLeft: 14, verticalAlign: 'middle' }}>
+          <DarkModeButton darkMode={darkMode} onToggle={onToggleDarkMode} tone={tone} />
+        </span>
       </header>
 
       <main style={{

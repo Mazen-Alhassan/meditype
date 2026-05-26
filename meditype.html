@@ -144,8 +144,10 @@
       const [readingVariant, setReadingVariant] = React.useState(
         () => MTStorage.prefs.getField('readingVariant', TWEAK_DEFAULTS.readingVariant)
       );
-      // libraryTone removed: Library/Prepare/Complete always render paper. Only
-      // the Reading screen can go dark, via its background swatch.
+      const [darkMode, setDarkMode] = React.useState(
+        () => MTStorage.prefs.getField('darkMode', false)
+      );
+      const toggleDarkMode = React.useCallback(() => setDarkMode(d => !d), []);
 
       // Closing-the-book transition: when set, we render the previous screen on top
       // while the new screen fades in beneath. Cleared automatically.
@@ -187,6 +189,7 @@
 
       // Persist preferences only — session state (screen, book, settings) is intentionally not stored.
       React.useEffect(() => { MTStorage.prefs.setField('readingVariant', readingVariant); }, [readingVariant]);
+      React.useEffect(() => { MTStorage.prefs.setField('darkMode', darkMode); }, [darkMode]);
       // Clean up stale libraryTone from older v1 prefs (one-time, idempotent).
       React.useEffect(() => { try { MTStorage.prefs.setField('libraryTone', undefined); } catch (e) {} }, []);
 
@@ -195,13 +198,15 @@
       };
 
       const darkForReadingC = readingVariant === 'C';
-      const nonReadingTone = 'ink'; // hardcoded paper for Library/Prepare/Complete
+      const nonReadingTone = darkMode ? 'ember' : 'ink';
 
       // Render a screen by name. Used for both current and outgoing.
       const renderScreen = (which, asOutgoing = false) => {
         if (which === 'library') {
           return <LibraryScreen
             tone={nonReadingTone}
+            darkMode={darkMode}
+            onToggleDarkMode={toggleDarkMode}
             onOpenBook={(b) => openBookTo(b, 'prepare')}
           />;
         }
@@ -209,6 +214,8 @@
           return <PrepareScreen
             book={asOutgoing && closing ? closing.fromBook : book}
             tone={nonReadingTone}
+            darkMode={darkMode}
+            onToggleDarkMode={toggleDarkMode}
             onBack={() => closeTo('library', { fromTone: nonReadingTone })}
             onBegin={(s) => { setSettings(s); setScreen('reading'); }}
           />;
@@ -228,6 +235,8 @@
           return <CompleteScreen
             book={b}
             tone={darkForReadingC ? 'dark' : nonReadingTone}
+            darkMode={darkMode}
+            onToggleDarkMode={toggleDarkMode}
             stats={{
               words: 1427,
               time: '28 min',

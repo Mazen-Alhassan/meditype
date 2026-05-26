@@ -15,10 +15,10 @@
   --accent-soft:  #D2A494;
   --error:        #A85B50;          /* soft faded red */
 
-  /* Candlelit (dark) */
-  --walnut:       #1C140E;
-  --walnut-deep:  #140D08;
-  --walnut-edge:  #2A1F16;
+  /* Candlelit (dark) — lighter, warmer browns for the home screens */
+  --walnut:       #2B2118;
+  --walnut-deep:  #1F1610;
+  --walnut-edge:  #3A2D20;
   --hairline-d:   #4A3A2A;
   --paper-warm:   #E8DCC4;
   --paper-dim:    #B9A585;

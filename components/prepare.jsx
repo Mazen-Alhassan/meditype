@@ -2,14 +2,17 @@
 // After a book is chosen. Settling-in moment: cover, description,
 // three selectors (ambient sound, background, length), one "Begin" button.
 
-function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
+function PrepareScreen({ book, onBack, onBegin, tone = 'ink', darkMode, onToggleDarkMode }) {
   const [ambient, setAmbient] = React.useState('rain');
   const [background, setBackground] = React.useState('paper');
   const [length, setLength] = React.useState('15');
   const [drift, setDrift] = React.useState(false);
 
-  // Preview ambient when changed (4s window: ~0.5s in, ~3s hold, ~0.5s out)
+  // Preview ambient ONLY on user-initiated change (not on initial mount, which
+  // would re-start the audio that ReadingScreen just finished fading out).
+  const previewMountedRef = React.useRef(false);
   React.useEffect(() => {
+    if (!previewMountedRef.current) { previewMountedRef.current = true; return; }
     if (!ambient) return;
     window.ambience?.preview?.(ambient, 3000);
   }, [ambient]);
@@ -67,6 +70,9 @@ function PrepareScreen({ book, onBack, onBegin, tone = 'ink' }) {
           textTransform: 'uppercase', color: textFaint,
         }}>
           {resuming ? 'Resuming' : 'New session'}
+          <span style={{ marginLeft: 14, display: 'inline-flex', verticalAlign: 'middle' }}>
+            <DarkModeButton darkMode={darkMode} onToggle={onToggleDarkMode} tone={tone} />
+          </span>
         </div>
       </header>
 

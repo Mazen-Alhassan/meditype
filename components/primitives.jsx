@@ -97,6 +97,43 @@ const IconSun = (p) => <Icon sw={1} {...p} d={<>
 </>} />;
 const IconCheck = (p) => <Icon sw={1} {...p} d={<path d="M5 12l4 4 10-10" />} />;
 
+// Top-right dark/light toggle, shared by Library / Prepare / Complete screens.
+// Clicks animate a soft cross-fade between sun and moon glyphs.
+function DarkModeButton({ darkMode, onToggle, tone = 'ink' }) {
+  const isDark = darkMode || tone !== 'ink';
+  const ink   = isDark ? 'var(--paper-warm)' : 'var(--ink)';
+  const faint = isDark ? 'var(--paper-faint)' : 'var(--ink-faint)';
+  const rule  = isDark ? 'var(--hairline-d)' : 'var(--hairline)';
+  return (
+    <button onClick={onToggle}
+      aria-label={darkMode ? 'Switch to paper' : 'Switch to candlelit'}
+      style={{
+        position: 'relative', width: 28, height: 28,
+        background: 'transparent', border: `1px solid ${rule}`,
+        cursor: 'pointer', padding: 0,
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        color: ink, transition: 'border-color 320ms ease, color 320ms ease',
+      }}>
+      <div style={{
+        position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+        opacity: darkMode ? 0 : 1,
+        transform: darkMode ? 'rotate(-22deg) scale(0.85)' : 'rotate(0) scale(1)',
+        transition: 'opacity 320ms ease, transform 360ms cubic-bezier(.3,.1,.3,1)',
+      }}>
+        <IconSun size={13} />
+      </div>
+      <div style={{
+        position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+        opacity: darkMode ? 1 : 0,
+        transform: darkMode ? 'rotate(0) scale(1)' : 'rotate(22deg) scale(0.85)',
+        transition: 'opacity 320ms ease, transform 360ms cubic-bezier(.3,.1,.3,1)',
+      }}>
+        <IconMoon size={13} />
+      </div>
+    </button>
+  );
+}
+
 // Tiny waveform for ambient selector
 function Waveform({ active, tone = 'ink' }) {
   const bars = [3, 6, 10, 14, 9, 5, 11, 7, 4, 8, 13, 6, 3];
@@ -142,5 +179,5 @@ function BackgroundSwatch({ bg, active, tone = 'ink' }) {
 Object.assign(window, {
   BookCover, ProgressLine, Icon, Waveform, BackgroundSwatch,
   IconSound, IconBackground, IconSettings, IconLayout, IconBack, IconSearch,
-  IconPlay, IconMoon, IconSun, IconCheck,
+  IconPlay, IconMoon, IconSun, IconCheck, DarkModeButton,
 });

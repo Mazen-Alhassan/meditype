@@ -1,13 +1,13 @@
 // meditype - Library screen
 // A curated shelf organized by mood. Cream paper, generous air, no ratings.
 
-function LibraryScreen({ onOpenBook, tone = 'ink' }) {
+function LibraryScreen({ onOpenBook, tone = 'ink', darkMode, onToggleDarkMode }) {
   const [activeMood, setActiveMood] = React.useState('All');
   const [search, setSearch] = React.useState('');
 
   // Merge live per-book progress (from typing sessions) onto seed continue %.
   // Seed values give a populated demo; real reading overrides them.
-  const liveProgress = (typeof window !== 'undefined' && window.loadProgress) ? window.loadProgress() : {};
+  const liveProgress = typeof window !== 'undefined' && window.loadProgress ? window.loadProgress() : {};
   const booksWithProgress = BOOKS.map((b) => {
     const live = liveProgress[b.id];
     if (!live) return b;
@@ -38,7 +38,8 @@ function LibraryScreen({ onOpenBook, tone = 'ink' }) {
   return (
     <div className="paper-grain" style={{
       minHeight: '100%', background: bg, color: textInk,
-      fontFamily: 'var(--serif)', position: 'relative'
+      fontFamily: 'var(--serif)', position: 'relative',
+      transition: 'background 700ms cubic-bezier(.4,.2,.2,1), color 700ms ease'
     }}>
       {/* Masthead */}
       <header style={{
@@ -95,6 +96,7 @@ function LibraryScreen({ onOpenBook, tone = 'ink' }) {
             fontFamily: 'var(--mono)', fontSize: 10.5, letterSpacing: '0.22em',
             textTransform: 'uppercase', color: textFaint
           }}>Eleanor</div>
+          <DarkModeButton darkMode={darkMode} onToggle={onToggleDarkMode} tone={tone} />
         </div>
       </header>
 
@@ -173,7 +175,7 @@ function LibraryScreen({ onOpenBook, tone = 'ink' }) {
 
       {/* Continue reading row */}
       {continuing.length > 0 &&
-      <section style={{ padding: '56px 88px 28px' }}>
+      <section style={{ padding: "56px 88px 1px", height: "343px" }}>
           <div style={{
           display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',
           marginBottom: 32
@@ -220,18 +222,18 @@ function LibraryScreen({ onOpenBook, tone = 'ink' }) {
       }
 
       {/* Mood sections */}
-      <section style={{ padding: '36px 88px 120px' }}>
+      <section style={{ padding: "2px 88px 120px", height: "3268px" }}>
         {MOODS.filter((m) => activeMood === 'All' || m === activeMood).
         filter((m) => byMood[m].length > 0).
         map((mood, idx) =>
         <div key={mood} style={{
           paddingTop: idx === 0 ? 44 : 80,
           borderTop: idx === 0 ? 'none' : `1px solid ${rule}`,
-          marginTop: idx === 0 ? 0 : 0
+          marginTop: idx === 0 ? 0 : 0, height: "542px"
         }}>
               <div style={{
             display: 'grid', gridTemplateColumns: '240px 1fr', gap: 56,
-            paddingTop: idx === 0 ? 0 : 44
+            paddingTop: idx === 0 ? 0 : 44, width: "717px", height: "461px"
           }}>
                 <div style={{ position: 'sticky', top: 32, alignSelf: 'start' }}>
                   <div style={{
@@ -241,7 +243,7 @@ function LibraryScreen({ onOpenBook, tone = 'ink' }) {
                   <h3 style={{
                 margin: 0, fontSize: 32, lineHeight: 1.05, fontWeight: 400,
                 letterSpacing: '-0.02em', fontStyle: 'italic',
-                fontVariationSettings: "'opsz' 144"
+                fontVariationSettings: "'opsz' 144", fontFamily: "Fraunces"
               }}>{mood}</h3>
                   <div style={{ marginTop: 20, width: 32, height: 1, background: accent, opacity: 0.7 }} />
                   <p style={{
@@ -323,7 +325,7 @@ function LibraryCard({ book, onClick, textInk, textSoft, textFaint, rule }) {
       <div style={{
         fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.18em',
         textTransform: 'uppercase', color: textFaint,
-        display: 'flex', justifyContent: 'space-between', paddingTop: 22,
+        display: 'flex', justifyContent: 'space-between', paddingTop: 32,
         borderTop: `1px solid ${rule}`
       }}>
         <span>~{book.minutes} min</span>
