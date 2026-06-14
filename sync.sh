@@ -55,6 +55,8 @@ RSYNC_FLAGS=(-av
   --exclude='sync.sh'
   --exclude='DEPLOY.md'
   --exclude='HANDOFF.md'
+  --exclude='README.md'
+  --exclude='docs/'
   --exclude='storage.jsx'
 )
 [[ $CLEAN -eq 1 ]] && RSYNC_FLAGS+=(--delete)
