@@ -2,6 +2,120 @@
 
 ---
 
+# 2026-06-17, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X original post]**
+- **Source link:** N/A (original post)
+- **Posted by OP:** N/A
+- **Why it fits:** Book quote angle is different from yesterday's builder voice. Literary crowd and lo-fi study audience both respond to a line that lands before the pitch arrives.
+- **Draft (paste ready):**
+> "The mass of men lead lives of quiet desperation."
+> Thoreau, Walden
+>
+> most people read that and move on. type it slowly, with rain in the background, no wpm counter, and it lands different.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply draft]**
+- **Source link:** N/A (template for "going analog" / "screen time" threads - hold and paste when one appears)
+- **Posted by OP:** N/A
+- **Why it fits:** Different angle from yesterday's "cozy websites" reply template. The "intentional screen time" thread type is posting daily in June. This answer leads with the experience, names meditype second.
+- **Draft (paste ready):**
+> something i've started doing instead of scrolling: opening meditype and typing a chapter of marcus aurelius or thoreau. no metrics, no account, ambient sound. it's screen time that slows you down rather than speeding you up. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Substack comment - slowread.substack.com, "Will 2026 be the year of the slow read?"]**
+- **Source link:** https://slowread.substack.com/p/will-2026-be-the-year-of-the-slow
+- **Posted by OP:** early 2026 (Slow Read newsletter, ongoing slow-reading community)
+- **Why it fits:** Active newsletter about slow reading as a deliberate practice. Comments are open on Substack. The typing angle adds something concrete and is not self-promotional if framed as a method suggestion.
+- **Draft (paste ready):**
+> The typing angle connects to this for me in an unexpected way. There's a site called meditype (https://meditype-omega.vercel.app) built around typing through public-domain books, no WPM counter, no speed pressure. The effect of actually typing the words rather than scanning them is that you read at whatever pace you naturally absorb each sentence, which turns out to be much slower than normal reading. It forces attention to stay on each phrase. For anyone wanting a concrete slow-reading method alongside the reading challenge, it's worth trying.
+
+---
+
+**[Channel: Substack comment - Jess Kirby, "2026 is the Year of Analog"]**
+- **Source link:** https://jessannkirby.substack.com/p/2026-is-the-year-of-analog
+- **Posted by OP:** early 2026, A Common Thread newsletter
+- **Why it fits:** Popular lifestyle Substack on the analog trend. The post argues for slower, more intentional time online. Meditype is the "intentional digital" answer to the analog-or-nothing framing.
+- **Draft (paste ready):**
+> The thing I keep coming back to from this piece: the problem isn't the screen, it's the engagement layer on top of it. Most digital tools are optimized to keep you using them, which is the opposite of what you want. I've been finding a middle ground with a typing site called meditype (https://meditype-omega.vercel.app). Public-domain books, ambient sound, no account, no metrics, no way to share progress anywhere. It asks nothing back from you. Not analog, but it doesn't pull. That feels like the real distinction worth making.
+
+---
+
+**[Channel: Reddit comment - r/digitalminimalism]**
+- **Source link:** N/A (template for threads asking about clean tools, non-manipulative apps, or intentional screen use)
+- **Posted by OP:** N/A
+- **Why it fits:** r/digitalminimalism regulary has threads like "what apps do you still use?" and "tools that don't demand attention." This reply leads with the experience, no hype language.
+- **Draft (paste ready):**
+> one i keep coming back to: meditype (meditype-omega.vercel.app). you type through public domain books with ambient sound. no account, no ads, no metrics, no share buttons. completely static, nothing to notify you, no reason to return except that you want to. you pick a book, you type, you leave.
+
+---
+
+**[Channel: Threads / Mastodon post]**
+- **Source link:** N/A (original post)
+- **Posted by OP:** N/A
+- **Why it fits:** Different angle from yesterday's Bluesky (which was the monkeytype comparison). Today's Threads post leads with the "going analog" trend and positions meditype as the screen-time answer. Mastodon/Fediverse audience overlaps with slow-web and indie-web communities.
+- **Draft (paste ready):**
+> everyone keeps saying "go analog" but nobody talks about what to do with your screen that doesn't feel like waste.
+>
+> meditype is the best answer i've found. type through public domain books (marcus aurelius, thoreau, rilke), ambient sound, no stats. it's the part of the internet that doesn't want anything from you.
+>
+> https://meditype-omega.vercel.app
+>
+> #slowweb #digitalminimalism #indieweb
+
+---
+
+**[Channel: Show HN draft (hold for right timing, max 1 per week)]**
+- **Source link:** N/A (new HN post, distinct from yesterday's "What are you working on?" comment)
+- **Posted by OP:** N/A
+- **Why it fits:** Show HN gives independent visibility. Different from the "working on?" thread: a Show HN is a standalone submission that can be upvoted and discovered independently. Best posted on a weekday morning EST for traction. Hold until the June "What are you working on?" thread has run its course.
+- **Draft (paste ready):**
+> **Title:** Show HN: meditype, a typing app for public-domain classics with no WPM counter
+>
+> **URL:** https://meditype-omega.vercel.app
+>
+> **Comment:**
+> The library has 24 books organized by mood: Stoic Mornings (Marcus Aurelius, Seneca, Epictetus), Slow Sundays (Walden, Whitman, Montaigne), Wonder (Carroll, Burnett, Grahame), Melancholy (Rilke, Dickinson, Pessoa), Adventure (Moby-Dick, Verne, Kipling), Mystical (Rumi, Laozi, Hafiz).
+>
+> Deliberate design choices: no WPM counter, no accuracy score, no leaderboard, no account. You pick a book, pick an ambient sound (rain, cafe, forest, etc.), and type. Position in each book is saved locally so you can pick up where you left off. That's the whole thing.
+>
+> Built as static React loaded in-browser without a bundler. Versioned localStorage handles preferences and per-book progress. No server, no build step, deploys to Vercel on every push.
+>
+> I built it because I wanted to sit with classic literature, not race through it. Curious whether the no-metrics approach lands for others or if there's something important missing.
+
+---
+
+## Today's notes
+
+**Trends spotted:**
+- Substack is now the active hub for the "going analog" and "slow reading" movements in June 2026, with several newsletters specifically built around slow reading (slowread.substack.com, footnotesandtangents, schooloftheunconformed). Comment windows are open and audiences are engaged. This is the biggest new channel find today vs. yesterday.
+- Public domain 2026 angle (Maltese Falcon, Agatha Christie, Faulkner) is still fresh in June. Nobody in the typing/reading space has landed this hook yet.
+- TypeLit.io has a "Typing as Mindfulness" blog post confirming there's search intent around that angle. TypeLit is a competitor (skip their community threads), but the framing confirms meditype is not alone in this territory.
+- Slow reading as a named practice is distinct from the "going analog" trend and has its own Substack communities worth tracking separately.
+
+**Queries that returned nothing useful:**
+- Live Reddit threads from last 24-48h (indexing lag, same as yesterday)
+- Live Twitter/X threads from last 24h (not indexed in real time)
+- Firecrawl API blocked in this environment, WebFetch returning 403 on most targets (Reddit, Medium, HN, Epigram, Substack). All drafts above are based on search snippets and WebSearch summaries, not full article reads. Verify each post's actual content before commenting to confirm the reply is on-topic.
+
+**Channels worth doubling down on:**
+- Substack slow-reading newsletters: highest-quality audience found today, comment sections are open, community is tight-knit and non-spammy. Prioritize slowread.substack.com and footnotesandtangents.substack.com.
+- Twitter/X book-quote posts: test the Thoreau draft above and see if the literary angle pulls better engagement than the builder angle from yesterday.
+- Show HN: timing matters more than the draft quality. Post on a Tuesday or Wednesday morning EST, not a weekend.
+
+**Channels to deprioritize:**
+- Lemon8: still needs a screenshot/visual to work; no point drafting text-only content for it.
+- HN "Typing and Keyboards" thread (id=47565848, March 31, 2026): 2.5 months old, commenting there now gets no visibility.
+- Reddit fresh post: already drafted yesterday, do not post again this week.
+
+---
+
 # 2026-06-16, Channel drafts (6 items)
 
 ---
