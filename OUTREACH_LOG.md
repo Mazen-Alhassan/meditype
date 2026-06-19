@@ -2,6 +2,104 @@
 
 ---
 
+# 2026-06-19, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X original post]**
+- **Source link:** n/a (original)
+- **Posted by OP:** n/a
+- **Why it fits:** public-domain quote angle, slow-reading contrast, strong for lo-fi and literature crowds
+- **Draft (paste ready):**
+> "i loafe and invite my soul." (Whitman, Leaves of Grass)
+>
+> typed that line on meditype with the rain sound on. no wpm counter ticking, no score flashing. just the sentence and your hands. public-domain books, ambient sounds, nothing else.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template (for "cozy websites" / "calm corners of the internet" / "monkeytype alternative" threads)]**
+- **Source link:** browse X for threads matching "what are some chill websites", "cozy corners of the internet", "monkeytype alternative" from last 24h. paste this reply on any that look active.
+- **Posted by OP:** varies
+- **Why it fits:** answers the question first, offers meditype as one option without overselling, short enough to read past
+- **Draft (paste ready):**
+> if you want something genuinely quiet, not just aesthetically quiet, try meditype. it's a typing app built around public-domain books. no wpm counter, no streaks, no gamification. pick a book, put on the rain sound, type. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit fresh post, r/SideProject]**
+- **Source link:** https://www.reddit.com/r/SideProject/ (post directly, 1 per week max)
+- **Posted by OP:** you (fresh post, use once this week)
+- **Why it fits:** r/SideProject welcomes "I built this" posts, this framing leads with the experience before the pitch, no self-congratulation
+- **Draft (paste ready):**
+
+**Title:** I built a typing app where there's no WPM counter and no score. just a book and ambient sound.
+
+> the idea was simple: what if a typing practice tool wasn't trying to make you faster?
+>
+> meditype (https://meditype-omega.vercel.app) lets you pick a public-domain book, choose an ambient sound (rain, forest, etc.), and type through the prose at whatever pace feels natural. no words-per-minute counter, no daily streak, no leaderboard. the only feedback is finishing a passage.
+>
+> i built it because monkeytype and keybr are great but they're both optimizing for speed. i wanted something that felt like sitting with a book on a slow afternoon. turns out a surprising number of people want that too, mostly lo-fi study folks and mechanical keyboard users who just enjoy the act of typing.
+>
+> would love feedback, especially on the book selection and ambient sound quality. all public domain, no account needed, no ads.
+
+---
+
+**[Channel: Blog/article comment]**
+- **Source link:** https://typingfastest.com/blog/best-monkeytype-alternatives-2026-tested-7-sites
+- **Posted by OP:** TypingFastest staff, active 2026 roundup article
+- **Why it fits:** article lists monkeytype alternatives by speed and features. meditype is a genuinely different angle (anti-WPM) that adds value to the comments rather than competing with listed tools
+- **Draft (paste ready):**
+> these are all solid picks if faster WPM is the goal. one tool worth adding for a completely different niche: meditype (https://meditype-omega.vercel.app). it's built around public-domain books, no speed tracking, no score at all. closer to sitting with a novel than taking a test. not trying to replace monkeytype, just for people who specifically don't want the gamification loop.
+
+---
+
+**[Channel: Blog/article comment]**
+- **Source link:** https://asleepycreative.com/cozy-websites-to-cure-boredom/
+- **Posted by OP:** asleepycreative, last updated Dec 2025, comment section open
+- **Why it fits:** article is literally a roundup of cozy/calm websites. meditype fits the category exactly. comment adds real value to the list rather than being a plug.
+- **Draft (paste ready):**
+> one more for the list: meditype (https://meditype-omega.vercel.app). it's a typing app for public-domain books with ambient sounds built in, no WPM counter, no streaks. you pick something like Austen or Woolf, turn on the rain, and just type at whatever pace. genuinely one of the quieter corners of the internet i've found.
+
+---
+
+**[Channel: Bluesky / Mastodon post]**
+- **Source link:** n/a (original, post to #indieweb and #slowweb feeds)
+- **Posted by OP:** n/a
+- **Why it fits:** Mastodon/Bluesky indie-web crowd values static sites, public domain, no-account tools. this hits all three. hashtag reach is real for this niche.
+- **Draft (paste ready):**
+> there's a typing site built around public-domain books. no analytics, no wpm counter, no account, no ads. you pick the book, pick the ambient sound (rain, forest), type.
+>
+> the whole thing is a static site. books are out of copyright. it just exists and works.
+>
+> https://meditype-omega.vercel.app
+>
+> #indieweb #slowweb #publicdomain #typing
+
+---
+
+**[Channel: Reddit comment template (r/MechanicalKeyboards, r/typing)]**
+- **Source link:** browse r/MechanicalKeyboards and r/typing directly for threads from last 48h asking about practice tools, "what do you use to practice", "recommend a typing app", etc.
+- **Posted by OP:** varies
+- **Why it fits:** mech keyboard users care about the feel and sound of typing, not just the score. "enjoy the keyboard" framing is native to that community.
+- **Draft (paste ready):**
+> if you want something that makes typing feel like an activity rather than a test, meditype is worth trying. it's public-domain books with ambient sounds (rain, forest), no wpm counter. good for when you want to enjoy the keyboard rather than clock yourself. https://meditype-omega.vercel.app
+
+---
+
+## Today's notes
+
+- Web search could not surface specific Reddit or Twitter threads from last 24h. Search engines don't index new social posts fast enough for same-day work. Browse r/InternetIsBeautiful, r/MechanicalKeyboards, r/typing, and r/digitalminimalism directly. Search X for "cozy websites" and "monkeytype alternative" sorted by Latest.
+- Best finds today were roundup blog articles with open comment sections (typingfastest.com, asleepycreative.com, gridfiti.com). High-value targets: they rank well, stay indexed, comments visible to the same audience searching for those tools.
+- HN had active Public Domain Day 2026 threads from January (works from 1930 entering copyright-free). Those are now 5+ months old. Bookmark for next Public Domain Day (Jan 1, 2027) as a natural meditype tie-in.
+- The "retyping novels" niche is established on HN via Typelit.io and Entertrained Show HN posts. Meditype is differentiated by the no-WPM philosophy, not by being first. Lead with that difference.
+- Channels to double down: roundup blog comment sections (long shelf life, search traffic), Bluesky #indieweb and #slowweb (audience overlap is high, not oversaturated).
+- Channels that need direct browsing (not search): r/MechanicalKeyboards, Twitter/X Latest tab, Bluesky feed for #typing.
+- Notion MCP tools not available in this session. Log written to OUTREACH_LOG.md in repo as fallback.
+
+---
+
 # 2026-06-17, Channel drafts (7 items)
 
 ---
