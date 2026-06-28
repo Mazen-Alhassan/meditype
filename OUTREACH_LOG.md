@@ -2,6 +2,116 @@
 
 ---
 
+# 2026-06-28, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X original post]**
+- **Source link:** n/a (original content)
+- **Posted by OP:** n/a
+- **Why it fits:** First post to show the mood-based library system. New angle not used in prior weeks.
+- **Draft (paste ready):**
+
+> meditype organizes books by mood, not genre.
+>
+> Stoic Mornings: Marcus Aurelius, Epictetus, Seneca.
+> Slow Sundays: Thoreau, Whitman, Montaigne.
+> Melancholy: Rilke, Pessoa, Dickinson.
+>
+> pick the vibe before you pick the book. ambient sound on. no wpm counter.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** n/a (template for "can't focus," "brain fog," "I've been staring at my screen," "recommend a distraction-free website" threads on X from last 24h)
+- **Posted by OP:** varies
+- **Why it fits:** Saturday afternoon peak for focus-crash tweets. Different emotional moment from prior June templates (decompression June 22, morning ritual June 27).
+- **Draft (paste ready):**
+
+> if you need something that forces slow attention instead of more fast scrolling, meditype is good for that. you type through a passage from a public domain book (Walden, Meditations, Rilke) with ambient sound on. can't skim, can't scroll. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit comment template, r/Stoicism]**
+- **Source link:** n/a (template for r/Stoicism threads about daily Meditations practice, morning routines, or "how do you read Aurelius." Hold period elapsed June 24+.)
+- **Posted by OP:** varies
+- **Why it fits:** Answers the "does reading method matter" question first. Meditations confirmed in library at 184 passages.
+- **Draft (paste ready):**
+
+> typing through it changes it. you can't skip ahead or scan the next passage before finishing the current one. meditype has the full Meditations in its library, no wpm counter, just ambient sound in the background. going through it a few passages at a time in the morning has been a different experience from just reading. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit comment template, r/books]**
+- **Source link:** n/a (template for r/books summer reading / "what are you reading this weekend" threads. Flagged valid per June 27 notes.)
+- **Posted by OP:** varies
+- **Why it fits:** Summer reading season. Leads with the suggestion before mentioning meditype. Book titles confirmed in library.
+- **Draft (paste ready):**
+
+> if you want to slow down with something, try typing it. meditype lets you work through public domain texts at your own pace, no wpm counter or score. it has some good ones for a summer pace: The Wind in the Willows, The Secret Garden, Alice in Wonderland, Pessoa's Book of Disquiet. each passage saves so you can come back where you left off. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog comment]**
+- **Source link:** https://typingfastest.com/blog/best-monkeytype-alternatives-2026-tested-7-sites
+- **Posted by OP:** typingfastest.com (2026)
+- **Why it fits:** MonkeyType alternatives article, direct audience fit. Fresh angle (mood library) avoids duplicate with June 21 draft. Verify comment section exists before posting.
+- **Draft (paste ready):**
+
+> worth adding to this list: meditype (https://meditype-omega.vercel.app). takes a completely different direction from everything here. no wpm counter, no score, no timed mode at all. you choose a public domain book from a library organized by mood (Stoic Mornings, Slow Sundays, Melancholy, Adventure) and type through it with ambient sound. built for people who want typing to be a practice rather than a competition.
+
+---
+
+**[Channel: Bluesky post]**
+- **Source link:** n/a (original content)
+- **Posted by OP:** n/a
+- **Why it fits:** Pessoa angle, unused book, resonates with literary Bluesky crowd. New angle from all prior Bluesky posts.
+- **Draft (paste ready):**
+
+> Fernando Pessoa's Book of Disquiet has 248 passages in meditype.
+>
+> you type through it slowly. rain sound or nothing. no timer, no wpm.
+>
+> Pessoa wrote it as fragments over 47 years. reading it in fragments feels right.
+>
+> https://meditype-omega.vercel.app
+>
+> #slowweb #publicdomain #indieweb #digitalminimalism
+
+---
+
+**[Channel: Mastodon / Threads post]**
+- **Source link:** n/a (original content)
+- **Posted by OP:** n/a
+- **Why it fits:** Threads adaptation, warmer tone, Rilke angle (different book from Bluesky draft). Letters to a Young Poet confirmed in library at 32 passages.
+- **Draft (paste ready):**
+
+> there's a Rainer Maria Rilke reading in meditype. Letters to a Young Poet. 32 passages.
+>
+> you type through it with ambient sound in the background. no score, no wpm, no finish line.
+>
+> it's built for sitting with the text, not measuring yourself against it.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+## Today's notes
+
+**Trends spotted:** Mood-based organization (Stoic Mornings, Slow Sundays, etc.) has not appeared in any prior draft. Genuinely distinctive product angle. Pessoa and Rilke are both in the library and untouched in outreach. MonkeyType alternatives search is active in 2026 with at least one ranked article (typingfastest.com). CozyTyper (Steam) is the main calm-typing competitor; it's paid, desktop-only, curated short quotes. Public-domain full books and browser-native access are the differentiators worth naming against it.
+
+**Queries that returned nothing:** Live Reddit threads (consistent block). Live X threads (not indexed). Direct page fetches (403 across all targets). Firecrawl API (blocked). HN threads from last 48h: Public Domain Day threads are 6 months old, IndieWeb thread used June 27. No HN slot used today.
+
+**Weekly slots:** Reddit fresh post next slot June 30 (Tuesday). Show HN do not re-post. IH post available if June 25 slot was unused.
+
+**Pending backlog (post these first):** AlternativeTo.net submission (one-time, high value). typingfastest.com comment (June 21 draft unconfirmed). josebriones Substack (June 22, unconfirmed). joshmcconnell Substack (no URL yet). Lemon8 comments (June 21). gridfiti comment (June 27).
+
+**Notion note:** Notion MCP not available. Copy to Notion manually from outreach/2026-06-28-channel-drafts.md.
+
+---
+
 # 2026-06-19, Channel drafts (7 items)
 
 ---
