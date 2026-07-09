@@ -2,6 +2,115 @@
 
 ---
 
+# 2026-07-09, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X original post]**
+- **Source link:** n/a (original content)
+- **Posted by OP:** n/a
+- **Why it fits:** Privacy and static-site angle not used in any prior post. "Nothing you type goes anywhere" resonates with the digital-minimalism crowd and is a genuine differentiator worth naming plainly.
+- **Draft (paste ready):**
+
+> meditype has no server. what you type goes nowhere. no account, no login, progress saves in your own browser.
+>
+> pick a book, pick a sound, type slowly. public domain, no WPM counter.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** n/a (template for "what apps don't try to hook me," "recommend something with no engagement loop," or "everything online wants my attention" threads on X from last 24h)
+- **Posted by OP:** varies
+- **Why it fits:** Answers the "no engagement loop" question before naming meditype. New angle from prior June templates (slow attention, going-analog, decompression). Engagement-loop fatigue is peaking in July 2026 discourse.
+- **Draft (paste ready):**
+
+> meditype might be it. public-domain books, ambient sounds, no WPM counter, no streak. nothing you type is sent anywhere. no notification to bring you back. it just sits there until you want it. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit comment template, r/books]**
+- **Source link:** n/a (template for r/books "how do you stay focused while reading," summer reading threads, or "reading attention tips" threads from last 48h. Fresh sub, not used in prior weeks.)
+- **Posted by OP:** varies
+- **Why it fits:** The "typing forces sentence-level attention" mechanism is a genuine reading method worth sharing in r/books. Answers the focus question first. Meditype is the specific tool, not the lead.
+- **Draft (paste ready):**
+
+> typing through a book is the best focus trick I've found. your hands can't skip ahead and your eyes stop scanning because the pace is dictated by your keystrokes, not your reading speed. meditype is built for this with public-domain books (Walden, Meditations, Alice in Wonderland, a few others) and ambient sound in the background. no WPM pressure, progress saves by passage. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit comment template, r/MechanicalKeyboards]**
+- **Source link:** n/a (template for r/MechanicalKeyboards threads asking about practice sites, "what do you type on just to enjoy the board," or no-pressure typing from last 48h)
+- **Posted by OP:** varies
+- **Why it fits:** "Sound of your switches" framing is native to the mech community. Different hook from the June 19 r/MechanicalKeyboards draft which led with "activity rather than a test." This one leads with tactile/acoustic experience specifically.
+- **Draft (paste ready):**
+
+> meditype is the one I go to for that. typing app for public-domain books with no WPM counter at all. no score, no feedback loop. you're just hearing your switches and whatever ambient track you've chosen while you work through a chapter. if you want to type with nothing to beat, it's the quietest setup I've found. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Bluesky post]**
+- **Source link:** n/a (original content)
+- **Posted by OP:** n/a
+- **Why it fits:** July seasonal hook (summer afternoons, rain) not used in any prior Bluesky post. Fresh angle from the Pessoa (June 28), static-site (June 19), and monkeytype-vs-library (June 16) Bluesky drafts.
+- **Draft (paste ready):**
+
+> it's july. it's rainy-afternoon weather.
+>
+> meditype has ambient rain and a library of public-domain books. Walden, Meditations, Alice in Wonderland. no WPM counter, no score, no account.
+>
+> pick a book and type into a summer afternoon.
+>
+> https://meditype-omega.vercel.app
+>
+> #slowweb #publicdomain #summerreading
+
+---
+
+**[Channel: Blog comment, gridfiti.com]**
+- **Source link:** https://gridfiti.com/aesthetic-study-websites/
+- **Posted by OP:** Gridfiti, updated 2026 (confirmed active in search results; returned 403 on direct fetch, so verify comment section is open before pasting)
+- **Why it fits:** Pending since June 27 notes. "34 Best Aesthetic Study Websites 2026" is a direct audience match. Comment adds a real tool gap rather than a duplicate of what's listed.
+- **Draft (paste ready):**
+
+> one missing from this list that fits the aesthetic study vibe exactly: meditype (https://meditype-omega.vercel.app). it's a typing app for public-domain books with ambient sound built in. no WPM counter, no account, no ads. pick a classic, turn on rain or forest sounds, type. runs entirely in the browser. genuinely one of the quieter study tools I've come across.
+
+---
+
+**[Channel: AlternativeTo.net submission]**
+- **Source link:** https://alternativeto.net/software/monkeytype/ (submit meditype as an alternative on this page, one-time action)
+- **Posted by OP:** n/a (one-time platform submission, pending since first log entry in June)
+- **Why it fits:** The MonkeyType alternatives page on AlternativeTo ranks in search results and surfaces when people look for typing tool options. A submission here is persistent and indexed. High-value, low-effort, overdue.
+- **Draft (paste ready):**
+
+> **Software name:** meditype
+> **URL:** https://meditype-omega.vercel.app
+> **License:** Free, no account required
+> **Platform:** Web (browser)
+>
+> **Description:**
+> A typing app built around public-domain books with no speed metrics. Pick from a library organized by mood (Stoic Mornings, Slow Sundays, Wonder, Melancholy, Adventure, Mystical), turn on ambient sound (rain, forest, cafe), and type at your own pace. No WPM counter, no accuracy score, no leaderboard. Progress saves to localStorage. No account, no server, free.
+>
+> **Why it's an alternative to MonkeyType:**
+> Different philosophy. Where MonkeyType optimizes for WPM and accuracy, meditype ignores both. It's built for people who want to sit with classic literature, not measure themselves against it. The closest existing alternative is TypeLit (full-book typing) but meditype removes all metrics and organizes by mood rather than title.
+
+---
+
+## Today's notes
+
+**Trends spotted:** Digital minimalism articles in 2026 are framing tools as "non-extractive" vs "extractive." The privacy angle (nothing you type is sent anywhere, saves to localStorage only) is a genuine meditype differentiator that has not been the lead hook in any prior post. July summer reading discourse is starting on r/books and Bluesky. The gothic/literary summer angle (rainy afternoon + old books) is seasonal and timely for the next few weeks.
+
+**Queries that returned nothing:** Live Twitter/X threads from last 24h (not indexed in real time by search engines, consistent with all prior runs). Live Reddit threads from last 48h (same indexing lag). Direct page fetches returned 403 across all targets including HN, Reddit, Substack, Gridfiti, Buzzfeed, and Epigram. All drafts above are based on search summaries and confirmed article existence, not full reads. Verify gridfiti.com comment section is open before posting draft 6.
+
+**Channels worth doubling down on:** r/books (fresh sub, July summer reading peak, attention/focus framing adds genuine value). AlternativeTo.net submission is the single highest-leverage one-time action remaining in the backlog; the page for MonkeyType alternatives ranks in search. Bluesky seasonal content performs well in #slowweb feeds.
+
+**Channels with unconfirmed pending posts (action first):** typingfastest.com comment (June 19 and June 28 drafts, neither confirmed posted). asleepycreative.com comment (June 19, unconfirmed). josebriones Substack (June 22). gridfiti.com comment is today's draft but needs manual comment-section check.
+
+**Note:** Notion MCP is connected to the claude.ai session but not enabled in this chat. To enable it, go to chat connector settings and toggle Notion on. Otherwise, copy this entry to the Notion "Meditype Outreach Log" page manually.
+
+---
+
 # 2026-06-28, Channel drafts (7 items)
 
 ---
