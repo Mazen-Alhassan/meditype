@@ -2,6 +2,122 @@
 
 ---
 
+# 2026-07-10, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X original post]**
+- **Source link:** n/a (original content)
+- **Posted by OP:** n/a
+- **Why it fits:** "Afternoon brain shot" summer fatigue angle. Fresh from all prior posts. Practical, specific, avoids the grand-thesis framing that ran June 16 and June 17. No prior draft has led with the mid-day reset moment.
+- **Draft (paste ready):**
+
+> if your afternoon brain is shot and you need something that isn't another tab to close, meditype is quiet. public domain books, ambient sound, no wpm counter. type through a few sentences of Walden or Meditations and then close it. no progress lost, no streak broken.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** n/a (template for "I want to read more but can't focus" / "how do you actually finish a book" / "attention span completely gone" threads on X from last 24h. Different from prior templates: engagement-loop fatigue covered July 9; decompression June 22; morning ritual June 27; brain fog June 28.)
+- **Posted by OP:** varies
+- **Why it fits:** "Typing forces attention to each sentence" is a concrete mechanism, not just a vibe. Answers the focus problem before naming meditype. Unused angle across all prior reply templates.
+- **Draft (paste ready):**
+
+> if the problem is that you want to read but your eyes keep sliding off the page, try typing the book instead. meditype is built for this. public domain books (Austen, Thoreau, Meditations, Rilke), ambient sound, no wpm counter. typing forces you to slow to the pace of each sentence. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit fresh post, r/digitalminimalism]**
+- **Source link:** https://www.reddit.com/r/digitalminimalism/ (fresh post, first time posting to this sub, previously only comment templates. Max 1 per week.)
+- **Posted by OP:** n/a (new post)
+- **Why it fits:** Sub discourse in 2026 is explicitly framing tools as "extractive vs. non-extractive" (noted July 9). meditype has zero engagement mechanics. This framing is native to r/digitalminimalism and lands differently from an r/InternetIsBeautiful share.
+- **Draft (paste ready):**
+
+> **Title:** a typing app with no engagement mechanics: no wpm, no streak, no score
+>
+> found meditype a while back and it's become my reference point for what "non-extractive" screen time actually looks like.
+>
+> https://meditype-omega.vercel.app
+>
+> you pick a public domain book from a small library (Marcus Aurelius, Walden, Alice in Wonderland, Rilke, Pessoa), choose an ambient sound (rain, forest, cafe), and type through passages at your own pace.
+>
+> no wpm counter. no daily streak. no score. no account. nothing saves to a server. there's no notification it could ever send because there's nowhere to send it from.
+>
+> passage position saves in your own browser so you can pick up where you left off, but nothing resets if you miss a day. the app is genuinely indifferent about whether you come back.
+>
+> it's become a deliberate-screen-time ritual. 10-15 min of typing through Meditations before opening anything else. nothing about it is asking for anything back.
+
+---
+
+**[Channel: Blog comment, Well-Read Herring Substack]**
+- **Source link:** https://wellreadherring.substack.com/p/relaxing-websites-for-stressful-times
+- **Posted by OP:** Emily Herring, March 2026 (confirmed active, Substack post about calming websites including typatone.com, donothingfor2minutes.org, drawafish.com. Comment section open on Substack. Author is a philosopher and literary writer with a book out in 2026.)
+- **Why it fits:** Direct audience match. Emily's readers are literary, slow-paced, philosophy-adjacent. The Rilke and Pessoa sections of meditype's library are a specific fit for this audience. Brand new target, not in any prior log.
+- **Draft (paste ready):**
+
+> Great collection. One I'd add that fits this spirit exactly: meditype (https://meditype-omega.vercel.app). You pick a public domain book (Meditations, Walden, Pessoa's Book of Disquiet, Rilke's Letters to a Young Poet, Alice in Wonderland), put on ambient sound, and type through it at whatever pace. No WPM counter, no score, no finish line. It's the only typing app I've found that feels restful rather than competitive. Given the literary bent here, the Rilke and Pessoa sections are particularly good.
+
+---
+
+**[Channel: Blog comment, TypingFlo.com "Monkeytype Alternatives"]**
+- **Source link:** https://www.typingflo.com/blog/monkeytype-alternatives
+- **Posted by OP:** TypingFlo, February 2026 (confirmed active in search results, different from typingfastest.com which was targeted June 19 and June 28. This article focuses on skill-building alternatives. Comment section status: unconfirmed, verify before posting.)
+- **Why it fits:** The article covers every alternative as a different path to faster WPM. meditype is the only option in the space with no metrics at all. Adds a genuinely missing category rather than competing with listed tools. Different enough from the June 28 typingfastest.com draft to post here separately.
+- **Draft (paste ready):**
+
+> One direction this list doesn't cover: zero-metrics typing. meditype (https://meditype-omega.vercel.app) has no WPM counter, no accuracy score, nothing to beat. It's a library of public-domain books (Marcus Aurelius, Thoreau, Rilke, Carroll, Pessoa) with ambient sound. You type through prose at your own pace, passage by passage. Not a speed trainer, more a slow reading method. Worth knowing about for the crowd who specifically wants off the improvement treadmill.
+
+---
+
+**[Channel: Hacker News comment]**
+- **Source link:** https://news.ycombinator.com/item?id=43752433
+- **Posted by OP:** April 2025 ("Handwriting activates broader brain networks than typing" thread, HN discussion of a research finding that handwriting's slower pace creates more cognitive engagement than typing does.)
+- **Why it fits:** The thread discussion lands exactly on "slowing down creates more attention." That's the core meditype philosophy. Comment adds a specific tool that goes in this direction, framed as a partial response, not a promo. Thread is older but HN comments on interesting threads stay findable. New target, not in any prior log.
+- **Draft (paste ready):**
+
+> There's a gap between handwriting and speed-optimized typing that apps rarely aim for. Most typing trainers work against slowness on purpose. meditype (https://meditype-omega.vercel.app) goes the other direction: public domain books, no WPM counter, no accuracy score. You can't speed through it because there's nothing rewarding speed. It's not a handwriting substitute but it forces a different quality of attention than racing through random words does. The sentence-by-sentence pace changes how you read the text.
+
+---
+
+**[Channel: Indie Hackers fresh post]**
+- **Source link:** https://www.indiehackers.com/ (fresh post, this slot has been available since June 28 notes. Max 1 per week. First IH post in the log.)
+- **Posted by OP:** n/a (new post, creator angle appropriate for IH)
+- **Why it fits:** IH audience is builders and product-minded people. The anti-gamification philosophy is a real product decision worth discussing there. Framed as a question to the community, not a pure promo, which performs better on IH.
+- **Draft (paste ready):**
+
+> **Title:** I built a typing app that deliberately has no WPM counter. Three months in, here's what I learned.
+>
+> Most typing apps are training tools. They show WPM, track accuracy, give streaks, display leaderboards. The feedback loop is the product.
+>
+> meditype (https://meditype-omega.vercel.app) has none of that. No WPM counter, no accuracy score, no streak. You pick a public domain classic (Marcus Aurelius, Walden, Alice in Wonderland, Rilke, Pessoa), choose an ambient sound, and type through it. Progress saves locally, passage by passage. That's the whole product.
+>
+> The bet: some people don't want to get faster. They want something to do with their hands while sitting with good writing. The lo-fi study crowd, mechanical keyboard users who enjoy the act of typing, people who want deliberate screen time that doesn't extract anything from them.
+>
+> Three months in, it's growing slowly through word of mouth in those communities. No paid acquisition. Mostly comments in the right places.
+>
+> Curious whether anyone else has gone anti-gamification in a gamified space and what the growth trajectory looked like. Also happy to hear thoughts on the no-metrics philosophy from a product standpoint.
+
+---
+
+## Today's notes
+
+**Trends spotted:** "Non-extractive" vs. "extractive" framing for tools is now common vocabulary in r/digitalminimalism (confirmed July 9, still active July 10). Summer afternoon fatigue is a real moment for "something quiet to do" content. The handwriting-vs-typing discourse from the Apr 2025 HN thread is still circulating in cognitive science adjacent communities. Emily Herring's "Well-Read Herring" Substack (philosopher, just released a book) is the best literary-audience comment target found to date, not yet touched.
+
+**Queries that returned nothing useful:** Live Reddit threads from last 24-48h (search indexing lag, consistent with all prior runs). Live Twitter/X threads from last 24h (not indexed in real time). Direct page fetches continue to return 403 across most targets. Firecrawl blocked in this environment.
+
+**Backlog carry-forwards (action first before new targets):** AlternativeTo.net submission (one-time, high value, overdue since June 16). typingfastest.com comment (June 19 and June 28 drafts, still unconfirmed posted). asleepycreative.com comment (June 19, unconfirmed). gridfiti.com comment (June 27 and July 9 drafts, unconfirmed). josebriones Substack (June 22, unconfirmed).
+
+**New targets surfaced today:** Well-Read Herring Substack (Emily Herring, March 2026, literary audience, high quality). TypingFlo Monkeytype alternatives article (Feb 2026, different from typingfastest.com already in backlog). HN handwriting thread (Apr 2025, item 43752433, topical angle).
+
+**Weekly slot status:** Reddit fresh post used today (r/digitalminimalism). IH post used today. Show HN slot still closed (no re-post). HN "What are you working on?" July thread: not yet found or targeted; search for it and post from June 16 draft (tech stack angle) if it exists.
+
+**Channels to double down on:** Literary Substack comments (Emily Herring is the best find in weeks). r/digitalminimalism fresh post (first time, not yet saturated). Blog comment sections on typing-alternatives articles remain high shelf-life targets.
+
+**Note:** Notion MCP not available in this environment. Copy this entry to the Notion "Meditype Outreach Log" page manually. Prior note from July 9: "To enable it, go to chat connector settings and toggle Notion on."
+
+---
+
 # 2026-07-09, Channel drafts (7 items)
 
 ---
