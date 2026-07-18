@@ -2,6 +2,134 @@
 
 ---
 
+# 2026-07-18, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X original post]**
+- **Source link**: N/A (original post)
+- **Posted by OP**: N/A
+- **Why it fits**: Seneca quote from Letters from a Stoic as the hook. "Letters from a Stoic" is confirmed in the Stoic Mornings library. Prior Twitter leads used Whitman (Jun 19), Thoreau (Jun 17, Jul 13), public domain (Jul 12), afternoon brain fog (Jul 10), and mood library lists (Jul 14). A single Seneca line is a completely unused angle. The quote earns its space before the app is mentioned.
+- **Draft (paste ready):**
+
+> 'withdraw into yourself as much as you can.' Seneca, Letters from a Stoic.
+>
+> there's a typing app built exactly for that. public domain books, ambient sound, no wpm counter.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link**: N/A (template for "what are some chill websites," "calm corners of the internet," "what to use online instead of doomscrolling," or "recommend me something quiet" threads on X. Browse X for threads from the last 24h. Prior templates covered: cozy/monkeytype alternative (Jun 16), intentional screen time (Jun 17), decompression (Jun 22), morning ritual (Jun 27), brain fog (Jun 28), engagement-loop fatigue (Jul 9), reading absorption (Jul 10), slow and tactile (Jul 13), late night wind-down (Jul 14). Today: specific book and sound pairing as the concrete recommendation.)
+- **Posted by OP**: varies
+- **Why it fits**: Naming a specific book and sound pairing reads like a personal recommendation, not a pitch. Concrete enough to picture before the URL is clicked. Different frame from every prior template.
+- **Draft (paste ready):**
+
+> meditype is the one I keep going back to. pick a public domain book (Meditations, Walden, Letters to a Young Poet, Rumi), set ambient rain or fire, and just type. no wpm, no streak, nothing to refresh. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog comment, typingmonk.com "Best Typing Practice Websites and Apps in 2026"]**
+- **Source link**: https://typingmonk.com/blog/best-typing-practice-websites-apps-2026
+- **Posted by OP**: typingmonk.com, 2026 (confirmed active in search results; new target, not in any prior log entry)
+- **Why it fits**: Article covers typing tools by speed and accuracy metrics. meditype occupies a category the article does not name: typing with no metrics at all. Distinct from typingfastest.com (Jun 19, Jun 28, Jul 10, Jul 12), CosmicKeys (Jul 13), and XDA Developers (Jul 14).
+- **Draft (paste ready):**
+
+> solid list, but there is a category missing here: typing with no metrics at all. meditype (https://meditype-omega.vercel.app) goes entirely in that direction. public domain books (Meditations, Walden, Alice in Wonderland, Rilke's Letters to a Young Poet, Rumi), ambient sound, and no WPM counter or accuracy score. if someone is burned out on tracking their speed, this is the opposite end of the spectrum from everything listed here.
+
+---
+
+**[Channel: Blog comment, voicekeyboardpro.com "7 Best Typing Speed Websites in 2026"]**
+- **Source link**: https://voicekeyboardpro.com/blog/best-typing-speed-websites.html
+- **Posted by OP**: voicekeyboardpro.com, 2026 (confirmed active in search results; new target, not in any prior log entry)
+- **Why it fits**: Title explicitly names "speed websites," which frames a comment about the no-speed alternative as a natural addition rather than an off-topic plug.
+- **Draft (paste ready):**
+
+> all good picks for speed training. one gap worth naming: typing with no speed tracking at all. meditype (https://meditype-omega.vercel.app) removes all metrics. public domain literature (Marcus Aurelius, Thoreau, Rilke, Rumi), ambient sound, your own pace. no WPM, no accuracy %, no leaderboard. not a competitor to the sites listed here, more a different destination for people who want off the improvement loop entirely.
+
+---
+
+**[Channel: Blog comment, whatsparpadi.in "Stop Using Monkeytype: 3 Better Alternatives to Improve Typing Speed"]**
+- **Source link**: https://www.whatsparpadi.in/productivity/stop-using-monkeytype-alternatives.html
+- **Posted by OP**: whatsparpadi.in, 2026 (confirmed active in search results; new target, not in any prior log entry)
+- **Why it fits**: Article is already framing monkeytype critically. A comment extending the argument to "none of them, try no metrics at all" is a natural continuation of the piece's own thesis. Warmest comment context in today's search results.
+- **Draft (paste ready):**
+
+> good alternatives, but all three are still speed-focused. meditype (https://meditype-omega.vercel.app) takes a different direction: public domain books (Meditations, Walden, Rilke's Letters to a Young Poet, Rumi), ambient sound, and no WPM counter at all. no accuracy score either. if someone is specifically burned out on the 'beat your score' loop, that is where to go.
+
+---
+
+**[Channel: Bluesky / Mastodon / Threads post]**
+- **Source link**: N/A (original post)
+- **Posted by OP**: N/A
+- **Why it fits**: Prior Bluesky posts this month covered public domain day (Jul 12), ambient pairings (Jul 13), mood library structure (Jul 14). Today's angle is the observation that typing through a book is slower than reading it. A real experience, not a feature list. Seasonal hook is light. Trim the hashtag line if total pushes past Bluesky's 300-char limit.
+- **Draft (paste ready):**
+
+> typing a book is slower than reading it. that's the point.
+>
+> meditype: public domain texts (Walden, Meditations, Rilke, Rumi), ambient sound, no wpm counter. your pace is set by your keystrokes, not your eyes.
+>
+> good use of a slow july afternoon.
+>
+> https://meditype-omega.vercel.app
+>
+> #slowweb #publicdomain #indieweb
+
+---
+
+**[Channel: Hacker News comment, "Ask HN: What are you working on? (July 2026)"]**
+- **Source link**: Find the July 2026 monthly thread at news.ycombinator.com (search "Ask HN: What are you working on? July 2026" or browse the front page first Monday of July. June 2026 thread was item 48528779. The July thread will be a new item number.)
+- **Posted by OP**: HN monthly thread, active through end of July
+- **Why it fits**: June thread was targeted Jun 16. No draft was written for the July thread. Monthly "What are you working on" comments are appropriate every month. July's angle is what we've learned from the no-metrics bet rather than re-explaining what the app does.
+- **Draft (paste ready):**
+
+> meditype | https://meditype-omega.vercel.app
+>
+> A typing app for public-domain literature with no speed metrics. Library of 24 books in 6 moods (Stoic Mornings, Slow Sundays, Wonder, Melancholy, Adventure, Mystical). Ambient sounds. No WPM counter, no leaderboard, no account.
+>
+> The no-metrics bet is holding up. Community skews lo-fi study, mechanical keyboard users who want to enjoy typing without clocking themselves, and people who want deliberate screen time. No paid acquisition, slow word-of-mouth growth.
+>
+> Currently thinking about whether to expand the library or keep it curated at 24. Happy to hear thoughts on what "enough books" means for a tool like this.
+
+---
+
+## Today's notes
+
+**Trends spotted:**
+- The monkeytype-alternatives SEO cluster is now wide enough that three fresh articles appeared today (typingmonk.com, voicekeyboardpro.com, whatsparpadi.in) not previously targeted. All are blog comment placements with distinct wording. Verify comment sections are open before posting each.
+- "Slow typing" as a web search query now returns meditype directly in results. Organic SEO traction building without paid effort.
+- "Cozy websites" content on Lemon8 and TikTok continues to surface with high engagement but remains image/video-first. No text-comment entry without a visual asset.
+
+**Queries that returned nothing actionable:**
+- Live Reddit threads from last 24-48h: consistent search indexing gap, same as every prior run.
+- Live Twitter/X threads from last 24h: X blocks web fetches.
+- Firecrawl API: blocked in this environment, consistent with all prior sessions.
+- HN "Ask HN: What are you building on the side in 2026?" items 46414570 and 46555823: both from January 2026, approximately 6 months old. Too old to comment in. Skipped.
+
+**Channels worth doubling down on:**
+- Blog comments in the monkeytype-alternatives cluster (keyhero.com and typingtestgo.com also appeared in today's search, not yet drafted)
+- HN "What are you working on" monthly threads (find the July thread URL manually, draft above is ready)
+- AlternativeTo.net submission: still overdue. First flagged Jun 16. Draft written Jul 9. Submit at https://alternativeto.net/software/monkeytype/ using the Jul 9 draft.
+
+**Channels to hold:**
+- Reddit fresh post: July 12 used the weekly slot (r/InternetIsBeautiful). Next slot opens July 19 (tomorrow). If posting tomorrow, r/books is the freshest sub.
+- HN Show HN: still on hold per notes from Jul 12, Jul 13, Jul 14. Hold until there is a concrete product update.
+- Lemon8: mobile and image-first. No entry without a screenshot or screen recording.
+
+**Targets to skip next time (recently drafted, avoid repeating):**
+- wellreadherring.substack.com: drafted Jul 10 and Jul 13. Skip unless new post from Emily Herring appears.
+- typingfastest.com: drafted Jun 19, Jun 28, Jul 10, Jul 12. Skip entirely.
+- gridfiti.com: Jul 9, Jul 12. Skip.
+- CosmicKeys: Jul 13. Skip.
+- epigram.org.uk: Jul 14. Skip.
+- xda-developers.com: Jul 14. Skip.
+- typingmonk.com, voicekeyboardpro.com, whatsparpadi.in: drafted today. Skip next run.
+
+**Notion logging status**: Notion MCP is connected to the account but not enabled for this chat session. Enable it in chat connector settings. Drafts written to outreach/2026-07-18.md and prepended to OUTREACH_LOG.md.
+
+---
+
 # 2026-07-10, Channel drafts (7 items)
 
 ---
