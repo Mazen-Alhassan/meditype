@@ -2,6 +2,149 @@
 
 ---
 
+# 2026-07-19, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X original post]**
+- **Source link:** N/A (original post)
+- **Posted by OP:** N/A
+- **Why it fits:** Wind in the Willows / Kenneth Grahame angle from the Wonder mood section. The "messing about" quote is a perfect frame for the no-WPM philosophy. Completely unused across all prior posts. Seasonal: slow summer afternoon feel.
+- **Draft (paste ready):**
+
+> "there is nothing half so much worth doing as simply messing about in boats."
+> Grahame, The Wind in the Willows.
+>
+> meditype is built on that logic. public domain books, ambient sound, no wpm counter. you type through a chapter of something good and then close it. the messing about is the point.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** N/A (template for "what do you do online when you're not trying to be productive" / "what's genuinely restful on the internet" / "recommend me something with no goal" threads on X from last 24h. Different from all prior templates: engagement-loop fatigue Jul 9, decompression Jun 22, morning ritual Jun 27, brain fog Jun 28, reading absorption Jul 10, slow and tactile Jul 13, late-night wind-down Jul 14, book and sound pairing Jul 18.)
+- **Posted by OP:** varies
+- **Why it fits:** Leads with deliberate idleness as a value, not a symptom. Concrete enough to picture. No prior template has led with "not practicing, not improving."
+- **Draft (paste ready):**
+
+> honestly, just opening meditype with no goal. pick a passage from Walden or Marcus Aurelius, put the rain sound on, type slowly through it. not practicing, not improving, just doing something with your hands that also happens to be reading. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit fresh post, r/books]**
+- **Source link:** https://www.reddit.com/r/books/ (fresh post, weekly slot available today per Jul 18 notes. First r/books fresh post in log history. Max 1 per week.)
+- **Posted by OP:** N/A
+- **Why it fits:** "Typing as a reading method for difficult texts" is native to r/books discourse. Leads with a real experience, mentions the app as the tool, ends with a community question. Genuinely useful for anyone who keeps bouncing off dense texts.
+- **Draft (paste ready):**
+
+> **Title:** Typing through a book changes how you read it. Found this useful for texts I kept bouncing off.
+>
+> I've been using meditype (https://meditype-omega.vercel.app) as a way to get through books I couldn't stay focused on with normal reading. It's a browser typing app for public domain texts. You type through the passages word by word, and the pace of your hands forces your brain to stay at the pace of the sentence.
+>
+> I tried this with Meditations first. Kept picking it up, reading a few pages, then getting distracted and starting over. Typing through it passage by passage was completely different. You can't skip forward when something gets dense because your hands have to go through it with you.
+>
+> The app has no WPM counter, no score, nothing to track. Walden, Alice in Wonderland, Pessoa, Rilke, a few others. Progress saves per passage so you can stop whenever.
+>
+> Curious if anyone else reads this way, or if there's a name for this method in the slow reading community.
+
+---
+
+**[Channel: Hacker News comment, "Ask HN: What are you working on? (July 2026)"]**
+- **Source link:** Find the July 2026 thread at news.ycombinator.com. June 2026 was item 48528779. July thread is typically posted the first Monday of the month (July 6, 2026). Search HN for "Ask HN: What are you working on? July 2026" to get the item number. Per Jul 18 notes, this thread has not yet been targeted.
+- **Posted by OP:** HN monthly thread, active through end of July
+- **Why it fits:** Monthly thread not yet commented on. Today's angle is what we've learned about the audience after six weeks, not just what the app does. Different from Jun 16 draft which was pure product description.
+- **Draft (paste ready):**
+
+> meditype | https://meditype-omega.vercel.app
+>
+> A typing app for public domain literature. 24 books across 6 mood categories (Stoic Mornings, Slow Sundays, Wonder, Melancholy, Adventure, Mystical). No WPM counter, no accuracy score, no account.
+>
+> Six weeks post-launch, the audience that's stuck is three clusters: lo-fi study folks who want something to do with their hands, mechanical keyboard users who enjoy typing as a physical activity rather than a test, and people who want deliberate screen time that doesn't ask for anything back. That last group seems driven by digital minimalism discourse more than the typing community.
+>
+> The no-metrics bet continues to hold. Growth is slow, word-of-mouth. Curious whether anyone has hit the inflection point where a tool like this crosses from "niche quiet corner" to broadly discoverable on its own.
+
+---
+
+**[Channel: Blog comment, keyhero.com "Different Typing sites"]**
+- **Source link:** https://keyhero.com/practice-typing/different-typing-sites/
+- **Posted by OP:** keyhero.com, confirmed active in 2026 search results. New target, first appearance in log.
+- **Why it fits:** Page compares and lists different typing sites by feature and focus. Meditype adds a genuinely absent category: zero-metrics typing. No competing with what's listed, just naming what's missing.
+- **Draft (paste ready):**
+
+> one category this comparison doesn't cover: typing with no metrics at all. meditype (https://meditype-omega.vercel.app) sits entirely outside the WPM-optimization space. public domain books organized by mood (Marcus Aurelius, Walden, Rilke, Wind in the Willows, Rumi), ambient sound built in, no speed tracking or accuracy score of any kind. worth knowing about for people who specifically want off the improvement loop.
+
+---
+
+**[Channel: Blog comment, typingtestgo.com "The Best Monkeytype Alternative (2026)"]**
+- **Source link:** https://typingtestgo.com/guides/typing-test-comparison
+- **Posted by OP:** typingtestgo.com, 2026 (confirmed active in search results, returned in multiple searches today). New target, first appearance in log.
+- **Why it fits:** Audit-style article reviewing monkeytype alternatives. Every tool reviewed still measures WPM. Meditype is the unreviewed "no metrics" option. Framed as an addition, not a correction.
+- **Draft (paste ready):**
+
+> solid audit. one thing worth noting for readers: every tool in this comparison still measures WPM. there's a small niche for people who specifically don't want that, and meditype (https://meditype-omega.vercel.app) is probably the cleanest option there. public domain books, ambient sounds, zero speed tracking. not a competitor to anything reviewed here, just a different destination for a different use case.
+
+---
+
+**[Channel: Bluesky / Mastodon / Threads post]**
+- **Source link:** N/A (original post, post to #slowweb, #publicdomain, #indieweb feeds)
+- **Posted by OP:** N/A
+- **Why it fits:** Laozi / Tao Te Ching angle from the Mystical mood section. Completely unused across all prior Bluesky posts (Jun 16: monkeytype comparison, Jun 19: static site, Jun 28: Pessoa, Jul 9: rain/summer, Jul 13 and Jul 14: CosmicKeys/other, Jul 18: typing slower than reading). Short Laozi line pairs naturally with the no-score philosophy. Trim hashtags if over 300 chars.
+- **Draft (paste ready):**
+
+> "those who know do not speak. those who speak do not know."
+> Laozi, Tao Te Ching.
+>
+> there's a typing app with no score, no leaderboard, no badge for finishing. you type through the Tao Te Ching (or Rumi, or Rilke, or Marcus Aurelius) with ambient sound. that's all it does.
+>
+> https://meditype-omega.vercel.app
+>
+> #slowweb #publicdomain #indieweb
+
+---
+
+## Today's notes
+
+**Trends spotted:**
+- TypersGuild (typersguild.com) and TypeLit.io confirmed as active competitors in the "type through books" niche. Both have WPM tracking, account systems, and speed analytics. Meditype's no-metrics stance is the genuine differentiator in a niche that is now established enough to have multiple players. Lean into the contrast when relevant.
+- "Slow tech" movement has 2026 articles in mainstream SEO (guidelightinnovations.com, fanstik.com). Framing is explicitly about mindful adoption vs. speed. Natural ecosystem for meditype messaging but articles returned 403 on fetch, so verify comment sections before posting.
+- Competitor articles (typingfastest.com, typingtestgo.com, keyhero.com, AlternativeTo) dominate the search results for "monkeytype alternatives 2026." Blog comments in this cluster have the most reliable reach because they stay indexed alongside those searches.
+- Lemon8 continues to dominate "cozy websites" content with image-first posts. No text-only entry viable without a screenshot.
+
+**Queries that returned nothing actionable:**
+- Live Reddit threads from last 24-48h: consistent search indexing gap, same as all prior runs. Reddit fetch also blocked. Browse r/books, r/InternetIsBeautiful, r/MechanicalKeyboards, r/digitalminimalism directly.
+- Live Twitter/X threads from last 24h: X not indexed in real time.
+- Direct page fetches: 403 across all targets today (keyhero.com, typingtestgo.com, gridfiti.com, asleepycreative.com, HN, guidelightinnovations.com). Verify comment sections on all blog targets before pasting.
+- Firecrawl API: blocked in this environment, consistent with all prior sessions.
+- HN July "What are you working on?" thread ID: not found via search, look it up manually at news.ycombinator.com.
+
+**Weekly slots used today:**
+- Reddit fresh post: r/books (first r/books post in log history). Next Reddit slot opens Jul 26.
+- Twitter original post: Wind in the Willows angle.
+- Bluesky: Laozi angle.
+
+**Persistent backlog (post these before new targets):**
+- AlternativeTo.net submission: one-time, high-value, overdue since Jun 16. Draft in Jun 16 and Jul 9 entries. Submit at https://alternativeto.net/software/monkeytype/. This is the single highest-leverage action remaining.
+- asleepycreative.com comment: Jun 19 draft confirmed available, never confirmed posted. Check comment section, paste Jun 19 draft if still open.
+- HN July "Ask HN: What are you working on?" thread: Jul 19 draft above is ready. Find the item number manually and post.
+
+**Targets to skip next run (recently drafted, avoid repeating):**
+- keyhero.com, typingtestgo.com: drafted today.
+- typingmonk.com, voicekeyboardpro.com, whatsparpadi.in: drafted Jul 18.
+- typingfastest.com: drafted Jun 19, Jun 28, Jul 10, Jul 12. Retired.
+- gridfiti.com: Jul 9, Jul 12. Retired.
+- wellreadherring.substack.com: Jul 10, Jul 13. Skip unless new post appears.
+- CosmicKeys: Jul 13. Skip.
+
+**Channels worth doubling down on:**
+- Typing-alternatives blog comment cluster: keyhero, typingtestgo, typingtestgo, AlternativeTo all appeared in today's searches. High shelf-life, stay indexed alongside the searches that matter.
+- r/books: First fresh post done today. Monitor the thread. If it gets traction, r/books is worth a comment template next week.
+- Bluesky #indieweb and #slowweb: audience overlap continues to be the strongest qualitative fit.
+- Next Reddit fresh post (Jul 26): consider r/MechanicalKeyboards or r/Stoicism. Both have not had a fresh post yet.
+
+**Notion logging status:** Notion MCP is connected to the account but not enabled for this chat session. Toggle it on in chat connector settings to enable direct logging. Drafts written to OUTREACH_LOG.md in repo as fallback.
+
+---
+
 # 2026-07-18, Channel drafts (7 items)
 
 ---
