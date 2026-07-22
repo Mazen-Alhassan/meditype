@@ -2,6 +2,130 @@
 
 ---
 
+# 2026-07-22, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (original post)
+- **Posted by OP:** n/a
+- **Why it fits:** Time-of-day framing with a specific book and ambient sound lands as authentic and screenshot-able. Rilke is obscure enough to feel literary, well-known enough to resonate.
+- **Draft (paste ready):**
+> tonight: hearth fire sounds, Letters to a Young Poet by Rilke, no WPM counter watching me. that's what meditype is for.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (original post)
+- **Posted by OP:** n/a
+- **Why it fits:** Contrast framing (other apps vs. meditype) is the sharpest anti-monkeytype angle. Lists the actual mood system which is a real differentiator. Good for the afternoon slot.
+- **Draft (paste ready):**
+> most typing apps: random words, 30-second test, WPM anxiety.
+>
+> meditype: pick a mood (Stoic Mornings, Slow Sundays, Melancholy, Wonder), pick an ambient sound, type Thoreau or Marcus Aurelius or Alice in Wonderland at whatever pace. no score.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply draft]**
+- **Source link:** template for "recommend me a calm website" / "what are some cozy corners of the internet" threads (no specific live thread found today, see notes)
+- **Posted by OP:** n/a
+- **Why it fits:** Answers the "cozy site" ask directly and immediately, drops the mood-library detail as the differentiating hook. One of these threads goes semi-viral every few days. Paste-ready when one surfaces.
+- **Draft (paste ready):**
+> meditype might fit. you pick a mood from a public-domain library (Stoic Mornings, Slow Sundays, Wonder, Melancholy), turn on rain or hearth fire in the background, and type Thoreau or Rumi or Rilke at your own pace. no WPM counter anywhere.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Bluesky / Mastodon post]**
+- **Source link:** n/a (original post)
+- **Posted by OP:** n/a
+- **Why it fits:** Leads with a real passage from the app (confirmed in data.jsx), then drops the context naturally. The Bluesky/Mastodon crowd responds well to literature quotes and the slow-web angle. Longer character limit lets it breathe.
+- **Draft (paste ready):**
+> "Have patience with everything unresolved in your heart and try to love the questions themselves."
+>
+> that's Rilke, Letters to a Young Poet. you can type that passage on meditype with rain sounds or hearth fire in the background, no score, no WPM counter, just the text and your keyboard.
+>
+> the library is organized by mood: Stoic Mornings, Slow Sundays, Mystical, Melancholy, Wonder, Adventure.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit fresh post, r/InternetIsBeautiful]**
+- **Source link:** n/a (new post)
+- **Posted by OP:** n/a
+- **Why it fits:** Last r/IIB post was June 24 (4 weeks ago), well within the one-per-week limit. Today's title leads with the mood-library angle rather than the WPM angle used last time. 16.6M members, highest-reach channel for this tool.
+- **Draft (paste ready):**
+> **Title:** meditype - a quiet typing app for public-domain books, organized by mood, no WPM counter
+>
+> you pick a mood from the library: Stoic Mornings, Slow Sundays, Mystical, Melancholy, Wonder, Adventure. then you pick an ambient sound (rain on a window, hearth fire, forest at dusk, ocean, soft piano, white noise). then you type passages from classic public-domain works at your own pace.
+>
+> the library: Marcus Aurelius, Epictetus, Seneca, Walden, Leaves of Grass, Montaigne, Rumi, Laozi, Alice in Wonderland, The Wind in the Willows, The Secret Garden, Rilke, Emily Dickinson, Moby-Dick, Treasure Island, and others.
+>
+> no WPM counter. no streaks. no leaderboard. your position in each book saves locally so you can come back where you left off.
+>
+> it's designed to feel like a slow reading ritual more than a typing test.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit comment draft, r/Stoicism]**
+- **Source link:** template for threads about daily Meditations practice, "how do you engage with stoic texts," or "reading vs. studying Aurelius" (no specific live thread found today, see notes)
+- **Posted by OP:** n/a
+- **Why it fits:** r/Stoicism (1M+ members) has a constant stream of threads about daily Meditations practice. meditype has Meditations, Enchiridion, and Letters from a Stoic in the Stoic Mornings mood. This reply targets that sub specifically, not as a promo but as a genuine practice tip.
+- **Draft (paste ready):**
+> if you like sitting with the text rather than just skimming it, meditype lets you type through Meditations or Epictetus passage by passage with ambient sound in the background. no WPM counter, no score, you just move through it slowly. it turned my morning Aurelius practice into something almost tactile.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog/article comment]**
+- **Source link:** https://gridfiti.com/aesthetic-study-websites/ ("The 34 Best Aesthetic Study Websites 2026", Gridfiti)
+- **Posted by OP:** 2026 (article indexed July 2026 per search results)
+- **Why it fits:** The article rounds up study and focus websites for an aesthetic-minded audience. meditype fits cleanly: calm, beautiful, public-domain, no gamification. Commenting here puts it in front of people actively looking for tools in this category.
+- **Draft (paste ready):**
+> worth adding meditype to a list like this. it's a typing app built around public-domain literature organized by mood (Stoic Mornings, Slow Sundays, Wonder, Melancholy), with ambient sounds like rain on a window or hearth fire. no WPM counter, no score. it lands somewhere between a focus tool and a slow reading ritual.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+## Today's notes
+
+**Trends spotted:**
+- The "cozy typing" niche has grown since June. TypeMochi (typemochi.com) is active and pitching "soft, gentle typing at your own pace." It's the closest competitor in positioning. meditype's differentiator is real literature vs. TypeMochi's word-list format. Worth monitoring their site for what language resonates with their audience.
+- Mindful typing apps are appearing on the App Store (One at a Time: Mindful Typing, Stoic Typist, Typer with Mindful Transcription Mode). The "mindful typing" framing is gaining traction. meditype could lean into this language on social without changing the product.
+- Bluesky/Mastodon are the fastest-growing channels for the slow-web / calm-internet crowd. The Rilke quote post above fits that community well. Consider tagging #slowweb or #indieweb on Bluesky.
+- Gridfiti's "Best Aesthetic Study Websites 2026" article is indexed and live. High-intent audience. Blog comment draft above is ready to ship if the comment section is open.
+
+**Queries that returned nothing useful:**
+- Reddit is still 403 blocked in this environment. r/InternetIsBeautiful, r/digitalminimalism, r/MechanicalKeyboards, r/typing, r/Stoicism all unreachable for live thread search. Cannot surface reply opportunities from the last 24-48h.
+- Twitter/X searches returned no specific recent threads about cozy/chill websites. Only bought-follower articles and platform comparison pieces.
+- HN threads are 403 blocked. The Public Domain Day 2026 threads are from January 2026 (6 months old), not usable for replies today.
+- Firecrawl API returned no output (likely blocked in this environment too).
+- Most article URLs (Gridfiti, Slow Signal Manifesto, UX Collective, Coulture) returned 403 on direct fetch. Article metadata came from search snippets only.
+
+**Channels worth doubling down on:**
+- r/Stoicism: high-fit audience, constant Meditations discussion threads. The reply template above is ready. Worth checking manually when you're on Reddit.
+- Bluesky with #slowweb or #indieweb tags: the Rilke quote post is designed for this feed. Post Tuesday or Wednesday afternoon for best reach.
+- Gridfiti comment section: if it allows comments, the blog comment draft above is a clean fit. Check manually.
+- r/InternetIsBeautiful: the fresh post draft is ready. Wait until at least July 29 for the next one to stay within the one-per-week limit.
+
+**Channels to hold off on:**
+- HN Show HN: not repeated today (the June 24 log has a draft). Hold until the r/IIB post lands and gets traction.
+- Indie Hackers: hold for the same reason.
+
+**Note on book accuracy:** the June 24 log mentioned Frankenstein, Dracula, Dorian Gray, and The Maltese Falcon as being in the meditype library. Those books are NOT in the current data.jsx. The actual library is confirmed: Aurelius, Epictetus, Seneca, Emerson, Thoreau, Whitman, Dorothy Wordsworth, Montaigne, Rumi, Laozi, Blake, Hafiz, Alice in Wonderland, The Blue Bird, Wind in the Willows, The Secret Garden, Rilke, Pessoa, Dickinson, Kierkegaard, Moby-Dick, Verne, Treasure Island, Kipling. All future drafts use this list.
+
+---
+
 # 2026-06-24, Channel drafts (7 items)
 
 ---
