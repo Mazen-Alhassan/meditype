@@ -2,6 +2,127 @@
 
 ---
 
+# 2026-07-27, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (standalone post)
+- **Posted by OP:** n/a
+- **Why it fits:** Kafka slow-reading angle. Not used in any prior entry. Ties the typing-as-reading mechanism to a specific author whose prose rewards it. Fresh from Seneca (Jul 18), Thoreau (Jun 17), Grahame (Jul 19), Whitman (Jun 19), Pessoa (Jun 28).
+- **Draft (paste ready):**
+> typing through kafka is slower than reading him. the sentences slow you down even more when your hands have to follow each word. meditype has his work alongside marcus aurelius, pessoa, rilke. ambient sound, no WPM counter. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** n/a (template for "cozy website," "deliberate screen time," "what should I do online," or "recommend something quiet" threads. Browse X Latest tab before posting. Prior templates covered: cozy/monkeytype (Jun 16), intentional screen time (Jun 17), decompression (Jun 22), morning ritual (Jun 27), brain fog (Jun 28), engagement-loop fatigue (Jul 9), reading absorption (Jul 10), slow and tactile (Jul 13), late-night wind-down (Jul 14), book and sound pairing (Jul 18), deliberate idleness (Jul 19). Today: "hands have to follow every word" framing, concrete attentional mechanism.)
+- **Posted by OP:** varies
+- **Why it fits:** Leads with the attentional mechanism (hands can't skip ahead), then names meditype as the tool. Different from all prior templates in that it centers physical engagement rather than calm or quiet.
+- **Draft (paste ready):**
+> meditype is the one i use when i want screen time that actually requires my attention. public domain books (walden, kafka, marcus aurelius), ambient sound, no wpm, no streak. your hands have to follow every word. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog comment]**
+- **Source link:** https://spacetimetech.wordpress.com/2026/07/19/the-small-real-original-web/
+- **Posted by OP:** July 19, 2026 (8 days ago, blog post about the small/slow/indie web being non-corporate, single-purpose, and made with intent)
+- **Why it fits:** The article is literally describing what meditype is: a personal, single-purpose tool with no engagement mechanics, no corporate layer, no algorithmic goal. New target, not in any prior log entry. Blog comments on personal sites are indexed alongside the post and read by exactly the right audience.
+- **Draft (paste ready):**
+> really good piece. one small web tool that came to mind reading this: meditype (https://meditype-omega.vercel.app). single-purpose typing app for public domain books, static React, no accounts, no ads, no gamification. you pick a text (kafka, marcus aurelius, walden, rilke) and type through it with ambient sound. no WPM counter, no score. feels very much like what you're describing when you talk about tools made with intent rather than attention.
+
+---
+
+**[Channel: Lobsters comment]**
+- **Source link:** https://lobste.rs/s/yryapx/indieweb_small_web
+- **Posted by OP:** unknown exact date, appeared in current search results for indieweb/small web
+- **Why it fits:** Lobsters thread on IndieWeb and small web. Community values single-purpose personal tools, static sites, no-account tools. Meditype is a textbook fit. New target, not in any prior log entry. Lobsters crowd would appreciate the static/no-backend technical reality.
+- **Draft (paste ready):**
+> meditype fits this conversation well: https://meditype-omega.vercel.app. single-purpose typing app for public domain books. static, no accounts, no backend, nothing you type goes anywhere. ambient sound, no gamification, no WPM counter. typing through classic literature with rain sounds is a small odd activity but it feels very much in the spirit of what this thread is describing.
+
+---
+
+**[Channel: Blog comment]**
+- **Source link:** https://medium.com/@Nathans_Tweets/the-indie-web-is-leading-a-quiet-rebellion-against-big-tech-f53e32ad11a5
+- **Posted by OP:** recent (surfaced in July 2026 search results for "indie web rebellion big tech")
+- **Why it fits:** Article argues for small personal tools as an alternative to corporate platforms. Meditype is a concrete, specific example that adds to the article rather than competing with anything in it. New target, not in any prior log entry.
+- **Draft (paste ready):**
+> good framing. a concrete example in the small-tool category: meditype (https://meditype-omega.vercel.app), a typing app for public domain books. no accounts, no WPM counter, no streak tracking. it's one page, it does one thing. the indie web spirit applied to typing practice turns out to produce something genuinely restful. worth naming alongside the bigger examples.
+
+---
+
+**[Channel: Reddit r/MechanicalKeyboards fresh post]**
+- **Source link:** https://www.reddit.com/r/MechanicalKeyboards/ (fresh post, weekly slot available per Jul 19 notes: "Next Reddit fresh post (Jul 26): consider r/MechanicalKeyboards or r/Stoicism." MAX 1 per week.)
+- **Posted by OP:** n/a (fresh post)
+- **Why it fits:** First fresh post to r/MechanicalKeyboards in the log. The "enjoy the act of typing without clocking yourself" framing is native to this community. Includes a specific question about switch sounds and ambient audio to invite real responses rather than reading as self-promo.
+- **Draft (paste ready):**
+
+  **Title:** A typing site for people who enjoy typing, not the score (public domain books, no WPM)
+
+  **Body:**
+  > I built meditype for mechanical keyboard users who want to enjoy typing without clocking themselves. You pick from a library of public domain books (Marcus Aurelius, Walden, Kafka, Rilke, Pessoa, Alice in Wonderland, Rumi), choose an ambient background, and type through the prose at whatever pace you want.
+  >
+  > There's no WPM counter, no accuracy score, no leaderboard. The only thing saved is your position in the book, stored locally so you can come back where you left off.
+  >
+  > https://meditype-omega.vercel.app
+  >
+  > Best on desktop. Curious how the switch sounds pair with the ambient audio (rain, forest, cafe), and what books people would want to see added.
+
+---
+
+**[Channel: Bluesky / Mastodon / Threads post]**
+- **Source link:** n/a (standalone post, post to #indieweb, #slowweb, #publicdomain feeds)
+- **Posted by OP:** n/a
+- **Why it fits:** Indie web / small web conversation is active right now (multiple fresh articles this week). Hooks into the current discourse. Prior Bluesky posts covered: monkeytype comparison (Jun 16), static site (Jun 19), Pessoa (Jun 28), rain/summer (Jul 9), typing slower than reading (Jul 18), Laozi (Jul 19). Today: small web hook from current discourse.
+- **Draft (paste ready):**
+> the small web conversation is loud right now. here is a small web tool that actually fits: meditype. typing app for public domain books, static, no accounts, no gamification. rain sounds. no WPM counter. just the text.
+>
+> https://meditype-omega.vercel.app
+>
+> #indieweb #slowweb #publicdomain
+
+---
+
+## Today's notes
+
+**Trends spotted:**
+- The indie web / small web movement has a cluster of fresh articles in July 2026, including the spacetimetech.wordpress.com piece (Jul 19), the Lobsters IndieWeb thread, a Medium article on indie web rebellion, and a "defining the indieweb for 2026" piece. This is an unusually active week for that discourse. Blog comments and Lobsters comments placed this week will be read by exactly the right audience.
+- The spacetimetech.wordpress.com "The small, real, original web" article is the best new blog comment target found this month. The author writes about personal, intent-driven tools. Very high audience fit.
+- Kafka as a named book is a fresh hook that hasn't appeared in prior Twitter posts. His prose style (short declarative sentences, dense meaning) makes the typing-as-reading mechanism particularly concrete.
+- "Hands have to follow every word" is a new attentional mechanism framing not used in any prior reply template. Tests whether the physical engagement angle outperforms the calm/quiet angle.
+
+**Queries that returned nothing actionable:**
+- Specific live Reddit threads from last 24-48h: consistent search indexing gap, same as every prior run. Browse r/MechanicalKeyboards, r/InternetIsBeautiful, r/Stoicism directly before posting templates.
+- Live Twitter/X threads from last 24h: not indexed in real time.
+- Firecrawl API: blocked in this environment, consistent with all prior sessions.
+- HN July "Ask HN: What are you working on?" thread: not found via search today. The Jul 19 entry has a ready draft for it. Find the item number manually at news.ycombinator.com.
+
+**Weekly slot used today:**
+- Reddit fresh post: r/MechanicalKeyboards (first fresh post to this sub). Next Reddit slot opens Aug 3.
+- Twitter original post: Kafka slow-reading angle.
+- Bluesky: small web discourse hook.
+
+**Persistent backlog (do these first before new targets):**
+- AlternativeTo.net submission: overdue since Jun 16. Draft in Jul 9 entry. Submit at https://alternativeto.net/software/monkeytype/. Highest-leverage one-time action remaining.
+- HN July "Ask HN: What are you working on?" thread: Jul 19 draft ready, needs the item number manually.
+- asleepycreative.com comment: Jun 19 draft, never confirmed posted.
+
+**Targets to skip next run (recently drafted):**
+- spacetimetech.wordpress.com: drafted today.
+- Medium indie web article: drafted today.
+- Lobsters IndieWeb thread: drafted today.
+- keyhero.com, typingtestgo.com: Jul 19.
+- typingmonk.com, voicekeyboardpro.com, whatsparpadi.in: Jul 18.
+
+**Channels to double down on:**
+- Lobsters: small community but near-perfect audience fit. The IndieWeb thread has enough traction to be worth a comment.
+- Blog comments on personal/indie-web articles: slow-web blog authors are exactly the audience, and comments stay up.
+- r/MechanicalKeyboards: fresh post done today. Monitor for traction.
+
+**Notion logging status:** Notion connector is connected to this account but not enabled for this chat session. Enable it in Claude.ai chat connector settings to allow direct logging. Drafts written to OUTREACH_LOG.md in repo as fallback.
+
+---
+
 # 2026-07-19, Channel drafts (7 items)
 
 ---
