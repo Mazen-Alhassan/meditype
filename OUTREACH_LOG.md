@@ -2,6 +2,149 @@
 
 ---
 
+# 2026-08-02, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (standalone post)
+- **Posted by OP:** n/a
+- **Why it fits:** Sunday morning timing plus the "Slow Sundays" mood section. First Twitter post to name all four Slow Sundays books together and the first ever to name Dorothy Wordsworth.
+- **Draft (paste ready):**
+> it is sunday. meditype has a section called Slow Sundays: Walden, Leaves of Grass, Montaigne's Essays, Dorothy Wordsworth's Pastoral Diary.
+>
+> pick one, add rain, type slowly through it.
+>
+> no wpm counter. no score.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** search twitter/x for "how do I start writing" OR "creative warm-up" OR "writing block tips" threads from last 24h (verify age before posting)
+- **Posted by OP:** varies
+- **Why it fits:** "Warm up by typing someone else's prose" is a writing technique. Answers the creative-block question before naming meditype. New angle not used in any prior reply template.
+- **Draft (paste ready):**
+> one thing that works for me as a warm-up: typing someone else's prose for 10 or 15 minutes before starting my own. meditype has public-domain books (Walden, Montaigne's Essays, Rilke, Alice in Wonderland) with ambient sound and no wpm counter. your hands get into motion before you switch to your own words.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Bluesky / Mastodon / Threads]**
+- **Source link:** n/a (standalone post, use #SlowSundays #publicdomain #slowweb)
+- **Posted by OP:** n/a
+- **Why it fits:** Dorothy Wordsworth ("A Pastoral Diary," 94 passages, Slow Sundays) has never appeared in any prior social post in the entire log history. Her writing (walks, weather, the garden at Grasmere) pairs naturally with Sunday timing and rain ambience.
+- **Draft (paste ready):**
+> dorothy wordsworth's "a pastoral diary" is in meditype. she wrote about walks, weather, and the garden at grasmere. small, precise, beautiful.
+>
+> typing through it with rain on is the right way to spend a sunday.
+>
+> no score. no wpm. just the sentences.
+>
+> https://meditype-omega.vercel.app
+>
+> #SlowSundays #publicdomain #slowweb
+
+---
+
+**[Channel: Blog article comment]**
+- **Source link:** https://typingmonk.com/blog/best-typing-practice-websites-apps-2026
+- **Posted by OP:** typingmonk.com, 2026. Explicitly flagged in Aug 1 notes as "save for next run." Verify comment section is open before posting.
+- **Why it fits:** Lists typing tools by speed metrics. No "no metrics at all" category exists in the article. Adds a genuinely absent alternative rather than competing with what's listed.
+- **Draft (paste ready):**
+> solid roundup. one gap worth noting: you've covered every speed approach there is but nothing in the "no metrics at all" category. meditype (meditype-omega.vercel.app) goes that direction. public-domain books organized by mood (Stoic Mornings, Slow Sundays, Melancholy, Adventure), ambient sound built in, and no WPM counter or accuracy score anywhere on the page. not useful for people trying to get faster, but worth naming for readers who are specifically burned out on the improvement loop.
+
+---
+
+**[Channel: AlternativeTo.net TypeLit.io listing (one-time submission)]**
+- **Source link:** https://alternativeto.net/software/typelit-io/
+- **Posted by OP:** n/a (one-time manual submission, in backlog since Jun 24)
+- **Why it fits:** TypeLit.io alternatives page surfaces in "typing alternative" searches. Both tools have users type through real literary texts. Philosophy difference (no metrics vs. metrics) is concrete and useful to state here.
+- **Draft (paste ready):**
+
+  **Software name:** meditype
+  **URL:** https://meditype-omega.vercel.app
+  **License:** Free, no account required
+  **Platform:** Web (browser)
+
+  **Description:** A typing app for public-domain literature organized by mood (Stoic Mornings, Slow Sundays, Wonder, Melancholy, Adventure, Mystical). 24 books including Marcus Aurelius, Walden, Rilke, Pessoa, Alice in Wonderland, Wind in the Willows, and more. Ambient sounds (rain, cafe, forest, hearth fire). No WPM counter, no accuracy score, no account. Static site, progress saves to localStorage.
+
+  **Why it's an alternative to TypeLit.io:** Both have you type through real literary texts rather than random words. TypeLit.io tracks WPM and accuracy. meditype removes all metrics and organizes by mood rather than title. Built for sitting with the text slowly, not measuring yourself against it.
+
+---
+
+**[Channel: Reddit comment template, r/books]**
+- **Source link:** search r/books for "what are you reading" OR "Sunday reading" OR "reading for focus" threads from the last 48h. Verify thread age before posting.
+- **Posted by OP:** varies
+- **Why it fits:** "Typing forces you to sit with every sentence" is genuinely useful slow-reading advice. Answers the focus/reading question before naming meditype. Different framing from Jul 9 and Jul 10 r/books templates.
+- **Draft (paste ready):**
+> if you're looking for a way to slow down with a text, try typing through it rather than just reading. i use meditype for this: browser-based, public-domain books (Walden, Meditations, Leaves of Grass, Rilke), ambient sound, no wpm counter. typing forces you to sit with every sentence because you can't skim ahead. https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Hacker News, "Ask HN: What are you working on? (August 2026)"]**
+- **Source link:** August thread posts first Monday of the month: August 3, 2026 (tomorrow). Find item number manually at news.ycombinator.com. DO NOT post today; hold for Aug 3.
+- **Posted by OP:** HN monthly thread, active through end of August
+- **Why it fits:** Monthly slot, August not yet used. This draft names all 24 books and 6 moods explicitly (HN audience appreciates specificity), then frames the discovery problem as the interesting open question. Different angle from Jul 18 and Jul 19 drafts.
+- **Draft (paste ready):**
+> meditype | https://meditype-omega.vercel.app
+>
+> A typing app for public-domain literature. No WPM counter, no accuracy score, no account, no backend. 24 books across 6 moods: Stoic Mornings (Aurelius, Epictetus, Seneca, Emerson), Slow Sundays (Walden, Whitman, Montaigne, Dorothy Wordsworth), Wonder (Carroll, Maeterlinck, Grahame, Burnett), Melancholy (Rilke, Pessoa, Dickinson, Kierkegaard), Adventure (Melville, Verne, Stevenson, Kipling), Mystical (Rumi, Laozi, Blake, Hafiz). Ambient sound. Progress saves locally.
+>
+> Seven months in. The people who stay are not typing enthusiasts looking for a new leaderboard. They want deliberate, tactile, slow screen time. That audience is harder to find because it does not cluster on "typing" search queries.
+>
+> The discovery problem is the interesting one. Happy to think through it with anyone who has built in a similarly quiet corner.
+
+---
+
+## Today's notes
+
+**LIBRARY ACCURACY CORRECTION (recurring issue):**
+Verified data.jsx directly. Confirmed 24-book library: Meditations (Aurelius), The Enchiridion (Epictetus), Letters from a Stoic (Seneca), Self-Reliance (Emerson), Walden (Thoreau), Leaves of Grass (Whitman), A Pastoral Diary (Dorothy Wordsworth), Essays (Montaigne), The Masnavi (Rumi), Tao Te Ching (Laozi), Songs of Innocence (Blake), The Divan (Hafiz), Alice in Wonderland (Carroll), The Blue Bird (Maeterlinck), The Wind in the Willows (Grahame), The Secret Garden (Burnett), Letters to a Young Poet (Rilke), The Book of Disquiet (Pessoa), Selected Poems (Dickinson), Either/Or (Kierkegaard), Moby-Dick (Melville), Twenty Thousand Leagues (Verne), Treasure Island (Stevenson), Kim (Kipling). The Aug 1 drafts referenced "As I Lay Dying," "Sherlock Holmes," and "Frankenstein" as being in the library. None are. Same error corrected in Jul 22 notes after the Jun 24 occurrence. This is the third time. Future drafts must use only the 24 confirmed titles above.
+
+**Trends spotted:**
+- Dorothy Wordsworth ("A Pastoral Diary") has never appeared in any channel in the entire log history. Freshest available book hook. Her journal writing (small, precise, observational) maps directly to the slow-reading and ambient ethos. Sunday timing makes it a natural anchor for the next week.
+- AlternativeTo TypeLit.io submission has been in the backlog for 6+ weeks. It requires an AlternativeTo account and one form submission. No further delay warranted.
+- typingmonk.com comment explicitly flagged for this run in Aug 1 notes. Drafted today.
+- HN August "What are you working on?" thread opens Aug 3 (tomorrow). Draft ready.
+
+**Queries that returned nothing useful:**
+- Reddit JSON API: blocked (403). All Reddit comment drafts are templates requiring a live thread URL. User must search r/books manually before posting.
+- Twitter/X: not indexed in real time. Reply template requires searching X's Latest tab for relevant threads.
+- Firecrawl API: blocked (403 from proxy). Consistent with all prior sessions.
+- HN threads and most article pages: 403. Research based on WebSearch snippets only. Verify comment sections are open before posting.
+- No live Twitter "chill website" or "calm internet" threads found with specific URLs.
+
+**Weekly slot status:**
+- Reddit fresh post: last used Jul 31 (r/InternetIsBeautiful). Next slot: Aug 7.
+- Reddit comment templates: eligible, r/books template above is ready.
+- Twitter original post: shipped (Slow Sundays / Sunday morning angle).
+- Bluesky: shipped (Dorothy Wordsworth).
+
+**Channels to skip (recently drafted):**
+- TypingFlo monkeytype alternatives: Aug 1
+- Filmora calming websites: Aug 1
+- r/MechanicalKeyboards: Aug 1 (hold a few days)
+- itch.io relaxing typing: Jul 31
+- typingfastest.com: Jul 31
+- gridfiti.com: Jul 31
+- graygroupintl.com: Jul 29
+- r/Stoicism: Jul 24, Jul 26, hold through this week
+- spacetimetech.wordpress.com: Jul 27
+- Medium indie web article: Jul 27
+
+**Channels to double down on:**
+- Dorothy Wordsworth angle: rotate into Twitter, Bluesky, and comment drafts next week
+- AlternativeTo TypeLit.io: submit this week (one-time, overdue)
+- HN August thread: post on Aug 3 using draft above
+- r/books: comment template ready, eligible for fresh post after Aug 7
+
+**Note on Notion:** Notion MCP not enabled in this chat session. Log written to outreach/2026-08-02-channel-drafts.md and prepended to OUTREACH_LOG.md as fallback.
+
+---
+
 # 2026-07-27, Channel drafts (7 items)
 
 ---
