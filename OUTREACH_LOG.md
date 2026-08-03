@@ -2,6 +2,123 @@
 
 ---
 
+# 2026-08-03, Channel drafts (6 items)
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (standalone post)
+- **Posted by OP:** n/a
+- **Why it fits:** Kierkegaard and the Melancholy section have never appeared in a standalone Twitter post. Either/Or is a striking title that earns a second look in a feed. Pairs the existential angle with the practical no-score reality. Fresh from all prior Twitter posts.
+- **Draft (paste ready):**
+> meditype has a section called Melancholy: Rilke, Pessoa, Dickinson, and Kierkegaard's Either/Or.
+>
+> type through existential philosophy with rain on, no WPM counter, no deadline, nowhere to be.
+>
+> that is all it does.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** search X Latest tab for "lo-fi study websites" OR "ambient study tools" OR "back to school websites" OR "focus tools august" threads from last 24h (August is peak timing for this audience, browse before posting)
+- **Posted by OP:** varies
+- **Why it fits:** August is the highest-traffic month for lo-fi study content as students return. No prior reply template has led with the back-to-school/focus-season timing. Different from Aug 2 template (writing warm-up angle) and all prior frames.
+- **Draft (paste ready):**
+> for lo-fi study season: meditype. pick a public-domain book from the library (Walden, Alice in Wonderland, Marcus Aurelius), set ambient rain or forest sounds, and type through it. no WPM tracking, no distraction loop. good for focus warm-ups before actual study sessions.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit comment template, r/books]**
+- **Source link:** search r/books directly for "reading slump" OR "august reading" OR "can't focus on books" threads from last 48h. Verify thread age before posting.
+- **Posted by OP:** varies
+- **Why it fits:** August reading slump is a recurring r/books topic as summer ends. The "type it instead of reading it" mechanism is a genuine answer to the focus/slump problem. Different framing from the Aug 2 r/books template (which used "typing forces sentence-level attention"). This one leads with the slump context specifically, and lands the Moby-Dick personal hook at the end.
+- **Draft (paste ready):**
+> if you are in a reading slump, try typing through the book instead of reading it. meditype has a browser-based library of public domain texts (Walden, Wind in the Willows, Pessoa, Dickinson) and you type through passages at your own pace, no WPM counter. your hands can't skip ahead, which forces the kind of attention that reading slumps kill off. it's how i got back into Moby-Dick.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog comment, DEV.to "The Rise of Calm Technology"]**
+- **Source link:** https://dev.to/fayorax/the-rise-of-calm-technology-rethinking-digital-tools-and-discovery-13om
+- **Posted by OP:** fayorax on DEV.to, 2026 (surfaced in search results, not in any prior log entry). Verify comment section is open before posting.
+- **Why it fits:** The article is specifically about calm technology as a design philosophy, single-purpose tools, and curated platforms. Meditype is a textbook example of what the article describes. New target, first appearance in log. DEV.to comment sections are open and indexed.
+- **Draft (paste ready):**
+> good piece. a concrete example from the typing space: meditype (https://meditype-omega.vercel.app). it's a single-purpose browser app for typing through public domain books, no WPM counter, no account, no engagement mechanics. ambient sound built in. the design philosophy is exactly what you are describing: one job done quietly, nothing asking for your attention back. static site, no server, progress saves to localStorage. it just sits there until you want it.
+
+---
+
+**[Channel: Bluesky / Mastodon / Threads]**
+- **Source link:** n/a (standalone post, use #SlowSundays #stoicism #slowweb)
+- **Posted by OP:** n/a
+- **Why it fits:** Epictetus and The Enchiridion have never appeared in any Bluesky or Mastodon post in the entire log history. The opening line of the Enchiridion ("some things are in our control and others not") is one of the most widely recognized Stoic passages, earns its space before the URL. Prior Bluesky posts covered: monkeytype comparison (Jun 16), static site (Jun 19), Pessoa (Jun 28), rain/summer (Jul 9), typing slower than reading (Jul 18), Laozi (Jul 19), small web (Jul 27), Dorothy Wordsworth (Aug 2).
+- **Draft (paste ready):**
+> the first line of Epictetus: "some things are in our control and others not."
+>
+> The Enchiridion is in meditype's Stoic Mornings section. you type through it with ambient sound on, no score, no pressure. your only job is the sentence in front of you.
+>
+> https://meditype-omega.vercel.app
+>
+> #stoicism #slowweb #publicdomain
+
+---
+
+**[Channel: Blog comment, webpronews.com "2026 Personal Websites Renaissance"]**
+- **Source link:** https://www.webpronews.com/2026-personal-websites-renaissance-ditching-social-media-for-privacy/
+- **Posted by OP:** webpronews.com, 2026 (confirmed active in search results, not in any prior log entry). Verify comment section is open before posting.
+- **Why it fits:** Article is about the 2026 shift toward personal, self-owned digital tools away from centralized platforms. Meditype is a static, no-account, no-server tool that fits this description precisely. New target, different audience from the DEV.to draft above. The "personal websites" discourse is the right context for the "this just exists and works" angle.
+- **Draft (paste ready):**
+> good frame. one tool that fits this spirit exactly: meditype (https://meditype-omega.vercel.app). typing app built around public domain books. static site, no server, no account. nothing you type is sent anywhere. 24 books across 6 moods, ambient sound built in, no WPM counter. it is the kind of small intentional tool worth naming alongside the personal websites themselves.
+
+---
+
+## Today's notes
+
+**ACTION REQUIRED TODAY (do before anything else):**
+HN August "What are you working on?" thread opens August 3 (today). The Aug 2 entry has a complete, specific draft ready. Find the item number manually at news.ycombinator.com, then post from that draft. Do not use today's 6 drafts as a substitute for this action. The HN thread is time-sensitive and closes at end of month.
+
+**Trends spotted:**
+- August is peak timing for lo-fi study content. Every year this audience spikes in the first two weeks of August as students return. Reply templates aimed at "ambient study" and "focus tools" will land better this week than any other.
+- Calm technology is an active discourse in the DEV.to ecosystem in 2026 (two articles by "fayorax" returned in search, plus the sailman digital minimalism piece). DEV.to comment sections are open, indexed, and read by the right audience.
+- The 2026 "personal websites renaissance" theme (webpronews.com article confirmed) is a new content cluster, different from the indie web discourse of July. Worth placing a comment this week before it cools.
+- Kierkegaard and Epictetus are both completely unused in the Twitter and Bluesky log history respectively. These are two of the most recognizable names in the library and both have natural first lines worth quoting.
+
+**Queries that returned nothing actionable:**
+- Reddit JSON API: blocked (403) for the twelfth consecutive session. All Reddit comment drafts above are templates requiring the user to find a live thread before posting.
+- Twitter/X: not indexed in real time. Browse X Latest tab manually before using reply templates.
+- HN and most article pages: 403 from proxy, consistent with all prior sessions. Confirm comment sections for DEV.to and webpronews.com before pasting.
+- Firecrawl API: blocked by proxy (403). Consistent across all sessions.
+- Lemon8 and TikTok: image-first platforms, no text-comment entry without a visual asset. Skipped again.
+
+**Weekly slot status:**
+- Reddit fresh post: last used Jul 31. Next slot: Aug 7.
+- Twitter original post: used today (Kierkegaard/Melancholy angle).
+- Bluesky: used today (Epictetus/Enchiridion angle).
+- HN August "What are you working on?" thread: post today from Aug 2 draft.
+
+**Persistent backlog (do these first):**
+- AlternativeTo.net TypeLit.io submission: in backlog since Jun 16. Draft in Aug 2 entry. Still overdue. Highest-leverage one-time action remaining.
+- HN August thread: post today using Aug 2 draft.
+- asleepycreative.com comment: Jun 19 draft, never confirmed posted. Check if comment section is still open.
+
+**Channels to skip next run (recently drafted):**
+- DEV.to calm technology: drafted today.
+- webpronews.com personal websites renaissance: drafted today.
+- All channels listed in Aug 2 "channels to skip" still apply.
+
+**Channels to double down on:**
+- DEV.to calm tech articles: fayorax has two relevant articles. If one comment lands well, consider the second.
+- August lo-fi study Twitter threads: browse X for "study with me" and "ambient study tools" in the next 48h, timing is peak.
+- r/books reading slump: this thread type reliably appears in late August. Template is ready.
+
+**Notion logging status:** Notion MCP is connected to this account but not enabled in this chat session. Enable it in Claude.ai chat connector settings (toggle Notion on) to allow direct logging. Log written to OUTREACH_LOG.md in repo as fallback.
+
+---
+
 # 2026-08-02, Channel drafts (7 items)
 
 ---
