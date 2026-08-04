@@ -2,6 +2,132 @@
 
 ---
 
+# 2026-08-04, Channel drafts (6 items)
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (standalone post)
+- **Posted by OP:** n/a
+- **Why it fits:** The Wonder section (Carroll, Maeterlinck, Grahame, Burnett) has never been the focus of a standalone Twitter post. The Secret Garden has never appeared in any channel in the log history. Leading with the mood category before the titles, same structure as Slow Sundays and Melancholy posts.
+- **Draft (paste ready):**
+> meditype has a section called Wonder: The Secret Garden, Alice in Wonderland, Wind in the Willows, The Blue Bird.
+>
+> type through any of them with forest sounds in the background. no WPM counter, no score.
+>
+> it is a very specific kind of afternoon.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** search X Latest tab for "what to do instead of scrolling at night" OR "phone before bed" OR "evening routine without screens" OR "no phone before sleep" threads from last 24h. Verify thread age before posting.
+- **Posted by OP:** varies
+- **Why it fits:** Evening/pre-sleep screen habits are a daily thread type on X. Meditype's ambient sound and slow pace make it a natural fit for winding down. Different from Aug 2 (writing warm-up) and Aug 3 (lo-fi study/back-to-school). Not used in any prior reply template across the full log history.
+- **Draft (paste ready):**
+> one thing that's worked for me: typing through a passage from a book before sleep instead of scrolling. meditype has public-domain books (Walden, Rilke, Treasure Island) with ambient sound and no WPM counter. hands busy, brain slowing down. less stimulating than a feed.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Bluesky / Mastodon / Threads]**
+- **Source link:** n/a (standalone post, use #publicdomain #slowweb #slowreading)
+- **Posted by OP:** n/a
+- **Why it fits:** Rumi's Masnavi (Mystical section) has never appeared in any post in the entire log history, any channel. The Mystical section (Rumi, Laozi, Blake, Hafiz) is almost entirely untapped: only Laozi appeared once (Jul 19 Bluesky). Different from Aug 2 (Dorothy Wordsworth), Aug 3 (Epictetus).
+- **Draft (paste ready):**
+> rumi's masnavi is in meditype. thirteenth-century sufi poetry, public domain, in a quiet browser app with ambient sound and no score.
+>
+> type through it a few lines at a time. it reads completely differently when you have to form every word.
+>
+> https://meditype-omega.vercel.app
+>
+> #publicdomain #slowweb #slowreading
+
+---
+
+**[Channel: Reddit comment template, r/digitalminimalism]**
+- **Source link:** search r/digitalminimalism directly for "what do I do with the time" OR "deleted Instagram" OR "quit scrolling" OR "bored without phone" threads from last 48h. Verify thread age before posting.
+- **Posted by OP:** varies
+- **Why it fits:** r/digitalminimalism surfaces threads about the gap left after quitting social apps, which meditype fills without recreating engagement mechanics. Sub not in Aug 2 or Aug 3 skip lists.
+- **Draft (paste ready):**
+> meditype has been useful for that gap. browser typing app for public-domain books: Walden, Marcus Aurelius' Meditations, Rilke, Pessoa. ambient sound, no account, no WPM tracking, nothing engineered to pull you back in. you finish a passage and close the tab.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog comment, wellreadherring.substack.com "Relaxing Websites for Stressful Times"]**
+- **Source link:** https://wellreadherring.substack.com/p/relaxing-websites-for-stressful-times
+- **Posted by OP:** Emily Herring, March 12, 2026. Verify comments are open before posting.
+- **Why it fits:** Article is specifically about calm websites for momentary escape from stress, mentions typatone.com and similar tools. Meditype fits the exact category. First appearance in the log. Author's audience (intentional readers, slow-screen crowd) overlaps precisely with meditype's.
+- **Draft (paste ready):**
+> one worth adding to this list: meditype. typing app built around public-domain books with ambient sound and zero WPM tracking. the design is minimal on purpose. pick a book (Walden, Wind in the Willows, Letters to a Young Poet), pick a sound (rain, cafe, forest, hearth), type through passages at your own pace. fits exactly what you are describing here.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog comment, hippyhighlandliving.substack.com "My Approach to Digital Minimalism"]**
+- **Source link:** https://hippyhighlandliving.substack.com/p/my-approach-to-digital-minimalism/comments
+- **Posted by OP:** hippyhighlandliving on Substack (surfaced in search with active comment thread). Verify comments are still open before posting.
+- **Why it fits:** Article about personal digital minimalism practices and analog alternatives. Meditype is a browser tool with zero engagement mechanics. New target, first appearance in log.
+- **Draft (paste ready):**
+> really like this framing. a tool that fits this spirit well: meditype (https://meditype-omega.vercel.app). browser typing app for public-domain books. no account, no tracking, no engagement mechanics. ambient sound built in. you pick what to type through and close it when you're done. nothing pulls you back. worth keeping alongside the paper and analog practices you mention.
+
+---
+
+## Today's notes
+
+**ACTION CARRY-FORWARD from Aug 3:**
+HN "Ask HN: What are you working on? August 2026" thread was marked "ACTION REQUIRED" on Aug 3. If not yet posted, the draft is in the Aug 2 entry. Active through end of August.
+
+**Trends spotted:**
+- Evening/pre-sleep screen-time replacement is a daily thread type on X, particularly strong in August as people return to schedules. Reply template above is a fresh angle.
+- Substack comment sections on niche curation/reading newsletters are under-indexed in this log. The audience (people subscribing to newsletters about intentional reading and digital life) is the meditype demographic. wellreadherring and hippyhighlandliving are new entries today.
+- The Wonder section (Secret Garden, Blue Bird, Alice, Wind in the Willows) is almost entirely absent from Twitter history. The mood-bucket framing worked for Slow Sundays and Melancholy. Carry Wonder into next week.
+- The Mystical section (Rumi, Laozi, Blake, Hafiz) is the most untapped category in the full library. Rumi debuted today. Songs of Innocence (Blake) and The Divan (Hafiz) are next.
+
+**Queries that returned nothing actionable:**
+- Reddit JSON API: blocked (403), consistent across all sessions.
+- Twitter/X live threads: not indexed in real time. Browse X Latest tab manually before using either reply template above.
+- Firecrawl API: blocked by proxy (403), consistent with all prior sessions.
+- Direct page fetches (HN, Reddit, most Substacks, article pages): 403 from proxy. All research based on WebSearch snippets only. Verify comment sections are open before posting any blog comment draft.
+- HN Public Domain Day 2026 thread (item 46462702, Jan 2026): outside 48h window, not drafted.
+
+**Books never featured in any post (use next):**
+The Blue Bird (Maeterlinck), Songs of Innocence (Blake), The Divan (Hafiz), Twenty Thousand Leagues (Verne), Kim (Kipling), Letters from a Stoic (Seneca), Self-Reliance (Emerson). The Secret Garden debuted today.
+
+**Weekly slot status:**
+- Twitter original post: used today (Wonder/Secret Garden).
+- Bluesky: used today (Rumi/Masnavi).
+- Reddit fresh post: last used Jul 31. Next slot: Aug 7.
+- HN Show HN: slot used this week (Aug 2 draft for Aug 3 posting). Next after Aug 9.
+
+**Persistent backlog:**
+- AlternativeTo.net TypeLit.io submission: backlogged since Jun 16. Draft in Aug 2 entry. Highest-leverage one-time action. Requires account.
+- HN August "What are you working on?" thread: post from Aug 2 draft if not yet done.
+- asleepycreative.com comment (Jun 19 draft): confirm if comment section still open.
+
+**Channels to skip next run:**
+- wellreadherring.substack.com: drafted today.
+- hippyhighlandliving.substack.com: drafted today.
+- DEV.to calm technology: drafted Aug 3.
+- webpronews.com personal websites renaissance: drafted Aug 3.
+- typingmonk.com: drafted Aug 2.
+- All channels in Aug 2 and Aug 3 skip lists remain in effect.
+
+**Channels to double down on:**
+- Mystical section on Bluesky/Mastodon: Rumi today, Blake and Hafiz next.
+- Wonder section on Twitter: Secret Garden today, The Blue Bird next.
+- r/digitalminimalism: live thread required, but "gap after quitting social" appears multiple times per week.
+- Substack comment sections on intentional-reading newsletters: under-indexed, right audience.
+
+**Note on Notion:** Notion MCP not enabled in this session. Log written to outreach/2026-08-04-channel-drafts.md and OUTREACH_LOG.md as fallback. Enable in Claude.ai chat connector settings (toggle Notion on) to allow direct logging.
+
+---
+
 # 2026-08-03, Channel drafts (6 items)
 
 ---
