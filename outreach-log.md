@@ -2,6 +2,121 @@
 
 ---
 
+# 2026-08-11, Channel drafts (6 items)
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (standalone post)
+- **Posted by OP:** n/a
+- **Why it fits:** Seneca's Letters from a Stoic is in the "never featured" queue since July 22. It's the strongest remaining Stoic Mornings title and pairs naturally with the forest-at-dusk or rain ambient for a morning post. First appearance anywhere in the log.
+- **Draft (paste ready):**
+> typed through a few passages of Seneca this morning with forest sounds running. Letters from a Stoic is in meditype's Stoic Mornings section alongside Marcus Aurelius and Epictetus. no timer, no wpm counter, just the words.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** search X Latest tab for "calm website" OR "cozy website" OR "recommend me something peaceful to do online" threads from the last 24h. Verify age before posting. Different framing from the Aug 10 mood-library reply.
+- **Posted by OP:** varies
+- **Why it fits:** Answers "cozy site" asks immediately before mentioning meditype. The "typing-to-read" mechanism is the hook here, different from the mood-library and ambient-sound hooks used in prior reply templates.
+- **Draft (paste ready):**
+> meditype is a typing app for public-domain books with ambient sound. the idea is that having to type every word forces you to actually read it instead of skimming. no wpm counter, no score. the library has everything from Tao Te Ching to Moby-Dick.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Reddit comment template, r/digitalminimalism]**
+- **Source link:** search r/digitalminimalism new posts for "deliberate screen use" OR "intentional browsing" OR "what do you do online that actually feels good" OR "tools without gamification" threads from the last 48h. Verify age before posting. This sub was flagged in Aug 10 notes to open today.
+- **Posted by OP:** varies
+- **Why it fits:** r/digitalminimalism readers want active, non-gamified screen experiences. The "costs attention" framing maps directly to the sub's core values and is different from any prior r/digitalminimalism draft in the log.
+- **Draft (paste ready):**
+> something that worked for me: meditype. it's a typing app for public domain books (Seneca, Emerson, Walden, Rumi) with ambient sound. no WPM counter, no streak, no notifications. you pick a book, pick a sound, and type a few paragraphs. it's active enough to keep you off autopilot, slow enough to feel like it actually costs attention.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Bluesky / Mastodon post]**
+- **Source link:** n/a (standalone post, tags: #slowweb #publicdomain #indieweb)
+- **Posted by OP:** n/a
+- **Why it fits:** Twenty Thousand Leagues (Verne) is in the never-featured queue since July 22. Ocean sounds is the obvious pairing and it makes for a vivid concrete image that lands well on Bluesky. First appearance of Verne anywhere in the log. Follows the Hafiz Mastodon post from Aug 10 with a very different genre and mood.
+- **Draft (paste ready):**
+> twenty thousand leagues under the sea has 236 passages in meditype's Adventure section. pair it with the ocean sounds loop and type Jules Verne at whatever pace you want. no wpm counter. it is a genuinely strange way to spend twenty minutes.
+>
+> https://meditype-omega.vercel.app
+>
+> #slowweb #publicdomain #indieweb
+
+---
+
+**[Channel: Blog/article comment, Forbes]**
+- **Source link:** https://www.forbes.com/sites/bryanrobinson/2026/02/02/friction-maxxing-the-trend-that-can-help-you-excel-in-2026/
+- **Posted by OP:** Bryan Robinson, February 2, 2026. Article is 6 months old. Verify comment section is still open before posting.
+- **Why it fits:** From the Aug 10 persistent backlog. The article defines friction-maxxing as choosing intentional inconveniences that build presence and tolerance. Typing every word of a classic text by hand is a direct, literal example of this. First draft targeting either Forbes friction-maxxing article.
+- **Draft (paste ready):**
+> the typing equivalent is real. there's a browser tool called meditype that puts you inside a public-domain book (Thoreau, Seneca, Montaigne) with ambient sound and no WPM counter. having to form each word by hand to get to the next sentence is friction in exactly this sense: you can't skim, you can't optimize, you just have to be present with the text.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Substack comment, brendajournalingrituals]**
+- **Source link:** https://brendajournalingrituals.substack.com/p/why-are-we-talking-about-being-offline
+- **Posted by OP:** Brenda, January 10, 2026. Article is 7 months old. Verify comment section is still accepting comments before posting.
+- **Why it fits:** From the Aug 10 double-down list. The article is specifically about the irony of discussing offline living on an online platform and craving "hands on" alternatives to phone scrolling. meditype answers that need directly. Different framing from the thejoyfuldispatch comment drafted Aug 10.
+- **Draft (paste ready):**
+> the hands-need-somewhere-to-go feeling is exactly it. meditype is a browser typing app for public-domain books with ambient sound. no wpm counter, nothing to optimize, nothing to unlock. you pick a book, pick a background sound, and type slowly through it. it keeps your hands busy and your attention on one thing, without the dopamine loop of a phone.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+## Today's notes
+
+**Books debuting today:** Letters from a Stoic (Seneca): Twitter original. Twenty Thousand Leagues (Verne): Bluesky. Both first appearances in the entire log.
+
+**r/digitalminimalism status:** This sub was explicitly flagged in Aug 10 notes to open today. The reply template above is ready. Browse r/digitalminimalism manually and drop it into a thread from the last 48h.
+
+**r/IIB post status:** Per Aug 10 notes, the Aug 6/7 draft was ready to post Aug 7. If it has not been posted yet, either post the July 22 draft now or hold for Aug 13 (the next weekly slot from that date). Do not draft a new r/IIB post until the previous one is confirmed posted.
+
+**Forbes comment section note:** Both Forbes friction-maxxing articles are from February 2026 (6 months old). Comment sections on Forbes articles sometimes close after a few months. Check before posting. If closed, the draft can be adapted for the Fortune article (June 23, 2026, fresher) at https://fortune.com/2026/06/23/gen-z-friction-maxxing-workplace-durable-skills-michelle-sobel/
+
+**brendajournalingrituals.substack.com note:** Article is from January 10, 2026. Substack comment sections typically stay open indefinitely, but engagement may be low at this age. Still worth posting since the fit is strong. Related target: mehretbiruk.substack.com appeared in the search results alongside this article and covers similar territory. Consider adding it to the queue.
+
+**Channels to skip next run:**
+- r/digitalminimalism (drafted today, template active).
+- Forbes friction-maxxing (drafted today).
+- brendajournalingrituals.substack.com (drafted today).
+- thejoyfuldispatch.substack.com (drafted Aug 10).
+- ResetEra friction-maxxing thread (drafted Aug 10).
+- r/books (drafted Aug 10).
+- All Aug 7 skip list items remain in effect.
+
+**Channels to double down on next run:**
+- Fortune friction-maxxing article (Jun 23, 2026, fresher than Forbes): still undrafted. Strong fit.
+- mehretbiruk.substack.com "100 ways to spend more time offline" (surfaced today in search): check if comment section is active.
+- Second Forbes friction-maxxing article (Kevin Kruse, Feb 13): still undrafted. Can use a different angle from today's Bryan Robinson comment.
+- Self-Reliance (Emerson) and Kim (Kipling): both still in the debut queue.
+
+**Trends spotted:**
+- Fortune covered friction-maxxing in June 2026, which is fresher than the Forbes pieces. Higher chance of open comment section and recent activity.
+- mehretbiruk.substack.com appeared multiple times in today's searches alongside "offline" and "100 ways to spend more time offline" content. Looks like a consistent home base for that audience and worth a comment.
+- The search snippet confirms brendajournalingrituals is about "craving an offline life" and "spending time creating rather than consuming." Exact match for meditype.
+
+**Queries that returned nothing actionable:**
+- Reddit JSON API and old.reddit.com: still 403 blocked. Cannot surface live threads. Browse Reddit manually for the r/digitalminimalism reply template.
+- Firecrawl API: 403 from proxy. Confirmed again.
+- Direct article fetches: 403 across all external domains except search snippets.
+- HN threads: still blocked.
+- Twitter/X live thread search: not indexed in real time.
+
+**Note on Notion:** Notion MCP connected but not enabled in this chat (enabledInChat: false). Log written to outreach-log.md in the repo. Enable Notion in Claude.ai connector settings to restore direct Notion logging.
+
+---
+
 # 2026-08-10, Channel drafts (6 items)
 
 ---
