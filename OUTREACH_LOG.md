@@ -2,6 +2,113 @@
 
 ---
 
+# 2026-08-13, Channel drafts (7 items)
+
+---
+
+**[Channel: Twitter/X post]**
+- **Source link:** n/a (standalone post)
+- **Posted by OP:** n/a
+- **Why it fits:** Kim (Kipling, 1901) is the next Adventure section book to get a standalone Twitter feature. Per Aug 12 notes, Kim was the named next candidate. The opening line of Kim is one of the most specific scene-setting lines in public domain fiction. First standalone Twitter appearance of Kim in log history.
+- **Draft (paste ready):**
+> 'he sat, in defiance of municipal orders, astride the gun zam-zammah on her brick platform opposite the old ajaib-ghar.' kipling, 1901.
+>
+> kim is in meditype's adventure section. pick rain sounds and type the opening slowly. public domain. no wpm.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Twitter/X reply template]**
+- **Source link:** search X Latest tab for "new keyboard" OR "mechanical keyboard" OR "just got a keyboard" threads where the poster mentions looking for something to type on that isn't monkeytype. Verify age before posting.
+- **Posted by OP:** varies
+- **Why it fits:** r/MechanicalKeyboards angle flagged as overdue in Aug 12 notes. Fresh angle across all prior reply templates.
+- **Draft (paste ready):**
+> honestly meditype is the best thing i've found for actually feeling the keyboard without the score pressure. public domain books (walden, kim, marcus aurelius), ambient sounds, zero wpm counter. you just type.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Hacker News comment, "Ask HN: What are you working on? August 2026"]**
+- **Source link:** https://news.ycombinator.com/ask (search "What are you working on? August 2026"). Carry-forward from Aug 6. Active through end of August.
+- **Posted by OP:** HN community, monthly thread. Active.
+- **Why it fits:** Carry-forward since Aug 6 per Aug 10 and Aug 12 notes. Monthly thread is the correct venue at meditype's stage. Aug 12 marks this as requiring immediate action. First HN "What are you working on" appearance in log history.
+- **Draft (paste ready):**
+> meditype (https://meditype-omega.vercel.app). a minimal typing app for public-domain books. pick a book from the library (marcus aurelius, thoreau, rilke, kipling, pessoa), choose an ambient sound, type at your own pace. no wpm counter, no accuracy score, no streak. the design bet: removing measurement removes the anxious relationship with speed. what remains is closer to slow reading than practice. a few hundred people return to it quietly and consistently, which tells me removing the metrics was the right call.
+
+---
+
+**[Channel: Bluesky / Mastodon post]**
+- **Source link:** n/a (standalone post, tags: #publicdomain #stoicism #slowweb #indieweb)
+- **Posted by OP:** n/a
+- **Why it fits:** Letters from a Stoic (Seneca) flagged in Aug 12 notes as next Bluesky/Mastodon candidate with #stoicism for Mastodon reach. Seneca used as a hook Jul 18 but never as the focus. First standalone Seneca appearance in the log.
+- **Draft (paste ready):**
+> 'the first thing philosophy promises us is fellow-feeling, humanity, and community.' seneca wrote that two thousand years ago and it still lands.
+>
+> letters from a stoic is in meditype. type through it with hearth sounds on. public domain. no wpm, no score.
+>
+> https://meditype-omega.vercel.app
+>
+> #publicdomain #stoicism #slowweb #indieweb
+
+---
+
+**[Channel: Reddit fresh post, r/InternetIsBeautiful]**
+- **Source link:** n/a (new post)
+- **Posted by OP:** n/a
+- **Why it fits:** Per Aug 12 notes, draft a fresh r/IIB post for the Aug 14 slot. The Aug 6 draft held 7 days is stale for reposting. Post on Aug 14, not today. MAX 1 Reddit fresh post per week.
+- **Draft (paste ready, post Aug 14):**
+
+**Title:** meditype: type through public domain books with ambient sound. no wpm, no score, no streaks.
+
+**Body:**
+> built this after getting tired of every typing app grading me on milliseconds.
+>
+> meditype is a quiet typing tool. you pick a book from a library of public-domain works (marcus aurelius, thoreau, rilke, pessoa, kipling, verne), choose an ambient sound like rain or a cafe, and type. that is the whole experience. no wpm counter, no accuracy percentage, no streak to maintain, no notification to pull you back.
+>
+> people who come to it from monkeytype say it changes how they read the text. when there is no score to optimize, you actually absorb the words.
+>
+> https://meditype-omega.vercel.app
+
+---
+
+**[Channel: Blog comment, Fortune.com "Gen Z Friction-Maxxing: Workplace and Durable Skills"]**
+- **Source link:** https://fortune.com/2026/06/23/gen-z-friction-maxxing-workplace-durable-skills-michelle-sobel/
+- **Posted by OP:** Michelle Sobel for Fortune.com, Jun 23, 2026. Flagged in Aug 12 notes as higher priority than the Forbes Feb articles. Verify comment section is open before posting.
+- **Why it fits:** Article discusses Gen Z embracing friction as a skill-building strategy. meditype is a concrete software case: a typing tool that removes all speed metrics on purpose, making the friction structural. Audience includes professionals interested in the trend. First draft targeting this article.
+- **Draft (paste ready):**
+> a software version worth adding: meditype (https://meditype-omega.vercel.app). typing app for public-domain books with no wpm counter. the friction is structural: you form every word of walden or marcus aurelius by hand, at your own pace, with nothing to optimize. people who come to it from speed-based apps say removing the score changes the whole experience. the slow part turns out to be what they were after, not the fast part.
+
+---
+
+**[Channel: Blog comment, Boing Boing "Improve or test your typing skills by copying the classics"]**
+- **Source link:** https://boingboing.net/2026/03/30/improve-or-test-your-typing-skills-by-copying-the-classics.html
+- **Posted by OP:** Gail Sherman for Boing Boing, March 30, 2026. ~4.5 months old. New find today. Article reviews TypeLit.io. Verify comment section is open before posting.
+- **Why it fits:** Article audience is people interested in typing through classic books. meditype is a direct alternative to TypeLit with a meaningfully different angle: no metrics at all vs. TypeLit's WPM tracking. Readers comparing tools are high-fit users. First draft targeting this article.
+- **Draft (paste ready):**
+> typelit is great for the wpm crowd. if you want the same literature-based format with the metrics stripped out entirely, meditype does exactly that. public domain books, ambient sound options, no wpm counter, no accuracy percentage. it is quieter in a way that changes the experience entirely. https://meditype-omega.vercel.app
+
+---
+
+## Today's notes
+
+**Carry-forwards resolved today:** HN "What are you working on August 2026" (item 3, post immediately), r/IIB fresh post (item 5, post Aug 14), Fortune.com friction-maxxing (item 6), Kim/Kipling Twitter (item 1), Seneca Bluesky (item 4).
+
+**New finds today:** Boing Boing March 30, 2026 article on TypeLit (item 7, 4.5 months old, verify comments open). typingmonk.com and typingowl.com "best typing 2026" roundups don't include meditype (undrafted, carry forward). meditype appearing organically in search for "typing app calm lo-fi public domain" queries.
+
+**Queries that returned nothing actionable:** Reddit 403, Twitter not indexed, all external domains blocked by egress proxy, Firecrawl blocked, Notion enabledInChat: false (log written to file). Note: outreach/2026-08-10 through 2026-08-12 commits were in a detached HEAD state and never pushed to origin/main; recovered via cherry-pick today.
+
+**Still backlogged (no change):** AlternativeTo.net TypeLit.io submission (since Jun 16, manual account required, highest-leverage one-time action). loggingoffclub.substack.com "Offline is the new online" (carry to Aug 14). r/MechanicalKeyboards Reddit comment template (Twitter covered today, Reddit version undrafted).
+
+**Books debuting today:** Kim (Kipling) Twitter standalone. Letters from a Stoic (Seneca) Bluesky/Mastodon standalone. Next queue: Moby-Dick (Melville) for Adventure section Twitter; Treasure Island (Stevenson) after.
+
+**Skip next run (Aug 14):** Fortune.com (drafted today), Boing Boing (drafted today), brendajournalingrituals (Aug 12), Forbes Bryan Robinson (Aug 12), Mind the Product (Aug 12), r/digitalminimalism (hold through Aug 14-15).
+
+**Double down (Aug 14+):** loggingoffclub.substack.com, AlternativeTo.net submission, r/MechanicalKeyboards Reddit comment, typingmonk.com and typingowl.com roundup comments, Moby-Dick Adventure section tweet, Mastodon #poetry (Keats or Rumi undrafted for Mastodon specifically).
+
+---
+
 # 2026-08-12, Channel drafts (7 items)
 
 ---
